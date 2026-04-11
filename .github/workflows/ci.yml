@@ -43,6 +43,12 @@ jobs:
           name: self-scan-report
           path: self-scan.json
 
-  # action-smoke: re-enable after first PyPI publish. The composite action
-  # currently does `pip install wrg-devguard`, which only works once the
-  # package is live on PyPI.
+  action-smoke:
+    name: action-smoke (composite action)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          profile: baseline
+          fail-on: error

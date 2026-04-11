@@ -1,5 +1,9 @@
 # wrg-devguard
 
+[![PyPI version](https://img.shields.io/pypi/v/wrg-devguard)](https://pypi.org/project/wrg-devguard/)
+[![CI](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/ci.yml/badge.svg)](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **Developer-first AI safety checks: prompt-policy lint + secret scanning.**
 
 Zero-dependency Python CLI that scans a repository for two classes of issues
@@ -104,7 +108,7 @@ Default lookup order:
 
 Profiles:
 
-- `default` → PR-friendly baseline (recommended for CI)
+- `baseline` → PR-friendly baseline (recommended for CI, default)
 - `strict` → stricter local/release audits (use `--profile strict`)
 
 Place custom policies in `.wrg/policy.json` (JSON) or `.wrg/policy.yaml`
