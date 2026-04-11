@@ -1,0 +1,12 @@
+{
+  "name": "wrg_devguard",
+  "cli_name": "wrg-devguard",
+  "aliases": ["devguard", "wrg-devguard"],
+  "category": "infra",
+  "description": "Developer-first AI policy lint and secret leak scanner",
+  "subcommands": {
+    "lint-policy": "scan files for deny-listed prompt and policy bypass patterns",
+    "scan-secrets": "scan files for leaked secrets and tokens",
+    "check": "run lint-policy + scan-secrets and emit a combined report"
+  }
+}

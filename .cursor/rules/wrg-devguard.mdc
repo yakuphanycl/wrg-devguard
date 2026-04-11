@@ -1,0 +1,45 @@
+---
+description: Block commits that contain leaked secrets or prompt-policy violations. Runs wrg-devguard before any suggested git commit.
+globs:
+  - "**/*.py"
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.env*"
+  - "**/*.json"
+  - "**/*.yaml"
+  - "**/*.yml"
+  - "**/*.md"
+alwaysApply: false
+---
+
+# wrg-devguard safety rule
+
+Before suggesting any `git commit` command, run the scanner and act on
+results:
+
+1. Run:
+   ```bash
+   wrg-devguard check --path . --json-out /tmp/wrg-devguard.json
+   ```
+2. If `wrg-devguard` is not installed, install it first:
+   ```bash
+   pip install wrg-devguard
+   ```
+3. Parse `/tmp/wrg-devguard.json`. For each finding, show
+   `file:line severity rule_id message`.
+4. If any finding has `severity=error`, refuse the commit. Propose concrete
+   fixes:
+   - move secret to `.env` + `os.environ["KEY"]`
+   - delete the leaked file
+   - rotate the credential and update the reference
+5. If only `severity=warning`, warn the user and let them choose.
+6. Never echo a secret value. Always use `<redacted>`.
+7. Do not suggest `git commit --no-verify` as a bypass.
+
+For release-grade checks, use the strict profile:
+
+```bash
+wrg-devguard check --path . --profile strict --fail-on warning --json-out /tmp/wrg-devguard.json
+```

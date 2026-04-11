@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wrg-devguard"
+version = "0.1.0"
+description = "Developer-first AI safety checks: policy lint and secret scanning for PR workflows"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+yaml = [
+    "PyYAML>=6.0",
+]
+dev = [
+    "pytest>=8",
+]
+
+[project.scripts]
+wrg-devguard = "wrg_devguard.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

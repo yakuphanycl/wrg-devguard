@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: test (python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e ".[dev,yaml]"
+      - name: Run tests
+        run: pytest -q
+
+  self-scan:
+    name: self-scan (wrg-devguard on itself)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e .
+      - name: Scan own source
+        run: wrg-devguard check --path . --fail-on error --json-out self-scan.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: self-scan-report
+          path: self-scan.json
+
+  # action-smoke: re-enable after first PyPI publish. The composite action
+  # currently does `pip install wrg-devguard`, which only works once the
+  # package is live on PyPI.
