@@ -5,9 +5,38 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "wrg-devguard"
 version = "0.1.0"
-description = "Developer-first AI safety checks: policy lint and secret scanning for PR workflows"
+description = "Developer-first AI safety checks: prompt-policy lint + secret scanning. Zero-dep CLI + GitHub Action + Claude Skill + Cursor Rule."
+readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Yakuphan Yucel" },
+]
 requires-python = ">=3.11"
+keywords = [
+    "security",
+    "secret-scanning",
+    "policy-lint",
+    "ai-safety",
+    "prompt-security",
+    "devsecops",
+    "pre-commit",
+    "github-action",
+    "claude-skill",
+    "cursor-rule",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
 dependencies = []
 
 [project.optional-dependencies]
@@ -17,6 +46,12 @@ yaml = [
 dev = [
     "pytest>=8",
 ]
+
+[project.urls]
+Homepage = "https://github.com/yakuphanycl/wrg-devguard"
+Repository = "https://github.com/yakuphanycl/wrg-devguard"
+Issues = "https://github.com/yakuphanycl/wrg-devguard/issues"
+Changelog = "https://github.com/yakuphanycl/wrg-devguard/releases"
 
 [project.scripts]
 wrg-devguard = "wrg_devguard.cli:main"
@@ -29,3 +64,7 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "unit: isolated unit test (no network, no real services)",
+    "integration: exercises a real external service or SDK",
+]
