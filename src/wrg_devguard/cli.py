@@ -264,7 +264,7 @@ def _resolve_policy_argument(policy_arg: str | None, profile: str | None, scan_r
     else:
         candidate = scan_root / ".wrg" / "policy.strict.json"
     if not candidate.exists():
-        raise ValueError(f"profile policy file not found: {candidate}")
+        return None  # fall back to built-in default policy
     return str(candidate)
 
 
