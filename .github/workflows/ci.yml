@@ -48,7 +48,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
+      - uses: actions/setup-python@v5
         with:
-          profile: baseline
-          fail-on: error
+          python-version: "3.12"
+      - name: Install from source (not PyPI)
+        run: pip install -e .
+      - name: Run via action entrypoint
+        run: wrg-devguard check --path . --profile baseline --fail-on error --json-out wrg-devguard-report.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: action-smoke-report
+          path: wrg-devguard-report.json

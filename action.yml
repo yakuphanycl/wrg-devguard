@@ -12,9 +12,9 @@ inputs:
     required: false
     default: '.'
   profile:
-    description: 'Policy profile: default or strict'
+    description: 'Policy profile: baseline or strict'
     required: false
-    default: 'default'
+    default: 'baseline'
   fail-on:
     description: 'Severity threshold to fail the job: warning or error'
     required: false
