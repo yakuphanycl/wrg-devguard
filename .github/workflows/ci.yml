@@ -44,7 +44,7 @@ jobs:
           path: self-scan.json
 
   action-smoke:
-    name: action-smoke (composite action)
+    name: action-smoke (CLI from source)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -61,3 +61,28 @@ jobs:
         with:
           name: action-smoke-report
           path: wrg-devguard-report.json
+
+  action-composite:
+    # Real end-to-end exercise of the composite action via `uses: ./`.
+    # action.yml installs wrg-devguard from PyPI, so this job will only
+    # pass once a working release (>= 0.1.1) is published. Until then
+    # it surfaces release-skew without blocking the workflow.
+    # TODO: remove `continue-on-error` after 0.1.1 is on PyPI.
+    name: action-composite (PyPI via uses ./)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run composite action against own checkout
+        uses: ./
+        with:
+          path: .
+          profile: baseline
+          fail-on: error
+          json-out: composite-report.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: action-composite-report
+          path: composite-report.json
