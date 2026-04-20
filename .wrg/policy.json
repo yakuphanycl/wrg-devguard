@@ -1,0 +1,65 @@
+{
+  "include": [
+    "**/*.md",
+    "**/*.txt",
+    "**/*.prompt",
+    "**/*.yaml",
+    "**/*.yml",
+    "**/*.json",
+    "**/*.py"
+  ],
+  "exclude": [
+    "**/.git/**",
+    "**/.venv/**",
+    "**/venv/**",
+    "**/node_modules/**",
+    "**/__pycache__/**",
+    "**/.pytest_cache/**",
+    "**/tests/**",
+    "**/testdata/**",
+    "**/fixtures/**",
+    "**/.tmp/**",
+    ".tmp/**",
+    "**/.tmp_pytest/**",
+    ".tmp_pytest/**",
+    "**/_tmp*/**",
+    "_tmp*/**",
+    "**/.cache/**",
+    "**/site-packages/**",
+    "**/.train_venv/**",
+    "**/data/**",
+    "**/runs/**",
+    "**/artifacts/**",
+    "artifacts/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.svg",
+    "**/*.ico",
+    "**/*.lock"
+  ],
+  "max_file_bytes": 1048576,
+  "deny_patterns": [
+    {
+      "id": "prompt_injection_ignore_previous",
+      "regex": "ignore\\s+previous\\s+instructions",
+      "severity": "ERROR",
+      "message": "Potential prompt-injection control bypass."
+    },
+    {
+      "id": "prompt_injection_bypass_guardrails",
+      "regex": "bypass\\s+(all\\s+)?(safety|guardrails|policy|policies)",
+      "severity": "ERROR",
+      "message": "Potential policy bypass intent."
+    },
+    {
+      "id": "data_exfiltration_intent",
+      "regex": "(exfiltrate|leak|dump)\\s+.*(secret|credential|token|password)",
+      "severity": "ERROR",
+      "message": "Potential exfiltration intent in prompt content."
+    }
+  ]
+}
