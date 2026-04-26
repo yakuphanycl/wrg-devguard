@@ -106,9 +106,10 @@
         "pii_phone",
         "pii_ssn",
         "pii_ip",
-        "pii_card"
+        "pii_card",
+        "pii_name"
       ],
-      "description": "Open enum. Future v0.3.0 may add more — consumers must accept unknown values gracefully (treat as a generic finding, do not crash)."
+      "description": "Open enum. Additive-only — v0.3.0 added `pii_name` (NAME-001 detector). Consumers must accept unknown values gracefully (treat as a generic finding, do not crash)."
     },
     "Finding": {
       "type": "object",

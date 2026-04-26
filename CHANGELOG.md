@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] — v0.3.0
+
+### Added — `NAME-001` PII pattern (First+Last name detection)
+
+- **`NAME-001`** detector (`wrg_devguard.pii_names`, stdlib-only) flags
+  First+Last name bigrams in scanned logs. Hybrid strategy:
+  - Curated common-given-names dictionary (~150 entries spanning Anglo,
+    Turkish, Slavic, East Asian, Hispanic, French/Irish, with diacritic
+    coverage) anchors high-confidence matches at **0.95 → MEDIUM**.
+  - NER-lite capitalized-bigram fallback fires on names outside the
+    dictionary at **0.70 → LOW** when both words are ≥3 chars and clear
+    of the place / phrase / token stop-lists.
+- **False-positive guards** (all unit-tested): CamelCase identifiers
+  (`FooBar`, `getUserName`), place-name prefixes (`New York`,
+  `San Francisco`, `Saint Louis`, `Mount Everest`), code-line keywords
+  (`def` / `class` / `function` / `import` / `return` / …),
+  docstring/JSDoc parameter markers (`:param`, `@param`, `:returns:`,
+  `@returns`), file paths (`/home/John Smith/.config/...`), URL fragments
+  (`https://example.com/John Smith`), and a curated phrase stop-list
+  (`Hello World`, `Thank You`, `Best Regards`, `Lorem Ipsum`, …).
+- **Test-context downgrade**: lines containing `test_` / `fixture` /
+  `sample` emit `severity=info` with `fp_suppression="test_context"` —
+  same convention as `JWT-001` and `EMAIL-001` example domains.
+- **Edge cases**: hyphenated (`Mary-Jane Watson`), apostrophe (`Sean
+  O'Brien`), middle initial (`John Q. Smith`), and diacritics
+  (`Çağrı Yıldız`, `José García`) all match. Single-name (`John`),
+  all-caps (`HENRY FORD`), and short-bigram (`Ai Bo`) are deliberately
+  not matched.
+- **`Category.PII_NAME`** (`pii_name`) added to the schema's open enum
+  per its v0.3.0 forward-compat note. `schema_version` stays at `1`
+  (additive, consumer-tolerant change as documented in the original
+  contract).
+
+### Schema
+
+- `schemas/log_scan_result.schema.json`: `Category` enum gains
+  `pii_name`. `schema_version` unchanged. No producer-side breakage —
+  consumers that already followed the "accept unknown values gracefully"
+  guidance continue to work without changes.
+
+### Severity rubric (NAME-001)
+
+| pattern_id | category   | confidence | severity | fp_suppression  |
+| ---------- | ---------- | ---------- | -------- | --------------- |
+| NAME-001   | pii_name   | 0.95       | MEDIUM   | (none)          |
+| NAME-001   | pii_name   | 0.70       | LOW      | (none)          |
+| NAME-001   | pii_name   | 0.95/0.70  | INFO     | `test_context`  |
+
+### Tests
+
+- `tests/test_pii_names_patterns.py`: 25+ cases covering the TP / TN /
+  edge matrix above plus pipeline-wiring invariants (`detect_line` ↔
+  `detect_names`, schema-shape compatibility through
+  `scan_logs._finding_to_dict`, redaction safety, and a regression guard
+  that pins zero NAME-001 hits on the existing v0.2.0 fixture log).
+- `tests/schemas/test_log_scan_result_schema.py`: `pii_name` added to
+  the expected Category enum.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection

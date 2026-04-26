@@ -68,6 +68,7 @@ class Category(str, Enum):
     PII_SSN = "pii_ssn"
     PII_IP = "pii_ip"
     PII_CARD = "pii_card"
+    PII_NAME = "pii_name"
 
 
 @dataclass(frozen=True)
@@ -630,6 +631,11 @@ def detect_line(line: str, line_no: int) -> list[PIIFinding]:
     findings.extend(ssn_results)
     ssn_spans = [f.span for f in ssn_results]
     findings.extend(_detect_card_001(line, line_no, ssn_spans))
+    # Names live in their own module to keep the curated dictionary +
+    # FP guards out of this file. The name detector is line-scoped (no
+    # cross-line context) and shares the PIIFinding contract.
+    from . import pii_names  # local import keeps cold-start cheap
+    findings.extend(pii_names.detect_names(line, line_no))
     findings.sort(key=lambda f: (f.line_no, f.span[0]))
     return findings
 
