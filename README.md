@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/wrg-devguard)](https://pypi.org/project/wrg-devguard/)
 [![Downloads](https://img.shields.io/pypi/dm/wrg-devguard?label=downloads%2Fmo)](https://pypistats.org/packages/wrg-devguard)
 [![CI](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Developer-first AI safety checks: prompt-policy lint + secret scanning.**
