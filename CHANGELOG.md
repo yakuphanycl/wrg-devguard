@@ -2,9 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [0.2.0] — 2026-04-26
 
-### Added
+### Added — log scanning + PII detection
+
+- `wrg-devguard scan-logs <path|->` subcommand: scans a single log file (or
+  stdin) for secrets and personally-identifiable information. Emits a JSON
+  report that conforms to a frozen v1 schema.
+- **Frozen output contract** at `schemas/log_scan_result.schema.json`
+  (JSON Schema 2020-12). Consumers (CC log_viewer, future CI integrations)
+  can pin against it. 28 schema-validation tests guard against drift.
+- **PII detection engine** (`wrg_devguard.pii`, stdlib-only) covering
+  13 patterns across 9 categories:
+  - Secrets (HIGH): `AWS-001` (access key), `AWS-002` (secret key with
+    self-corroborating context guard), `GH-001` (GitHub PAT), `JWT-001`,
+    `ANTHROPIC-001`, `OPENAI-001` (deduplicated against ANTHROPIC).
+  - PII: `EMAIL-001` (RFC-5322 simplified), `IP-001`/`IP-002` (IPv4 + IPv6
+    with RFC-1918 down-classify), `PHONE-001` (TR + US shapes via
+    rationale), `SSN-001` (US format), `CARD-001` (13–19 digits + Luhn
+    check, with a Stripe-test-card whitelist for canonical demo numbers).
+  - **False-positive suppressions**: `rfc1918_private_range`,
+    `example_domain`, `test_context` — each downgrades severity to `info`
+    and records the rule in `Finding.fp_suppression`. Aligned with the
+    monorepo-audit dogfood discipline (target: <20% FP, achieved <10% on
+    the 80-line integration fixture).
+  - **Redaction-by-design**: every `redacted_excerpt` middle-masks the
+    matched value (≤6 leading + ≤6 trailing chars + ≥4 stars). Raw
+    secrets never enter the output — verified end-to-end by tests.
+- `--strict`-style severity gating via `--fail-on
+  {high|medium|low|info|error|warning}` (legacy `error`→`high`,
+  `warning`→`medium` aliases preserved for cross-compat with the older
+  `check` / `scan-secrets` subcommands).
+- **Lazy detector resolution**: `scan_logs.py` imports `pii.py` lazily,
+  so the CLI surface ships safely without the engine and gains it on
+  first call once the package is installed. This is the seam used by
+  the v0.2.0 release-cut order (scan-logs CLI landed before the engine).
+- Validation fixtures: `tests/schemas/fixtures/clean.json` (empty
+  findings) and `mixed.json` (4-finding sample covering all categories).
+- Sample log fixture (`tests/fixtures/pii_sample_log.txt`, ~80 lines)
+  exercising every pattern with both real-shape positive cases and
+  false-positive-suppression cases.
+
+### GitHub Actions Marketplace surface (continued from previous wave)
+
 - GitHub Actions Marketplace publish-ready surface:
   - `action.yml` reshaped around the marketplace-friendly contract
     (`path`, `fail-on` ∈ `{error, warn, none}`, `format` ∈ `{text, json, sarif}`)
@@ -35,6 +75,15 @@ All notable changes to this project will be documented in this file.
 - Marketplace publish itself is a manual one-time approval flow at
   `https://github.com/marketplace/actions/wrg-devguard` after the first
   non-prerelease tag is pushed; the agent cannot click that button.
+- v0.2.0 introduces 1 dev-only optional dependency (`jsonschema>=4.20`,
+  used solely by the schema-validation test suite). The runtime surface
+  remains stdlib-only — `pip install wrg-devguard` resolves with no
+  transitive deps.
+- Test count grew from 8 (v0.1.0) → 253 (v0.2.0): scan-logs CLI 35,
+  PII patterns 98, schema 28, plus pre-existing policy/secrets/marketplace
+  coverage. Full suite runs in ~1.6s.
+
+[0.2.0]: https://github.com/yakuphanycl/wrg-devguard/releases/tag/v0.2.0
 
 ## [0.1.1] — 2026-04-16
 
