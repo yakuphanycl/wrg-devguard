@@ -79,12 +79,19 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Create GitHub Release
+        # Non-prerelease tags ship as DRAFT. The Marketplace "buy/install"
+        # banner only appears on releases authored by a real user — bot
+        # authorship silences it. The user promotes the draft via the
+        # GitHub UI to claim authorship; pre-release tags (rc/alpha/beta)
+        # auto-publish since they don't go to Marketplace anyway.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           FLAGS=()
           if [ "${{ steps.meta.outputs.prerelease }}" = "true" ]; then
             FLAGS+=(--prerelease)
+          else
+            FLAGS+=(--draft)
           fi
           gh release create "${{ steps.meta.outputs.tag }}" \
             --title "${{ steps.meta.outputs.tag }}" \
