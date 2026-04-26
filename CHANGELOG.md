@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- GitHub Actions Marketplace publish-ready surface:
+  - `action.yml` reshaped around the marketplace-friendly contract
+    (`path`, `fail-on` ∈ `{error, warn, none}`, `format` ∈ `{text, json, sarif}`)
+    with new outputs `findings-count` and `report-path`.
+  - `scripts/json_to_sarif.py` — stdlib-only SARIF v2.1.0 converter so
+    `format: sarif` integrates with GitHub code-scanning ingestion.
+  - `.github/workflows/marketplace-release.yml` — tag-triggered release
+    pipeline (`v*.*.*`): matrix CI on the tag commit, GitHub Release with
+    notes extracted from this CHANGELOG, fast-forward of the moving `v1`
+    major tag (skipped for pre-release tags such as `v1.0.0-rc.1`).
+  - `tests/marketplace/` — 5 smoke tests pinning the redacted-JSON
+    contract, the AKIA fixture exit-code signal, and the SARIF
+    converter behaviour at 0/1/7 findings.
+- README §"GitHub Actions Marketplace": 3-line quickstart, full
+  inputs/outputs tables, three concrete use-cases (PR check, scheduled
+  SARIF audit, monorepo path filter), and `@v1` vs immutable pinning
+  guidance.
+
+### Changed
+- `ci.yml::action-composite` job migrated from the removed `json-out`
+  input to `format: json` + the new `report-path` output.
+- `findings-count` action output is exit-code-derived (`0` or `1`)
+  rather than parsed from the JSON body. The package's CLI redacts
+  findings from the on-disk JSON report by design — the exit code is
+  the only reliable signal that findings hit the threshold.
+
+### Notes
+- Marketplace publish itself is a manual one-time approval flow at
+  `https://github.com/marketplace/actions/wrg-devguard` after the first
+  non-prerelease tag is pushed; the agent cannot click that button.
+
 ## [0.1.1] — 2026-04-16
 
 ### Fixed
