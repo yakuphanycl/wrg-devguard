@@ -103,3 +103,137 @@ def test_sarif_converter_handles_arbitrary_input(
     assert runs[0]["tool"]["driver"]["name"] == "wrg-devguard"
     assert runs[0]["tool"]["driver"]["version"] == "0.1.1-test"
     assert len(runs[0]["results"]) == fixture_findings
+
+
+def test_sarif_converter_handles_scan_logs_shape(tmp_path: Path) -> None:
+    """v0.2.0 scan-logs JSON shape — different keys than legacy `check`/`scan-secrets`.
+
+    scan-logs emits findings with `pattern_id`, `category`, `line_no`,
+    `rationale` (vs legacy `rule`, `path`, `line`, `message`), and threads
+    the scanned-file path at the top level under `input.path` rather than
+    per-finding. The SARIF converter must surface ruleId, line, and message
+    correctly across both shapes — silent degradation here means
+    GitHub Code Scanning sees stripped findings.
+    """
+    report = {
+        "schema_version": "1",
+        "tool_version": "0.3.0",
+        "scanned_at": "2026-04-26T12:01:30.500Z",
+        "source": "manual",
+        "input": {
+            "path": "logs/build.log",
+            "size_bytes": 24500,
+            "lines": 412,
+        },
+        "findings": [
+            {
+                "pattern_id": "AWS-001",
+                "category": "secret",
+                "severity": "high",
+                "line_no": 87,
+                "span": [12, 32],
+                "redacted_excerpt": "AKIA****EYID",
+                "rationale": "AWS access key ID format match.",
+            },
+            {
+                "pattern_id": "NAME-001",
+                "category": "pii_name",
+                "severity": "medium",
+                "line_no": 142,
+                "span": [4, 18],
+                "redacted_excerpt": "M****y S****h",
+                "rationale": "First+Last name pattern (confidence=0.95, strategy=curated).",
+            },
+            {
+                "pattern_id": "IP-001",
+                "category": "pii_ip",
+                "severity": "info",
+                "line_no": 134,
+                "span": [4, 17],
+                "redacted_excerpt": "192.168.***.10",
+                "rationale": "IPv4 address.",
+                "fp_suppression": "rfc1918_private_range",
+            },
+        ],
+    }
+    src = tmp_path / "scan_logs_report.json"
+    src.write_text(json.dumps(report), encoding="utf-8")
+    dst = tmp_path / "scan_logs.sarif"
+
+    proc = subprocess.run(
+        [
+            "python", str(SARIF_SCRIPT),
+            "--input", str(src),
+            "--output", str(dst),
+            "--tool-version", "0.3.0-test",
+        ],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+
+    sarif = json.loads(dst.read_text(encoding="utf-8"))
+    results = sarif["runs"][0]["results"]
+    assert len(results) == 3
+
+    # ruleId picks pattern_id (most specific) over category
+    rule_ids = [r["ruleId"] for r in results]
+    assert rule_ids == ["AWS-001", "NAME-001", "IP-001"]
+
+    # severity high → error, medium → warning, info → note
+    levels = [r["level"] for r in results]
+    assert levels == ["error", "warning", "note"]
+
+    # rationale becomes the message text
+    messages = [r["message"]["text"] for r in results]
+    assert "AWS access key" in messages[0]
+    assert "First+Last name pattern" in messages[1]
+    assert "IPv4" in messages[2]
+
+    # path is threaded from top-level input.path; line_no becomes startLine
+    for r in results:
+        loc = r["locations"][0]["physicalLocation"]
+        assert loc["artifactLocation"]["uri"] == "logs/build.log"
+        assert "region" in loc and loc["region"]["startLine"] > 0
+
+    # Driver picks up the rule list (deduplicated, sorted)
+    rules = sarif["runs"][0]["tool"]["driver"]["rules"]
+    rule_names = sorted(r["id"] for r in rules)
+    assert rule_names == ["AWS-001", "IP-001", "NAME-001"]
+
+
+def test_sarif_converter_handles_unknown_category_value(tmp_path: Path) -> None:
+    """v0.3.0+ may add new Category enum values per the schema's open-enum
+    contract. SARIF converter must propagate unknown categories without
+    crashing — they flow through as ruleId strings.
+    """
+    report = {
+        "schema_version": "1",
+        "tool_version": "0.4.0-future",
+        "input": {"path": "fake.log"},
+        "findings": [
+            {
+                "pattern_id": "FUTURE-001",
+                "category": "schema_drift",  # not in v1 enum, but converter is enum-agnostic
+                "severity": "low",
+                "line_no": 1,
+                "span": [0, 10],
+                "redacted_excerpt": "redacted",
+                "rationale": "Hypothetical future detector.",
+            }
+        ],
+    }
+    src = tmp_path / "future.json"
+    src.write_text(json.dumps(report), encoding="utf-8")
+    dst = tmp_path / "future.sarif"
+
+    proc = subprocess.run(
+        ["python", str(SARIF_SCRIPT),
+         "--input", str(src), "--output", str(dst)],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+
+    sarif = json.loads(dst.read_text(encoding="utf-8"))
+    result = sarif["runs"][0]["results"][0]
+    assert result["ruleId"] == "FUTURE-001"
+    assert result["level"] == "note"  # low → note via _level()

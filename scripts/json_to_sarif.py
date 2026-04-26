@@ -34,11 +34,37 @@ def _level(severity: str) -> str:
     return "note"
 
 
-def _result(finding: dict[str, Any]) -> dict[str, Any]:
-    rule_id = str(finding.get("rule") or finding.get("category") or "wrg-devguard.finding")
-    message = str(finding.get("message") or finding.get("detail") or finding.get("description") or rule_id)
-    location_path = str(finding.get("path") or finding.get("file") or "")
-    line = finding.get("line")
+def _rule_id(finding: dict[str, Any]) -> str:
+    """Extract the most specific rule identifier available.
+
+    scan-logs findings carry `pattern_id` (e.g. "NAME-001") which is more
+    actionable than the broader `category`. Legacy `check`/`scan-secrets`
+    findings carry `rule` instead. Both fall back to `category`, then to
+    a generic placeholder so SARIF always has a non-empty ruleId.
+    """
+    return str(
+        finding.get("pattern_id")
+        or finding.get("rule")
+        or finding.get("category")
+        or "wrg-devguard.finding"
+    )
+
+
+def _result(finding: dict[str, Any], default_path: str = "") -> dict[str, Any]:
+    rule_id = _rule_id(finding)
+    # scan-logs emits `rationale`; legacy emits `message`/`detail`/`description`
+    message = str(
+        finding.get("rationale")
+        or finding.get("message")
+        or finding.get("detail")
+        or finding.get("description")
+        or rule_id
+    )
+    # scan-logs threads path at the top level (input.path) since findings
+    # are line-scoped within a single file; legacy emits per-finding `path`/`file`.
+    location_path = str(finding.get("path") or finding.get("file") or default_path or "")
+    # scan-logs emits `line_no`; legacy emits `line`.
+    line = finding.get("line_no") or finding.get("line")
     physical: dict[str, Any] = {
         "artifactLocation": {"uri": location_path or "<unknown>"},
     }
@@ -54,10 +80,12 @@ def _result(finding: dict[str, Any]) -> dict[str, Any]:
 
 def to_sarif(report: dict[str, Any], package_version: str | None = None) -> dict[str, Any]:
     findings = report.get("findings") or []
-    rule_ids = sorted({
-        str(f.get("rule") or f.get("category") or "wrg-devguard.finding")
-        for f in findings
-    })
+    # scan-logs reports thread the scanned-file path at top level under
+    # `input.path`; legacy reports embed it per-finding. Resolve once for
+    # the scan-logs case so each Result picks it up by default.
+    input_meta = report.get("input") or {}
+    default_path = str(input_meta.get("path") or "") if isinstance(input_meta, dict) else ""
+    rule_ids = sorted({_rule_id(f) for f in findings})
     rules = [
         {
             "id": rid,
@@ -80,7 +108,7 @@ def to_sarif(report: dict[str, Any], package_version: str | None = None) -> dict
         "runs": [
             {
                 "tool": {"driver": driver},
-                "results": [_result(f) for f in findings],
+                "results": [_result(f, default_path) for f in findings],
             }
         ],
     }
