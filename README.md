@@ -7,15 +7,17 @@
 [![CodeQL](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/wrg-devguard/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Developer-first AI safety checks: prompt-policy lint + secret scanning.**
+**Developer-first AI safety checks: prompt-policy lint + secret & PII scanning.**
 
-Zero-dependency Python CLI that scans a repository for two classes of issues
+Zero-dependency Python CLI that scans a repository for three classes of issues
 before your PR lands:
 
 1. **Leaked secrets** — API keys, private keys, tokens, common credential
    formats in tracked files.
 2. **Prompt-policy violations** — deny-listed patterns in prompts, system
    messages, and AI-facing text assets (configurable via JSON policy).
+3. **PII in logs** — emails, IPs, phone numbers, SSNs, credit cards in log
+   files via the `scan-logs` subcommand (v0.2.0+).
 
 Ships as:
 
@@ -51,6 +53,9 @@ wrg-devguard scan-secrets --path .
 
 # Lint AI-facing text assets against a policy
 wrg-devguard lint-policy --path . --profile strict
+
+# Scan a log file for secrets + PII
+wrg-devguard scan-logs app.log
 
 # Emit a JSON report for CI
 wrg-devguard check --path . --json-out wrg-devguard-report.json
@@ -218,6 +223,10 @@ wrg-devguard check --path . --profile strict
 wrg-devguard check --path . --json-out report.json
 wrg-devguard check --path . --fail-on warning
 wrg-devguard check --path . --allowlist .wrg/allowlist.json
+wrg-devguard scan-logs app.log                  # scan log file for secrets + PII
+wrg-devguard scan-logs - < deploy.log           # read from stdin
+wrg-devguard scan-logs app.log --fail-on medium # exit 1 on medium+ findings
+wrg-devguard scan-logs app.log --json-out r.json
 wrg-devguard bandit --path src/                 # optional: bandit wrapper
 ```
 
@@ -229,22 +238,38 @@ wrg-devguard bandit --path src/                 # optional: bandit wrapper
 
 ## Output schema
 
-The forthcoming `scan-logs` subcommand (v0.2.0) emits a frozen JSON contract
-documented at [`schemas/log_scan_result.schema.json`](schemas/log_scan_result.schema.json).
+The `scan-logs` subcommand (v0.2.0+) emits a frozen JSON contract documented at
+[`schemas/log_scan_result.schema.json`](schemas/log_scan_result.schema.json).
 
 Consumers (the GitHub Action, the Control Center log viewer, future CI
 integrations) parse against this schema. Highlights:
 
-- `schema_version`: `"1"` (frozen for the v0.2.0 line).
-- `source`: one of `manual`, `ci`, `cc-endpoint`. v0.2.0 ships `manual` only.
+- `schema_version`: `"1"` (frozen for the entire 0.x line).
+- `source`: one of `manual`, `ci`, `cc-endpoint`. v0.2.0 ships `manual`;
+  `ci` and `cc-endpoint` are coming in v0.3.0.
 - `findings[].pattern_id`: stable `<NAMESPACE>-<NNN>` identifiers (`AWS-001`,
-  `EMAIL-001`, etc.). Patterns are versioned by ID — superseded patterns get
-  a new ID, never reuse.
+  `EMAIL-001`, etc.). 13 patterns across 6 categories. Patterns are versioned
+  by ID — superseded patterns get a new ID, never reuse.
 - `findings[].redacted_excerpt`: producers MUST middle-mask the matched value.
   Raw secrets never appear in the output.
 - Categories and severities are open-enum-friendly: consumers should accept
-  unknown values gracefully (treat as a generic finding) so v0.3.0 additions
-  don't break v0.2.0 readers.
+  unknown values gracefully (treat as a generic finding) so future additions
+  don't break existing readers.
+
+### PII categories (v0.2.0)
+
+| Category | Patterns | Example pattern IDs |
+|----------|----------|---------------------|
+| `secret` | 6 | AWS-001, AWS-002, GH-001, JWT-001, ANTHROPIC-001, OPENAI-001 |
+| `pii_email` | 1 | EMAIL-001 |
+| `pii_ip` | 2 | IP-001, IP-002 |
+| `pii_phone` | 2 | PHONE-001, PHONE-002 |
+| `pii_ssn` | 1 | SSN-001 |
+| `pii_card` | 1 | CARD-001 |
+
+Built-in false-positive guards: `rfc1918_private_range` (private IPs → info),
+`example_domain` (example.com/test.com → info), `test_context` (JWT in test
+lines → info), Luhn validation (credit cards).
 
 Validation tests live at `tests/schemas/test_log_scan_result_schema.py`
 (28 cases covering self-validation, fixture acceptance, and malformed-payload
@@ -266,6 +291,47 @@ pytest tests/schemas/ -v
   scanner runs automatically inside your AI coding assistant, not just in CI.
 - **Stable JSON schema** — `check --json-out` emits a versioned schema that
   never breaks.
+
+## Coming in v0.3.0 (unreleased)
+
+### Log source adapters (`--source ci|cc-endpoint`)
+
+The `scan-logs` subcommand gains source-aware normalization:
+
+```bash
+# Scan a GitHub Actions log (strips ANSI, timestamps, group markers)
+wrg-devguard scan-logs build.log --source ci
+
+# Reserved — warns and falls back to manual for now
+wrg-devguard scan-logs cc-output.log --source cc-endpoint
+```
+
+| Source | Behavior |
+|--------|----------|
+| `manual` (default) | Raw text, no normalization |
+| `ci` | GitHub Actions log normalization (ANSI codes, `##[group]` markers, timestamps stripped) |
+| `cc-endpoint` | Reserved — emits a warning and falls back to `manual` until adapter ships |
+
+### NAME-001 — Personal name PII pattern
+
+Adds `pii_name` category with a hybrid regex-bigram + stop-list strategy
+(stdlib-only, no dictionary import). False-positive guards exclude place names,
+code identifiers, and common English words.
+
+### Marketplace draft releases
+
+Non-prerelease tags now create **draft** GitHub Releases. The maintainer
+promotes to published via the GitHub UI, which enables the Marketplace "Install"
+banner. Pre-release tags (`v*-rc*`, `v*-beta*`) continue to auto-publish.
+
+### Surface at a glance
+
+| Metric | v0.2.0 | v0.3.0 (planned) |
+|--------|--------|-------------------|
+| PII/secret patterns | 13 | 14+ (NAME-001) |
+| Categories | 6 | 7 (`pii_name`) |
+| Log sources | 1 (`manual`) | 3 (`manual`, `ci`, `cc-endpoint`) |
+| Tests | 183+ | TBD |
 
 ## Development
 
