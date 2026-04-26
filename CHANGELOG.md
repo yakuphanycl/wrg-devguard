@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] — v0.3.0
+
+### Changed
+
+- Marketplace release workflow now creates draft releases for non-prerelease
+  tags; user promotes via UI to claim authorship (required for marketplace
+  banner). Pre-release tags continue to auto-publish.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection
