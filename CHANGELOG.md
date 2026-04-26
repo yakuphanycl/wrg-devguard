@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] — v0.3.0
+
+### Fixed
+
+- **SARIF converter (`scripts/json_to_sarif.py`) now correctly handles
+  `scan-logs` JSON shape.** v0.2.0 introduced a finding shape with
+  `pattern_id` / `category` / `line_no` / `rationale` (vs. the legacy
+  `check`/`scan-secrets` shape with `rule` / `path` / `line` / `message`)
+  and threaded the scanned-file path at the top level under `input.path`.
+  The converter only knew the legacy shape, so scan-logs SARIF output
+  was silently degraded:
+  - `ruleId` fell back to `category` (e.g. "secret") instead of the more
+    specific `pattern_id` ("AWS-001", "NAME-001", "EMAIL-001", …).
+  - `message` fell back to `ruleId` instead of `rationale`.
+  - `path` was always `<unknown>` (`input.path` not consulted).
+  - `region.startLine` was always missing (`line_no` not consulted).
+- New: SARIF converter prefers `pattern_id` over `rule`/`category` and
+  reads `rationale`/`line_no` for scan-logs output. Legacy shape
+  unchanged — existing parametrized fixture test (0/1/7 findings) still
+  passes verbatim.
+- Open-enum forward compatibility verified: a hypothetical `category:
+  "schema_drift"` (or any future v1-safe value) flows through as
+  `ruleId` without raising.
+
+### Tests
+
+- `tests/marketplace/test_action_locally.py`:
+  - `test_sarif_converter_handles_scan_logs_shape` — 3 findings with
+    AWS-001 / NAME-001 / IP-001 across high/medium/info severities,
+    asserts ruleId / level / message / path / line all populate
+    correctly from the scan-logs shape.
+  - `test_sarif_converter_handles_unknown_category_value` — exercises
+    the open-enum forward-compat path with a synthetic `schema_drift`
+    category.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection
