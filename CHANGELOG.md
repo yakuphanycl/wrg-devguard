@@ -35,6 +35,12 @@ All notable changes to this project will be documented in this file.
   (additive, consumer-tolerant change as documented in the original
   contract).
 
+### Changed
+
+- `NAME-001` `_is_test_context` narrowed: `sample` substring now requires
+  path/underscore boundary (was over-suppressing prose containing the word).
+  Addresses A's PR #20 review concern.
+
 ### Schema
 
 - `schemas/log_scan_result.schema.json`: `Category` enum gains

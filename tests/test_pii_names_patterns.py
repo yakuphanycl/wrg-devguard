@@ -108,6 +108,36 @@ def test_name_001_test_context_downgraded() -> None:
     assert f.fp_suppression == "test_context"
 
 
+def test_name_001_sample_prose_not_test_context() -> None:
+    findings = _name_findings(
+        detect_line("I have a sample of 100 customers including Mary Smith", 14)
+    )
+    assert findings
+    f = findings[0]
+    assert f.severity is Severity.MEDIUM
+    assert f.fp_suppression is None
+
+
+@pytest.mark.parametrize("line", [
+    "data/samples/users.csv has Mary Smith",
+    "_sample_data: Mary Smith",
+])
+def test_name_001_sample_path_context_downgraded(line: str) -> None:
+    findings = _name_findings(detect_line(line, 15))
+    assert findings
+    f = findings[0]
+    assert f.severity is Severity.INFO
+    assert f.fp_suppression == "test_context"
+
+
+def test_name_001_test_prefix_context_still_downgraded() -> None:
+    findings = _name_findings(detect_line("test_pii.py: 'Mary Smith'", 16))
+    assert findings
+    f = findings[0]
+    assert f.severity is Severity.INFO
+    assert f.fp_suppression == "test_context"
+
+
 # ──────────────────────────────────────────────────────────────────────
 # True negatives — false-positive guards
 # ──────────────────────────────────────────────────────────────────────
