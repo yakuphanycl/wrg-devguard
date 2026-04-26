@@ -9,6 +9,8 @@ from typing import Any
 
 from .policy import lint_policy, load_policy
 from .secrets import scan_secrets
+from .scan_logs import fail_code as _scan_logs_fail_code
+from .scan_logs import run_scan_logs as _scan_logs_core
 from .common import Finding, write_json
 
 
@@ -50,6 +52,19 @@ def build_parser() -> argparse.ArgumentParser:
     bandit_p.add_argument("--severity", choices=["low", "medium", "high"], default="medium",
                           help="minimum severity to report (default: medium)")
     bandit_p.add_argument("--json-out", default=None, dest="json_out", help="write JSON report")
+
+    logs = sub.add_parser(
+        "scan-logs",
+        help="scan a log file (or stdin) for secrets + PII; emits LogScanResult v1 JSON",
+    )
+    logs.add_argument("input", help="path to log file, or '-' for stdin")
+    logs.add_argument("--source", choices=["manual", "ci", "cc-endpoint"], default="manual",
+                      help="provenance label (v0.2.0: manual only)")
+    logs.add_argument("--fail-on", choices=["error", "warning", "high", "medium", "low", "info"],
+                      default="high",
+                      help="exit non-zero if any finding is at or above this severity (default: high)")
+    logs.add_argument("--json-out", default=None, dest="json_out",
+                      help="write the full LogScanResult JSON to this path (otherwise stdout)")
 
     return parser
 
@@ -373,6 +388,32 @@ def _run_check(
     return report, (1 if report["status"] == "FAIL" else 0)
 
 
+def _run_scan_logs(args: argparse.Namespace) -> int:
+    """Dispatcher for the `scan-logs` subcommand.
+
+    Reads the input (file or stdin), runs the LogScanResult pipeline, then
+    writes either to `--json-out` or stdout. Exit code follows `--fail-on`
+    (default `high`).
+    """
+    if args.input != "-" and not Path(args.input).is_file():
+        print(f"scan-logs: input file not found: {args.input}")
+        return 2
+
+    try:
+        report = _scan_logs_core(path=args.input, source=args.source)
+    except OSError as exc:
+        print(f"scan-logs: read failed: {exc}")
+        return 2
+
+    serialized = json.dumps(report, indent=2, ensure_ascii=False)
+    if args.json_out:
+        Path(args.json_out).write_text(serialized + "\n", encoding="utf-8")
+    else:
+        print(serialized)
+
+    return _scan_logs_fail_code(report, args.fail_on)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -380,6 +421,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.command is None:
         parser.print_help()
         return 1
+
+    # scan-logs takes a file (or stdin), not a directory; route it before
+    # the directory-based commands' shared scan_root validation runs.
+    if args.command == "scan-logs":
+        return _run_scan_logs(args)
 
     scan_root = Path(args.path).resolve()
     if not scan_root.exists():
