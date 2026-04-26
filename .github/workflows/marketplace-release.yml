@@ -1,0 +1,100 @@
+name: marketplace-release
+
+# Triggered by pushing a SemVer tag (v1.2.3, v1.2.3-rc.1, etc.). Runs CI on
+# the tag commit, creates a GitHub Release, then fast-forwards the moving
+# major tag (vN) so users pinned to `@v1` pick up the new release.
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  ci:
+    name: ci-on-tag
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e ".[dev,yaml]"
+      - name: Run tests
+        run: pytest -q
+      - name: Marketplace smoke test
+        run: pytest -q tests/marketplace/
+
+  release:
+    name: github-release
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve tag + major
+        id: meta
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          # vN.M.P[-...] → major = vN
+          MAJOR="${TAG%%.*}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "major=$MAJOR" >> "$GITHUB_OUTPUT"
+          # Pre-release if tag contains '-'
+          if [[ "$TAG" == *-* ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract changelog section
+        id: changelog
+        shell: bash
+        run: |
+          TAG="${{ steps.meta.outputs.tag }}"
+          VERSION="${TAG#v}"
+          NOTES_FILE="$(mktemp)"
+          # Extract the [VERSION] block from CHANGELOG.md (between this
+          # heading and the next ##).
+          awk -v v="$VERSION" '
+            $0 ~ "^## \\[" v "\\]" {capture=1; next}
+            capture && /^## \[/ {exit}
+            capture {print}
+          ' CHANGELOG.md > "$NOTES_FILE"
+          if [ ! -s "$NOTES_FILE" ]; then
+            echo "Release $TAG" > "$NOTES_FILE"
+          fi
+          {
+            echo "notes_file=$NOTES_FILE"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FLAGS=()
+          if [ "${{ steps.meta.outputs.prerelease }}" = "true" ]; then
+            FLAGS+=(--prerelease)
+          fi
+          gh release create "${{ steps.meta.outputs.tag }}" \
+            --title "${{ steps.meta.outputs.tag }}" \
+            --notes-file "${{ steps.changelog.outputs.notes_file }}" \
+            "${FLAGS[@]}"
+
+      - name: Update moving major tag
+        if: steps.meta.outputs.prerelease == 'false'
+        shell: bash
+        run: |
+          MAJOR="${{ steps.meta.outputs.major }}"
+          git tag -f "$MAJOR"
+          git push origin "$MAJOR" --force

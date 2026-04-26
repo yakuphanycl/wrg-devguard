@@ -102,8 +102,17 @@ runs:
         SCAN_RC=$?
         set -e
 
-        # findings-count from the internal JSON
-        FINDINGS_COUNT="$(python -c 'import json,sys; d=json.load(open(sys.argv[1])); print(len(d.get("findings", [])))' "$INTERNAL_JSON")"
+        # The CLI redacts findings from the on-disk JSON by design (it never
+        # persists matched secret text). The reliable signal is the exit code:
+        #   0 → no findings at-or-above threshold
+        #   1 → at least one finding at-or-above threshold
+        # Surface this via findings-count as 0 or 1 so downstream `if:` gates
+        # can react without parsing the (deliberately empty) JSON body.
+        if [ "$SCAN_RC" = "0" ]; then
+          FINDINGS_COUNT=0
+        else
+          FINDINGS_COUNT=1
+        fi
         echo "findings_count=$FINDINGS_COUNT" >> "$GITHUB_OUTPUT"
 
         # Materialise user-visible report based on format
