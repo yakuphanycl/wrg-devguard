@@ -68,6 +68,7 @@ def test_schema_category_levels(schema: dict) -> None:
     assert set(schema["$defs"]["Category"]["enum"]) == {
         "secret",
         "pii_email", "pii_phone", "pii_ssn", "pii_ip", "pii_card",
+        "pii_name",
     }
 
 
