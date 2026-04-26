@@ -53,12 +53,32 @@ Implementation notes:
 """
 from __future__ import annotations
 
+import os
 import re
 
 from .pii import Category, PIIFinding, Severity, _mask_generic
 
 
 __all__ = ["detect_names"]
+
+
+# NER-bigram fallback gate. Default-off as of v0.3.0 — the gate exists
+# because dogfood (PR #27) measured 100% FP rate on real CI logs (219
+# false hits per 1608-line GitHub Actions log: "Post Run", "Build Date",
+# "Azure Region", etc.). Curated dictionary tier (0.95 → MEDIUM) is
+# always active and unaffected. Opt back in via:
+#
+#     export WRG_DEVGUARD_NAME_NER=1
+#
+# Any of {"1", "true", "yes", "on"} (case-insensitive) enables the
+# fallback. Read at call-time, not import-time, so a test or runtime
+# can toggle the env var without re-importing the module.
+_NER_ENV_VAR = "WRG_DEVGUARD_NAME_NER"
+_NER_TRUTHY = {"1", "true", "yes", "on"}
+
+
+def _ner_fallback_enabled() -> bool:
+    return os.environ.get(_NER_ENV_VAR, "").strip().lower() in _NER_TRUTHY
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -161,6 +181,25 @@ _CODE_LINE_RE = re.compile(
 # Docstring/JSDoc parameter markers.
 _DOCSTRING_PARAM_RE = re.compile(
     r"(?::param\s|:returns?:|:raises?:|@param\s|@returns?\b|@throws?\b)"
+)
+
+# GitHub Actions annotation prefix — `##[group]`, `##[error]`,
+# `##[warning]`, `##[endgroup]`, etc. These lines are workflow
+# scaffolding (rendered as collapsible groups in the Actions UI), not
+# log payload. PR #27 dogfood: the `##[group]Runner Image` /
+# `##[group]Operating System` lines accounted for ~36 of 219 NER
+# false positives.
+_ACTIONS_ANNOTATION_RE = re.compile(r"^\s*##\[")
+
+# `gh run view --log` shape: `<job-name>\t<step-name>\t<timestamp>
+# <content>`. The `<step-name>` column is title-cased prose ("Set up
+# job", "Post Run actions/checkout", "Build Date") and feeds the bulk
+# of the NER false-positive cluster (`Post Run` alone = 165 of 219).
+# We require both: at least 2 leading tab-separated columns AND a
+# trailing ISO-shaped timestamp on the third column so we don't
+# misclassify ordinary tab-using log content.
+_GH_RUN_VIEW_PREFIX_RE = re.compile(
+    r"^[^\t\n]+\t[^\t\n]+\t﻿?\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"
 )
 
 # URL substring detector for span-overlap checks.
@@ -277,6 +316,22 @@ def _looks_like_code_line(line: str) -> bool:
     return False
 
 
+def _is_actions_scaffold(line: str) -> bool:
+    """True if the line is GitHub Actions scaffolding, not log payload.
+
+    Two shapes covered (PR #27 dogfood evidence): `##[...]` annotation
+    prefixes and the `<job>\\t<step>\\t<timestamp> <content>` envelope
+    produced by `gh run view --log`. Both are workflow-runner output,
+    not user-controlled log content, and contributed >70% of the NER
+    fallback FP cluster.
+    """
+    if _ACTIONS_ANNOTATION_RE.match(line):
+        return True
+    if _GH_RUN_VIEW_PREFIX_RE.match(line):
+        return True
+    return False
+
+
 def _is_test_context(line: str) -> bool:
     low = line.lower()
     return ("test_" in low) or ("fixture" in low) or ("sample" in low)
@@ -290,11 +345,16 @@ def _confidence(first: str, last: str) -> float | None:
     """Score the bigram. ``None`` ⇒ drop (below floor).
 
     Returned scores: 0.95 (curated anchor) or 0.70 (NER fallback).
+    NER fallback is gated by ``WRG_DEVGUARD_NAME_NER`` (default off
+    since v0.3.0 — see `_ner_fallback_enabled` for rationale).
     """
     if _is_curated(first):
         return 0.95
-    # NER fallback: both words must look name-shaped (≥3 letters,
-    # neither in any stop bucket).
+    # NER fallback path — gated. The check is up here (before the
+    # length/place-token filters) so disabling the gate avoids the
+    # extra work entirely.
+    if not _ner_fallback_enabled():
+        return None
     if len(first) < 3 or len(last) < 3:
         return None
     if first in _PLACE_TOKENS or last in _PLACE_TOKENS:
@@ -315,6 +375,8 @@ def detect_names(line: str, line_no: int) -> list[PIIFinding]:
     patterns and re-sorts globally.
     """
     if _looks_like_code_line(line):
+        return []
+    if _is_actions_scaffold(line):
         return []
     out: list[PIIFinding] = []
     for m in _NAME_BIGRAM_RE.finditer(line):
