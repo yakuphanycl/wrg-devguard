@@ -1,5 +1,5 @@
-name: 'wrg-devguard'
-description: 'Scan a repo for leaked secrets and prompt-policy violations'
+name: 'WRG-DevGuard'
+description: 'Scan a repo for leaked secrets and prompt-policy violations (composite action).'
 author: 'yakuphanycl'
 
 branding:
@@ -11,41 +11,44 @@ inputs:
     description: 'Root path to scan'
     required: false
     default: '.'
+  fail-on:
+    description: 'Fail threshold: error | warn | none'
+    required: false
+    default: 'error'
+  format:
+    description: 'Report format: text | json | sarif'
+    required: false
+    default: 'text'
   profile:
     description: 'Policy profile: baseline or strict'
     required: false
     default: 'baseline'
-  fail-on:
-    description: 'Severity threshold to fail the job: warning or error'
-    required: false
-    default: 'error'
-  json-out:
-    description: 'Path for the JSON report artifact'
-    required: false
-    default: 'wrg-devguard-report.json'
   allowlist:
     description: 'Optional path to an allowlist JSON file'
     required: false
     default: ''
   python-version:
-    description: 'Python version to use when installing wrg-devguard'
+    description: 'Python version to install for the action runtime'
     required: false
-    default: '3.11'
+    default: '3.12'
   version:
-    description: 'wrg-devguard package version (pip spec). Empty = latest on PyPI.'
+    description: 'wrg-devguard pip version spec (e.g. "==0.1.1"). Empty = latest.'
     required: false
     default: ''
 
 outputs:
+  findings-count:
+    description: 'Total number of findings produced by the scan'
+    value: ${{ steps.scan.outputs.findings_count }}
   report-path:
-    description: 'Path to the JSON report file'
-    value: ${{ inputs.json-out }}
+    description: 'Path to the generated report file (json or sarif). Empty when format=text.'
+    value: ${{ steps.scan.outputs.report_path }}
 
 runs:
   using: 'composite'
   steps:
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ inputs.python-version }}
 
@@ -58,18 +61,87 @@ runs:
           pip install wrg-devguard
         fi
 
-    - name: Run wrg-devguard check
+    - name: Validate inputs
       shell: bash
       run: |
-        ARGS=(--path "${{ inputs.path }}" --profile "${{ inputs.profile }}" --fail-on "${{ inputs.fail-on }}" --json-out "${{ inputs.json-out }}")
-        if [ -n "${{ inputs.allowlist }}" ]; then
-          ARGS+=(--allowlist "${{ inputs.allowlist }}")
-        fi
-        wrg-devguard check "${ARGS[@]}"
+        case "${{ inputs.fail-on }}" in
+          error|warn|none) ;;
+          *) echo "::error::fail-on must be one of: error, warn, none (got '${{ inputs.fail-on }}')"; exit 2 ;;
+        esac
+        case "${{ inputs.format }}" in
+          text|json|sarif) ;;
+          *) echo "::error::format must be one of: text, json, sarif (got '${{ inputs.format }}')"; exit 2 ;;
+        esac
 
-    - name: Upload JSON report
-      if: always()
+    - name: Run wrg-devguard scan
+      id: scan
+      shell: bash
+      env:
+        WRG_PATH: ${{ inputs.path }}
+        WRG_FAIL_ON: ${{ inputs.fail-on }}
+        WRG_FORMAT: ${{ inputs.format }}
+        WRG_PROFILE: ${{ inputs.profile }}
+        WRG_ALLOWLIST: ${{ inputs.allowlist }}
+      run: |
+        set -u
+        # Always materialise an internal JSON so we can compute findings-count
+        # and convert to SARIF without a second tool invocation.
+        INTERNAL_JSON="$(mktemp -t wrg-devguard-internal.XXXXXX.json)"
+        ARGS=(check --path "$WRG_PATH" --profile "$WRG_PROFILE" --json-out "$INTERNAL_JSON")
+        if [ -n "$WRG_ALLOWLIST" ]; then
+          ARGS+=(--allowlist "$WRG_ALLOWLIST")
+        fi
+        case "$WRG_FAIL_ON" in
+          error) ARGS+=(--fail-on error) ;;
+          warn)  ARGS+=(--fail-on warning) ;;
+          none)  ARGS+=(--fail-on error) ;;  # exit code suppressed below
+        esac
+
+        set +e
+        wrg-devguard "${ARGS[@]}"
+        SCAN_RC=$?
+        set -e
+
+        # The CLI redacts findings from the on-disk JSON by design (it never
+        # persists matched secret text). The reliable signal is the exit code:
+        #   0 → no findings at-or-above threshold
+        #   1 → at least one finding at-or-above threshold
+        # Surface this via findings-count as 0 or 1 so downstream `if:` gates
+        # can react without parsing the (deliberately empty) JSON body.
+        if [ "$SCAN_RC" = "0" ]; then
+          FINDINGS_COUNT=0
+        else
+          FINDINGS_COUNT=1
+        fi
+        echo "findings_count=$FINDINGS_COUNT" >> "$GITHUB_OUTPUT"
+
+        # Materialise user-visible report based on format
+        REPORT_PATH=""
+        case "$WRG_FORMAT" in
+          text)
+            REPORT_PATH=""
+            ;;
+          json)
+            REPORT_PATH="wrg-devguard-report.json"
+            cp "$INTERNAL_JSON" "$REPORT_PATH"
+            ;;
+          sarif)
+            REPORT_PATH="wrg-devguard-report.sarif"
+            python "${GITHUB_ACTION_PATH}/scripts/json_to_sarif.py" \
+              --input "$INTERNAL_JSON" --output "$REPORT_PATH"
+            ;;
+        esac
+        echo "report_path=$REPORT_PATH" >> "$GITHUB_OUTPUT"
+
+        # fail-on=none always exits 0; otherwise propagate scanner exit code
+        if [ "$WRG_FAIL_ON" = "none" ]; then
+          exit 0
+        fi
+        exit "$SCAN_RC"
+
+    - name: Upload report
+      if: always() && steps.scan.outputs.report_path != ''
       uses: actions/upload-artifact@v7
       with:
         name: wrg-devguard-report
-        path: ${{ inputs.json-out }}
+        path: ${{ steps.scan.outputs.report_path }}

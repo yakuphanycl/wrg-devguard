@@ -70,15 +70,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Run composite action against own checkout
+        id: composite
         uses: ./
         with:
           path: .
           profile: baseline
           fail-on: error
-          json-out: composite-report.json
+          format: json
       - name: Upload report
-        if: always()
+        if: always() && steps.composite.outputs.report-path != ''
         uses: actions/upload-artifact@v7
         with:
           name: action-composite-report
-          path: composite-report.json
+          path: ${{ steps.composite.outputs.report-path }}

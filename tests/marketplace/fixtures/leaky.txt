@@ -1,0 +1,5 @@
+2026-04-26T10:00:01Z INFO  service started
+2026-04-26T10:00:02Z DEBUG loading credentials
+2026-04-26T10:00:03Z ERROR aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+2026-04-26T10:00:04Z DEBUG retry policy = baseline
+2026-04-26T10:00:05Z INFO  shutdown
