@@ -30,9 +30,9 @@ Severity from confidence:
   0.70 – 0.84 → LOW (NER fallback — emit with caution, easy to flip off
                      in policy)
 
-Test/fixture context (line contains `test_` / `fixture` / `sample`)
-downgrades to INFO + `fp_suppression="test_context"` — same convention as
-JWT-001 and EMAIL-001 example domains.
+Test/fixture context (line contains `test_` / `fixture` / sample-shaped
+path tokens) downgrades to INFO + `fp_suppression="test_context"` — same
+convention as JWT-001 and EMAIL-001 example domains.
 
 Implementation notes:
 
@@ -166,6 +166,10 @@ _DOCSTRING_PARAM_RE = re.compile(
 # URL substring detector for span-overlap checks.
 _URL_RE = re.compile(r"https?://\S+|[\w\-.]+@[\w\-.]+")
 
+# ``sample`` is common prose; only downgrade when it looks like a fixture
+# path/token (``sample_``, ``_sample``, ``samples/``).
+_IS_TEST_CONTEXT_RE = re.compile(r"(?:^|[/_])samples?(?:[/_]|$)")
+
 
 # ──────────────────────────────────────────────────────────────────────
 # Name-shape regex
@@ -211,12 +215,12 @@ _NAME_WORD = (
 # Bigram: First [Middle.] Last. Letter boundaries are explicit so we
 # don't bleed into surrounding identifiers.
 _NAME_BIGRAM_RE = re.compile(
-    rf"(?<![\w'’])"
+    rf"(?<![\w’])"
     rf"({_NAME_WORD})"
     rf"(?:\s+([{_UPPER_LATIN_CLS}])\.)?"
     rf"\s+"
     rf"({_NAME_WORD})"
-    rf"(?![\w'’])"
+    rf"(?![\w’])"
 )
 
 
@@ -279,7 +283,7 @@ def _looks_like_code_line(line: str) -> bool:
 
 def _is_test_context(line: str) -> bool:
     low = line.lower()
-    return ("test_" in low) or ("fixture" in low) or ("sample" in low)
+    return ("test_" in low) or ("fixture" in low) or bool(_IS_TEST_CONTEXT_RE.search(low))
 
 
 def _is_curated(word: str) -> bool:
