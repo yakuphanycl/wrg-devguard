@@ -313,21 +313,23 @@ def test_run_scan_logs_source_ci_dispatches_github_actions_events(tmp_path, vali
     assert "plain runner line" not in seen[0]
 
 
-def test_run_scan_logs_source_cc_endpoint_warns_and_falls_back(tmp_path, validator) -> None:
+def test_run_scan_logs_source_cc_endpoint_dispatches_jsonl_events(tmp_path, validator) -> None:
     log = tmp_path / "cc-endpoint.log"
-    log.write_bytes(b"raw cc endpoint payload admin@example.com\n")
+    log.write_bytes(
+        b'{"ts":"2026-04-26T12:00:00Z","level":"info","step":"login",'
+        b'"msg":"raw cc endpoint payload admin@example.com","user_id":"<redacted>"}\n'
+    )
     seen: list[str] = []
 
-    with pytest.warns(RuntimeWarning, match="cc-endpoint adapter not yet implemented"):
-        r = run_scan_logs(
-            path=str(log),
-            source="cc-endpoint",
-            detector=_capturing_detector(seen),
-        )
+    r = run_scan_logs(
+        path=str(log),
+        source="cc-endpoint",
+        detector=_capturing_detector(seen),
+    )
 
     validator.validate(r)
     assert r["source"] == "cc-endpoint"
-    assert seen == ["raw cc endpoint payload admin@example.com\n"]
+    assert seen == ["raw cc endpoint payload admin@example.com"]
 
 
 def test_run_scan_logs_source_manual_keeps_raw_text(tmp_path, validator) -> None:

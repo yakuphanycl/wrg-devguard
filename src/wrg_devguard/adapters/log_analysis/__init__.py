@@ -11,14 +11,22 @@ from .ci_github_actions import (
     analyze_github_actions_log,
     iter_github_actions_events,
 )
+from .cc_endpoint import (
+    CcEndpointLogAdapter,
+    analyze_cc_endpoint_log,
+    iter_cc_endpoint_events,
+)
 
 __all__ = [
+    "CcEndpointLogAdapter",
     "GitHubActionsLogAdapter",
     "LogAnalysisAdapter",
     "SystemdDeploymentLogAdapter",
+    "analyze_cc_endpoint_log",
     "analyze_github_actions_log",
     "analyze_systemd_deploy_log",
     "envelope",
+    "iter_cc_endpoint_events",
     "iter_clean_lines",
     "iter_github_actions_events",
     "iter_systemd_deploy_events",
