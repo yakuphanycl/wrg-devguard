@@ -137,6 +137,34 @@ wrg-devguard bandit --path src/                 # optional: bandit wrapper
 - `1` — findings at or above `--fail-on` threshold
 - `2` — configuration or input error
 
+## Output schema
+
+The forthcoming `scan-logs` subcommand (v0.2.0) emits a frozen JSON contract
+documented at [`schemas/log_scan_result.schema.json`](schemas/log_scan_result.schema.json).
+
+Consumers (the GitHub Action, the Control Center log viewer, future CI
+integrations) parse against this schema. Highlights:
+
+- `schema_version`: `"1"` (frozen for the v0.2.0 line).
+- `source`: one of `manual`, `ci`, `cc-endpoint`. v0.2.0 ships `manual` only.
+- `findings[].pattern_id`: stable `<NAMESPACE>-<NNN>` identifiers (`AWS-001`,
+  `EMAIL-001`, etc.). Patterns are versioned by ID — superseded patterns get
+  a new ID, never reuse.
+- `findings[].redacted_excerpt`: producers MUST middle-mask the matched value.
+  Raw secrets never appear in the output.
+- Categories and severities are open-enum-friendly: consumers should accept
+  unknown values gracefully (treat as a generic finding) so v0.3.0 additions
+  don't break v0.2.0 readers.
+
+Validation tests live at `tests/schemas/test_log_scan_result_schema.py`
+(28 cases covering self-validation, fixture acceptance, and malformed-payload
+rejection). To run them locally:
+
+```bash
+pip install -e ".[dev]"
+pytest tests/schemas/ -v
+```
+
 ## Why another secret scanner?
 
 - **Zero runtime deps** — the core scanner is stdlib only, so `pip install` is

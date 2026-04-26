@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yakuphanycl/wrg-devguard/blob/main/schemas/log_scan_result.schema.json",
+  "title": "LogScanResult",
+  "description": "Output contract of `wrg-devguard scan-logs` (v0.2.0+). Frozen — adapters and consumers (CC log_viewer, CI integrations) rely on this shape. Additive-only changes via $defs; breaking changes require a major bump in tool_version.",
+  "type": "object",
+  "required": ["schema_version", "tool_version", "scanned_at", "source", "input", "findings", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1",
+      "description": "Frozen at 1 for the v0.2.0 line. Bump to 2 only on breaking change."
+    },
+    "tool_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:[-+][\\w.]+)?$",
+      "description": "Semver of wrg-devguard that produced this report (e.g., \"0.2.0\")."
+    },
+    "scanned_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp when the scan was performed."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["manual", "ci", "cc-endpoint"],
+      "description": "Where the input came from. v0.2.0 supports `manual` only; `ci` and `cc-endpoint` reserved for v0.3.0."
+    },
+    "input": {
+      "type": "object",
+      "required": ["path", "size_bytes", "lines"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Absolute or relative path of the scanned file. Empty string allowed when input was piped via stdin (path is then \"<stdin>\")."
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total bytes read from the input."
+        },
+        "lines": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total newline-terminated lines scanned. A trailing partial line counts as 1."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "Optional SHA-256 of the input bytes. Useful for de-duplication across re-scans."
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Finding" },
+      "description": "Per-finding records. Order: ascending by (line_no, span[0]). Empty array means a clean scan."
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total", "by_severity", "by_category"],
+      "additionalProperties": false,
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Equal to len(findings)."
+        },
+        "by_severity": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "high":   { "type": "integer", "minimum": 0 },
+            "medium": { "type": "integer", "minimum": 0 },
+            "low":    { "type": "integer", "minimum": 0 },
+            "info":   { "type": "integer", "minimum": 0 }
+          },
+          "description": "Counts per severity. Keys with zero may be omitted."
+        },
+        "by_category": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 },
+          "description": "Counts per category (open enum, mirrors Finding.category)."
+        },
+        "runtime_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional wall-clock runtime of the scan, in milliseconds."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "Severity": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "info"],
+      "description": "Default severity. UI consumers (e.g., CC log_viewer) decide presentation. `--strict` mode in the CLI may promote `info` → `low` for exit-code purposes; the JSON itself records the unpromoted severity."
+    },
+    "Category": {
+      "type": "string",
+      "enum": [
+        "secret",
+        "pii_email",
+        "pii_phone",
+        "pii_ssn",
+        "pii_ip",
+        "pii_card"
+      ],
+      "description": "Open enum. Future v0.3.0 may add more — consumers must accept unknown values gracefully (treat as a generic finding, do not crash)."
+    },
+    "Finding": {
+      "type": "object",
+      "required": ["pattern_id", "category", "severity", "line_no", "span", "redacted_excerpt", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "pattern_id": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9]*-[0-9]{3}$",
+          "description": "Stable identifier of the pattern that matched. Format: `<NAMESPACE>-<NNN>`. Examples: `AWS-001`, `EMAIL-001`, `JWT-001`. Never reused across pattern revisions; superseded patterns get a new ID."
+        },
+        "category": { "$ref": "#/$defs/Category" },
+        "severity": { "$ref": "#/$defs/Severity" },
+        "line_no": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "1-based line number in the input. Multi-line matches use the line of span[0]."
+        },
+        "span": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[start, end) character offsets within the line. Half-open interval, like Python slicing."
+        },
+        "redacted_excerpt": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Middle-masked match. Producers MUST redact: keep ≤6 leading and ≤6 trailing characters of the matched span; replace the middle with `*` (>=4 stars). Never emit the raw value. CC log_viewer renders this verbatim."
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300,
+          "description": "Short human explanation of why this matched. Used in CC log_viewer's row-expand. Avoid quoting the raw value."
+        },
+        "fp_suppression": {
+          "type": "string",
+          "description": "Optional. If the producer downgraded severity due to a known false-positive heuristic (e.g., RFC-1918 IP, test-file path, example.com email), name the rule here. Empty/absent means no suppression applied."
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "schema_version": "1",
+      "tool_version": "0.2.0",
+      "scanned_at": "2026-04-26T12:00:00Z",
+      "source": "manual",
+      "input": {
+        "path": "logs/build.log",
+        "size_bytes": 24500,
+        "lines": 412
+      },
+      "findings": [
+        {
+          "pattern_id": "AWS-001",
+          "category": "secret",
+          "severity": "high",
+          "line_no": 87,
+          "span": [12, 32],
+          "redacted_excerpt": "AKIA****EYID",
+          "rationale": "AWS access key ID format match (AKIA prefix + 16 uppercase alphanumerics)."
+        },
+        {
+          "pattern_id": "IP-001",
+          "category": "pii_ip",
+          "severity": "info",
+          "line_no": 134,
+          "span": [4, 17],
+          "redacted_excerpt": "192.168.***.10",
+          "rationale": "IPv4 address.",
+          "fp_suppression": "rfc1918_private_range"
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "by_severity": { "high": 1, "info": 1 },
+        "by_category": { "secret": 1, "pii_ip": 1 },
+        "runtime_ms": 38
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "tool_version": "0.2.0",
+  "scanned_at": "2026-04-26T12:01:30.500Z",
+  "source": "manual",
+  "input": {
+    "path": "logs/build.log",
+    "size_bytes": 24500,
+    "lines": 412,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "findings": [
+    {
+      "pattern_id": "AWS-001",
+      "category": "secret",
+      "severity": "high",
+      "line_no": 87,
+      "span": [12, 32],
+      "redacted_excerpt": "AKIA****EYID",
+      "rationale": "AWS access key ID format match (AKIA prefix + 16 uppercase alphanumerics)."
+    },
+    {
+      "pattern_id": "EMAIL-001",
+      "category": "pii_email",
+      "severity": "medium",
+      "line_no": 102,
+      "span": [0, 24],
+      "redacted_excerpt": "u***@company.example",
+      "rationale": "RFC-5322 simplified email pattern."
+    },
+    {
+      "pattern_id": "IP-001",
+      "category": "pii_ip",
+      "severity": "info",
+      "line_no": 134,
+      "span": [4, 17],
+      "redacted_excerpt": "192.168.***.10",
+      "rationale": "IPv4 address.",
+      "fp_suppression": "rfc1918_private_range"
+    },
+    {
+      "pattern_id": "JWT-001",
+      "category": "secret",
+      "severity": "high",
+      "line_no": 207,
+      "span": [22, 188],
+      "redacted_excerpt": "eyJhb****1QssW",
+      "rationale": "JWT triplet format match."
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "by_severity": { "high": 2, "medium": 1, "info": 1 },
+    "by_category": { "secret": 2, "pii_email": 1, "pii_ip": 1 },
+    "runtime_ms": 38
+  }
+}
