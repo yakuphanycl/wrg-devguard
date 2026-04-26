@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wrg-devguard"
-version = "0.2.0"
+version = "0.2.1"
 description = "Developer-first AI safety checks: prompt-policy lint, secret scanning, and log scanning with PII detection. Zero-dep CLI + GitHub Action + Claude Skill + Cursor Rule."
 readme = "README.md"
 license = "MIT"

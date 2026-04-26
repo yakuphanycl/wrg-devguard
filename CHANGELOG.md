@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1] — 2026-04-27
+
+### Fixed — IP-002 false-positive class on CI logs
+
+Patch release addressing two FP classes for the v0.2.0 IP-002 (IPv6)
+detector surfaced by real-CI dogfood (PR #27, run IDs `24966427106`
+and `24966008833`, total 10/10 IP-002 hits = 100% FP).
+
+- **Timestamp shape rejection** (`_is_timestamp_shape`): IPv6 candidates
+  with ≥3 colon-separated groups, every group ≤2 chars and all-decimal,
+  are now rejected. Real IPv6 needs `::` to compress, so a sequence of
+  3+ short decimal groups separated by single `:` is a clock value
+  (`0:00:00`, `12:30:45`, `1:23:45`), not an address. Group-count
+  threshold preserves loopback `::1` and `::ffff:` shapes.
+  - **Eliminates** the 4/10 FP class observed in real CI logs of the
+    `MB 24.4 MB/s  0:00:00` shape.
+- **GitHub Actions workflow command guard**
+  (`_GH_ANNOTATION_PREFIX_RE`): lines opening with `::error::`,
+  `::warning::`, `::group::`, `::debug::`, `::set-output`,
+  `::add-mask`, `::endgroup::`, etc. (the documented GitHub Actions
+  workflow commands) skip IPv6 detection entirely. The leading `::` +
+  single hex-shaped char (e.g. the `e` in `error`) satisfies the IPv6
+  regex's third alt-branch, producing the bulk of the FP class.
+  - **Eliminates** the 6/10 FP class observed in real CI logs of the
+    `::error::fail-on must be one of ...` shape.
+
+### Tests
+
+15 new cases in `tests/test_pii_patterns.py`:
+- `test_ip_002_rejects_timestamp_shape` — 6 parametrized
+  HH:MM:SS shapes (`0:00:00`, `1:23:45`, `10:20:30`, etc.)
+- `test_ip_002_rejects_gh_annotation_prefix` — 9 parametrized GH
+  Actions workflow commands
+- `test_ip_002_real_ipv6_after_annotation_keyword_in_prose` — sanity:
+  prose containing the substring `error` doesn't trigger the guard
+- `test_ip_002_real_ipv6_alongside_timestamp_on_same_line` — sanity:
+  per-candidate guard preserves real IPv6 next to a timestamp
+- `test_ip_002_short_loopback_not_timestamp_shape` — guard
+  threshold (`::1`, single-group, must keep flagging)
+
+All v0.2.0 IP-002 positive tests still pass verbatim. No schema or
+public-API change — the contract `schemas/log_scan_result.schema.json`
+remains v1, no `pattern_id` change.
+
+### Notes
+
+- This is a **pure FP-fix patch** — nothing additive. v0.3.0 work
+  proceeds in parallel; this patch can ship immediately on the v0.2.x
+  line.
+- IP-002 severity (MEDIUM) and category (`pii_ip`) unchanged.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection
