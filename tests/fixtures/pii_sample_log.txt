@@ -1,0 +1,29 @@
+2026-04-26T08:00:01Z INFO  service starting up
+2026-04-26T08:00:01Z DEBUG config load from /etc/app/config.yml
+2026-04-26T08:00:02Z INFO  binding 0.0.0.0:8080
+2026-04-26T08:00:03Z DEBUG aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+2026-04-26T08:00:03Z DEBUG aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+2026-04-26T08:00:04Z INFO  registered handler /api/v1
+2026-04-26T08:00:05Z DEBUG token=ghp_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2026-04-26T08:00:06Z DEBUG bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0In0.SflKxwRJSMeKKF2QT4
+2026-04-26T08:00:07Z INFO  anthropic key sk-ant-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2026-04-26T08:00:08Z INFO  openai key sk-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2026-04-26T08:00:09Z DEBUG container ip 10.0.0.5
+2026-04-26T08:00:10Z DEBUG client ip 203.0.113.42
+2026-04-26T08:00:11Z DEBUG client ip6 2001:db8::1
+2026-04-26T08:00:12Z INFO  user signup admin@acmecorp.com from 198.51.100.7
+2026-04-26T08:00:13Z INFO  user signup demo@example.com from 127.0.0.1
+2026-04-26T08:00:14Z INFO  contact phone 5321234567
+2026-04-26T08:00:15Z INFO  contact phone +905321234567
+2026-04-26T08:00:16Z INFO  alt contact (415) 555-2671
+2026-04-26T08:00:17Z INFO  alt contact 415.555.2671
+2026-04-26T08:00:18Z INFO  ssn 123-45-6789
+2026-04-26T08:00:19Z INFO  cc test 4532015112830366
+2026-04-26T08:00:20Z INFO  cc placeholder 0000000000000000
+2026-04-26T08:00:21Z DEBUG bandwidth 100.50.20.30 utilization 0.42
+2026-04-26T08:00:22Z DEBUG cluster fe80::1234:5678:9abc:def0
+2026-04-26T08:00:23Z INFO  test_payload eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0In0.SflKxwRJSMeKKF2QT4
+2026-04-26T08:00:24Z DEBUG noise mac 00:11:22:33:44:55
+2026-04-26T08:00:25Z DEBUG sha1 da39a3ee5e6b4b0d3255bfef95601890afd80709
+2026-04-26T08:00:26Z INFO  cleanup ok
+2026-04-26T08:00:27Z INFO  shutdown
