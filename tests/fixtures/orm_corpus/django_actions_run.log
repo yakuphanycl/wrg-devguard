@@ -1,0 +1,905 @@
+# === SETUP + EARLY TESTS (first 500 lines) ===
+Windows, SQLite, Python 3.14	Set up job	﻿2026-04-26T21:52:29.9735763Z Current runner version: '2.333.1'
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9792845Z ##[group]Runner Image Provisioner
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9793667Z Hosted Compute Agent
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9794201Z Version: 20260213.493
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9794706Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9795356Z Build Date: 2026-02-13T00:28:41Z
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9795907Z Worker ID: {010a2f56-2e77-48a3-b85c-89e2b2c8514b}
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9796554Z Azure Region: westus
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9797009Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9798389Z ##[group]Operating System
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9798970Z Microsoft Windows Server 2025
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9799451Z 10.0.26100
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9799874Z Datacenter
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9800254Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9800724Z ##[group]Runner Image
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9801179Z Image: windows-2025
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9801654Z Version: 20260413.84.1
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9802541Z Included Software: https://github.com/actions/runner-images/blob/win25/20260413.84/images/windows/Windows2025-Readme.md
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9804351Z Image Release: https://github.com/actions/runner-images/releases/tag/win25%2F20260413.84
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9805469Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9807219Z ##[group]GITHUB_TOKEN Permissions
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9809042Z Contents: read
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9809552Z Metadata: read
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9810047Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9812066Z Secret source: None
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:29.9812704Z Prepare workflow directory
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:30.0161515Z Prepare all required actions
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:30.0217063Z Getting action download info
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:30.4473445Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:30.5939670Z Download action repository 'actions/setup-python@v6' (SHA:a309ff8b426b58ec0e2a45f0f869d46889d02405)
+Windows, SQLite, Python 3.14	Set up job	2026-04-26T21:52:30.9044326Z Complete job name: Windows, SQLite, Python 3.14
+Windows, SQLite, Python 3.14	Checkout	﻿2026-04-26T21:52:31.0831978Z ##[group]Run actions/checkout@v6
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0833096Z with:
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0833509Z   persist-credentials: false
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0834521Z   repository: django/django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0835384Z   token: ***
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0835846Z   ssh-strict: true
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0836320Z   ssh-user: git
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0836772Z   clean: true
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0837430Z   sparse-checkout-cone-mode: true
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0838336Z   fetch-depth: 1
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0838827Z   fetch-tags: false
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0839337Z   show-progress: true
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0839868Z   lfs: false
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0841114Z   submodules: false
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0841670Z   set-safe-directory: true
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.0842705Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.2467276Z Syncing repository: django/django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.2470318Z ##[group]Getting Git version info
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.2471371Z Working directory is 'D:\a\django\django'
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.3575574Z [command]"C:\Program Files\Git\bin\git.exe" version
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.8225711Z git version 2.53.0.windows.2
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.8275748Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.8297427Z Temporarily overriding HOME='D:\a\_temp\74821009-ab6b-4bd3-8944-fb5c47093a34' before making global git config changes
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.8300360Z Adding repository directory to the temporary git global config as a safe directory
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.8309242Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\django\django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.9009050Z Deleting the contents of 'D:\a\django\django'
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.9015513Z ##[group]Initializing the repository
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:31.9024164Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\django\django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.0072252Z Initialized empty Git repository in D:/a/django/django/.git/
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.0120275Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/django/django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.0722034Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.0723451Z ##[group]Disabling automatic garbage collection
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.0732902Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.1032767Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.1034411Z ##[group]Setting up auth
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.1035371Z Removing SSH command configuration
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.1046045Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:32.1355047Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:33.8828393Z Removing HTTP extra header
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:33.8846976Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:33.9170283Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:34.4868085Z Removing includeIf entries pointing to credentials config files
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:34.4882063Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:34.5203841Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.1031677Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.1381121Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/django/django/.git.path D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.1729242Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/django/django/.git/worktrees/*.path D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.2127354Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.2447195Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.2788170Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.2788841Z ##[group]Fetching the repository
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:35.2804537Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +66c305a0786c3748a298923b71eb13a40bbe8d79:refs/remotes/pull/21169/merge
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2286529Z From https://github.com/django/django
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2287493Z  * [new ref]         66c305a0786c3748a298923b71eb13a40bbe8d79 -> pull/21169/merge
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2781997Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2782698Z ##[group]Determining the checkout info
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2783499Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.2794883Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.3271973Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.3579579Z ##[group]Checking out the ref
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:37.3588308Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/21169/merge
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.4336890Z Updating files:  45% (3207/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.4523368Z Updating files:  46% (3238/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.4732986Z Updating files:  47% (3308/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.4954270Z Updating files:  48% (3379/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.5137273Z Updating files:  49% (3449/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.5307029Z Updating files:  50% (3519/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.5493569Z Updating files:  51% (3590/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.5682499Z Updating files:  52% (3660/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.5920563Z Updating files:  53% (3731/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.6160134Z Updating files:  54% (3801/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.6390734Z Updating files:  55% (3871/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.6635292Z Updating files:  56% (3942/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.6793876Z Updating files:  57% (4012/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.6966147Z Updating files:  58% (4083/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.7112445Z Updating files:  59% (4153/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.8998948Z Updating files:  60% (4223/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.9143910Z Updating files:  61% (4294/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.9371637Z Updating files:  62% (4364/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.9568579Z Updating files:  63% (4434/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.9733675Z Updating files:  64% (4505/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:38.9937110Z Updating files:  65% (4575/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0106423Z Updating files:  66% (4646/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0280778Z Updating files:  67% (4716/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0451014Z Updating files:  68% (4786/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0622672Z Updating files:  69% (4857/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0777437Z Updating files:  70% (4927/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.0967221Z Updating files:  71% (4997/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.1168247Z Updating files:  72% (5068/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.1326532Z Updating files:  73% (5138/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.1506107Z Updating files:  74% (5209/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.1680254Z Updating files:  75% (5279/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.1875866Z Updating files:  76% (5349/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2056270Z Updating files:  77% (5420/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2269390Z Updating files:  78% (5490/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2446797Z Updating files:  79% (5561/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2626645Z Updating files:  80% (5631/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2789738Z Updating files:  81% (5701/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.2937282Z Updating files:  82% (5772/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.3406479Z Updating files:  83% (5842/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.3582048Z Updating files:  84% (5912/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.3751785Z Updating files:  85% (5983/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.3936302Z Updating files:  86% (6053/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4113451Z Updating files:  87% (6124/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4272779Z Updating files:  88% (6194/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4291691Z Updating files:  88% (6256/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4477937Z Updating files:  89% (6264/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4635372Z Updating files:  90% (6335/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4811923Z Updating files:  91% (6405/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.4970693Z Updating files:  92% (6475/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5134707Z Updating files:  93% (6546/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5294620Z Updating files:  94% (6616/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5457453Z Updating files:  95% (6687/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5616856Z Updating files:  96% (6757/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5767527Z Updating files:  97% (6827/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.5942199Z Updating files:  98% (6898/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6129698Z Updating files:  99% (6968/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6133536Z Updating files: 100% (7038/7038)
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6133975Z Updating files: 100% (7038/7038), done.
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6343237Z Note: switching to 'refs/remotes/pull/21169/merge'.
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6343633Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6343963Z You are in 'detached HEAD' state. You can look around, make experimental
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6344760Z changes and commit them, and you can discard any commits you make in this
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6345776Z state without impacting any branches by switching back to a branch.
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6346201Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6346455Z If you want to create a new branch to retain commits you create, you may
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6346991Z do so (now or later) by using -c with the switch command. Example:
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6347234Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6347325Z   git switch -c <new-branch-name>
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348011Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348096Z Or undo this operation with:
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348246Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348313Z   git switch -
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348416Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348602Z Turn off this advice by setting config variable advice.detachedHead to false
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6348964Z 
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6356214Z HEAD is now at 66c305a Merge c5a43c4baa829d1ed55412937054a833f5e71678 into 017d7f6f12e597e6179de7ffdf330a52c2b22053
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.6548945Z ##[endgroup]
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7197945Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7482061Z 66c305a0786c3748a298923b71eb13a40bbe8d79
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7526651Z ##[group]Removing auth
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7527077Z Removing SSH command configuration
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7536032Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:39.7848673Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.3493845Z Removing HTTP extra header
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.3503269Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.3820560Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9405647Z Removing includeIf entries pointing to credentials config files
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9413517Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9683309Z includeif.gitdir:D:/a/django/django/.git.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9683991Z includeif.gitdir:D:/a/django/django/.git/worktrees/*.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9684768Z includeif.gitdir:/github/workspace/.git.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9685184Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9724694Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/django/django/.git.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:40.9994229Z D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.0038258Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/django/django/.git.path D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.0347386Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/django/django/.git/worktrees/*.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.0616350Z D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.0664227Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/django/django/.git/worktrees/*.path D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.0976297Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.1252526Z /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.1301863Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.1621337Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.1894608Z /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.1939119Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.2254300Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.7839134Z Removing credentials config 'D:\a\_temp\git-credentials-1a798ba4-90b8-433a-a2d0-80b6d42d0202.config'
+Windows, SQLite, Python 3.14	Checkout	2026-04-26T21:52:41.7852050Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up Python	﻿2026-04-26T21:52:41.8282200Z ##[group]Run actions/setup-python@v6
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8282585Z with:
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8282780Z   python-version: 3.14
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8283009Z   cache: pip
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8283264Z   cache-dependency-path: tests/requirements/py3.txt
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8283648Z   check-latest: false
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8284033Z   token: ***
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8284243Z   update-environment: true
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8284503Z   allow-prereleases: false
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8284749Z   freethreaded: false
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.8284963Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:41.9830343Z ##[group]Installed versions
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:42.0124745Z Successfully set up CPython (3.14.4)
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:42.0125325Z ##[endgroup]
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:47.0438771Z Cache hit for: setup-python-Windows-x64-python-3.14.4-pip-1d28f02cee6948315884700ce5c849dc172a45af6fe1d81d532d8b29349b083b
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:48.3822030Z Received 20971520 of 40793373 (51.4%), 20.0 MBs/sec
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:48.8985825Z Received 40793373 of 40793373 (100.0%), 25.6 MBs/sec
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:48.8990359Z Cache Size: ~39 MB (40793373 B)
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:52:48.9106258Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/11c15c29-d4b5-477e-8ed5-971e76d18877/cache.tzst -P -C D:/a/django/django --force-local --use-compress-program "zstd -d"
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:53:01.1119490Z Cache restored successfully
+Windows, SQLite, Python 3.14	Set up Python	2026-04-26T21:53:01.1161266Z Cache restored from key: setup-python-Windows-x64-python-3.14.4-pip-1d28f02cee6948315884700ce5c849dc172a45af6fe1d81d532d8b29349b083b
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	﻿2026-04-26T21:53:01.1473471Z ##[group]Run python -m pip install --upgrade pip wheel
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:01.1474222Z [36;1mpython -m pip install --upgrade pip wheel[0m
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2516760Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2517337Z env:
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2517626Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2518094Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.4\x64/lib/pkgconfig
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2518539Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2518936Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2519352Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:02.2519659Z ##[endgroup]
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:28.7822755Z Requirement already satisfied: pip in C:\hostedtoolcache\windows\Python\3.14.4\x64\Lib\site-packages (26.0.1)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:29.4338425Z Collecting pip
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:30.8445823Z   Downloading pip-26.1-py3-none-any.whl.metadata (4.6 kB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:30.9141146Z Collecting wheel
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:30.9184558Z   Downloading wheel-0.47.0-py3-none-any.whl.metadata (2.3 kB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.0111518Z Collecting packaging>=24.0 (from wheel)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.0201679Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.0816890Z Downloading pip-26.1-py3-none-any.whl (1.8 MB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.2697049Z    ---------------------------------------- 1.8/1.8 MB 28.7 MB/s  0:00:00
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.2737494Z Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.3464384Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.4511182Z Installing collected packages: pip, packaging, wheel
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.4518823Z   Attempting uninstall: pip
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.4548546Z     Found existing installation: pip 26.0.1
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.5824232Z     Uninstalling pip-26.0.1:
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:31.6060101Z       Successfully uninstalled pip-26.0.1
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:34.3360240Z 
+Windows, SQLite, Python 3.14	Install and upgrade packaging tools	2026-04-26T21:53:34.3373871Z Successfully installed packaging-26.2 pip-26.1 wheel-0.47.0
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	﻿2026-04-26T21:53:35.7646354Z ##[group]Run python -m pip install -r tests/requirements/py3.txt -e .
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7646991Z [36;1mpython -m pip install -r tests/requirements/py3.txt -e .[0m
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7706302Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7706651Z env:
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7706916Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7707403Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.4\x64/lib/pkgconfig
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7707824Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7708212Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7708594Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:35.7708894Z ##[endgroup]
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:37.2897181Z Obtaining file:///D:/a/django/django
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:37.2933398Z   Installing build dependencies: started
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:40.5312875Z   Installing build dependencies: finished with status 'done'
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:40.5330068Z   Checking if build backend supports build_editable: started
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:41.1047535Z   Checking if build backend supports build_editable: finished with status 'done'
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:41.1071998Z   Getting requirements to build editable: started
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:42.9614619Z   Getting requirements to build editable: finished with status 'done'
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:42.9645414Z   Preparing editable metadata (pyproject.toml): started
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.4446667Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.4512141Z Ignoring pylibmc: markers 'sys_platform != "win32"' don't match your environment
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.4514401Z Ignoring pywatchman: markers 'sys_platform != "win32"' don't match your environment
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.4540804Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7450596Z Collecting aiosmtpd>=1.4.5 (from -r tests/requirements/py3.txt (line 1))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7475553Z   Using cached aiosmtpd-1.4.6-py3-none-any.whl.metadata (6.6 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7527168Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7840636Z Collecting asgiref>=3.9.1 (from -r tests/requirements/py3.txt (line 2))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7863497Z   Using cached asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.7919216Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.8483726Z Collecting argon2-cffi>=23.1.0 (from -r tests/requirements/py3.txt (line 3))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.8506909Z   Using cached argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.8556374Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.9710272Z Collecting bcrypt>=4.1.1 (from -r tests/requirements/py3.txt (line 4))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.9734601Z   Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:44.9789436Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.0743985Z Collecting black>=26.1.0 (from -r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.0770149Z   Using cached black-26.3.1-cp314-cp314-win_amd64.whl.metadata (91 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.0903951Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1153085Z Collecting docutils>=0.22 (from -r tests/requirements/py3.txt (line 6))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1176750Z   Using cached docutils-0.22.4-py3-none-any.whl.metadata (15 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1240192Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1480055Z Collecting geoip2>=4.8.0 (from -r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1503050Z   Using cached geoip2-5.2.0-py3-none-any.whl.metadata (19 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1566808Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1821418Z Collecting jinja2>=2.11.0 (from -r tests/requirements/py3.txt (line 8))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1844371Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.1892740Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.3787660Z Collecting numpy>=1.26.0 (from -r tests/requirements/py3.txt (line 9))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.3811804Z   Using cached numpy-2.4.4-cp314-cp314-win_amd64.whl.metadata (6.6 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.3867795Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.5660073Z Collecting Pillow>=10.1.0 (from -r tests/requirements/py3.txt (line 10))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.5685366Z   Using cached pillow-12.2.0-cp314-cp314-win_amd64.whl.metadata (9.0 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.5772429Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6022270Z Collecting pymemcache>=3.4.0 (from -r tests/requirements/py3.txt (line 13))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6050063Z   Using cached pymemcache-4.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6119772Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6562691Z Collecting PyYAML>=6.0.2 (from -r tests/requirements/py3.txt (line 15))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6587592Z   Using cached pyyaml-6.0.3-cp314-cp314-win_amd64.whl.metadata (2.4 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.6638011Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7256770Z Collecting redis>=5.1.0 (from -r tests/requirements/py3.txt (line 16))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7280280Z   Using cached redis-7.4.0-py3-none-any.whl.metadata (12 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7343066Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7685221Z Collecting selenium>=4.23.0 (from -r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7707927Z   Using cached selenium-4.43.0-py3-none-any.whl.metadata (7.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.7759833Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8070826Z Collecting sqlparse>=0.5.0 (from -r tests/requirements/py3.txt (line 18))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8093031Z   Using cached sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8142400Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8353023Z Collecting tblib>=3.0.0 (from -r tests/requirements/py3.txt (line 19))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8374464Z   Using cached tblib-3.2.2-py3-none-any.whl.metadata (27 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8441616Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:45.8753857Z Collecting tzdata (from -r tests/requirements/py3.txt (line 20))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1169429Z   Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1360585Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1604858Z Collecting colorama>=0.4.6 (from -r tests/requirements/py3.txt (line 21))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1628043Z   Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1696447Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1917087Z Collecting atpublic (from aiosmtpd>=1.4.5->-r tests/requirements/py3.txt (line 1))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1941177Z   Using cached atpublic-7.0.0-py3-none-any.whl.metadata (2.0 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.1988949Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2250299Z Collecting attrs (from aiosmtpd>=1.4.5->-r tests/requirements/py3.txt (line 1))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2298908Z   Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2358578Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2601956Z Collecting argon2-cffi-bindings (from argon2-cffi>=23.1.0->-r tests/requirements/py3.txt (line 3))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2625570Z   Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-win_amd64.whl.metadata (7.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2686272Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2948770Z Collecting click>=8.0.0 (from black>=26.1.0->-r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.2991306Z   Downloading click-8.3.3-py3-none-any.whl.metadata (2.6 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3181508Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3396525Z Collecting mypy-extensions>=0.4.3 (from black>=26.1.0->-r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3420384Z   Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3462632Z Requirement already satisfied: packaging>=22.0 in C:\hostedtoolcache\windows\Python\3.14.4\x64\Lib\site-packages (from black>=26.1.0->-r tests/requirements/py3.txt (line 5)) (26.2)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3479788Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3717451Z Collecting pathspec>=1.0.0 (from black>=26.1.0->-r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3765686Z   Downloading pathspec-1.1.0-py3-none-any.whl.metadata (14 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.3999177Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4266524Z Collecting platformdirs>=2 (from black>=26.1.0->-r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4288965Z   Using cached platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4337081Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4560907Z Collecting pytokens~=0.4.0 (from black>=26.1.0->-r tests/requirements/py3.txt (line 5))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4584561Z   Using cached pytokens-0.4.1-cp314-cp314-win_amd64.whl.metadata (3.9 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.4651897Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.9299776Z Collecting aiohttp<4.0.0,>=3.6.2 (from geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.9323603Z   Using cached aiohttp-3.13.5-cp314-cp314-win_amd64.whl.metadata (8.4 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:46.9398081Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0014671Z Collecting maxminddb<4.0.0,>=3.0.0 (from geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0040291Z   Using cached maxminddb-3.1.1-cp314-cp314-win_amd64.whl.metadata (5.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0091254Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0426590Z Collecting requests<3.0.0,>=2.24.0 (from geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0452147Z   Using cached requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0511610Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0801816Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0825037Z   Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.0872613Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1049309Z Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1071788Z   Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1133112Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1849063Z Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1875341Z   Using cached frozenlist-1.8.0-cp314-cp314-win_amd64.whl.metadata (21 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.1942632Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4139113Z Collecting multidict<7.0,>=4.5 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4163691Z   Using cached multidict-6.7.1-cp314-cp314-win_amd64.whl.metadata (5.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4214609Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4814536Z Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4838127Z   Using cached propcache-0.4.1-cp314-cp314-win_amd64.whl.metadata (14 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.4899613Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.7363849Z Collecting yarl<2.0,>=1.17.0 (from aiohttp<4.0.0,>=3.6.2->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.7387734Z   Using cached yarl-1.23.0-cp314-cp314-win_amd64.whl.metadata (82 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.7515337Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.8498722Z Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.24.0->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.8523248Z   Using cached charset_normalizer-3.4.7-cp314-cp314-win_amd64.whl.metadata (41 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.8598360Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.8812793Z Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.24.0->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.8856770Z   Downloading idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9041179Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9359925Z Collecting urllib3<3,>=1.26 (from requests<3.0.0,>=2.24.0->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9383107Z   Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9438085Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9713637Z Collecting certifi>=2023.5.7 (from requests<3.0.0,>=2.24.0->geoip2>=4.8.0->-r tests/requirements/py3.txt (line 7))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:47.9773453Z   Downloading certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0021267Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0570711Z Collecting MarkupSafe>=2.0 (from jinja2>=2.11.0->-r tests/requirements/py3.txt (line 8))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0600087Z   Using cached markupsafe-3.0.3-cp314-cp314-win_amd64.whl.metadata (2.8 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0682402Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0919482Z Collecting trio<1.0,>=0.31.0 (from selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0942048Z   Using cached trio-0.33.0-py3-none-any.whl.metadata (8.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.0995620Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1190985Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1213914Z   Using cached trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1265158Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1499510Z Collecting typing_extensions<5.0,>=4.15.0 (from selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1535312Z   Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1596178Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1857402Z Collecting websocket-client<2.0,>=1.8.0 (from selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1879384Z   Using cached websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.1948988Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2155418Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2176830Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2228003Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2423968Z Collecting outcome (from trio<1.0,>=0.31.0->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2445310Z   Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2491026Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2681517Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2703261Z   Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.2750307Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.3762668Z Collecting cffi>=1.14 (from trio<1.0,>=0.31.0->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.3788317Z   Using cached cffi-2.0.0-cp314-cp314-win_amd64.whl.metadata (2.6 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.3855876Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4077272Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4125506Z   Using cached wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4197397Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4523712Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4546806Z   Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4662455Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4863566Z Collecting pycparser (from cffi>=1.14->trio<1.0,>=0.31.0->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.4885656Z   Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5001391Z WARNING: Cache entry deserialization failed, entry ignored
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5199102Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium>=4.23.0->-r tests/requirements/py3.txt (line 17))
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5221203Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5317973Z Using cached aiosmtpd-1.4.6-py3-none-any.whl (154 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5337302Z Using cached asgiref-3.11.1-py3-none-any.whl (24 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5370484Z Using cached argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5391119Z Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5410090Z Using cached black-26.3.1-cp314-cp314-win_amd64.whl (1.4 MB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5437052Z Using cached pytokens-0.4.1-cp314-cp314-win_amd64.whl (104 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5456468Z Using cached docutils-0.22.4-py3-none-any.whl (633 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5479189Z Using cached geoip2-5.2.0-py3-none-any.whl (28 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5498040Z Using cached aiohttp-3.13.5-cp314-cp314-win_amd64.whl (464 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5519476Z Using cached maxminddb-3.1.1-cp314-cp314-win_amd64.whl (38 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5537780Z Using cached multidict-6.7.1-cp314-cp314-win_amd64.whl (45 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5556293Z Using cached requests-2.33.1-py3-none-any.whl (64 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5575359Z Using cached charset_normalizer-3.4.7-cp314-cp314-win_amd64.whl (159 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.5617000Z Downloading idna-3.13-py3-none-any.whl (68 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6541583Z Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6561911Z Using cached yarl-1.23.0-cp314-cp314-win_amd64.whl (89 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6582064Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6602236Z Using cached numpy-2.4.4-cp314-cp314-win_amd64.whl (12.4 MB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6685538Z Using cached pillow-12.2.0-cp314-cp314-win_amd64.whl (7.2 MB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6744068Z Using cached pymemcache-4.0.0-py2.py3-none-any.whl (60 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6763757Z Using cached pyyaml-6.0.3-cp314-cp314-win_amd64.whl (156 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6783781Z Using cached redis-7.4.0-py3-none-any.whl (409 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6819560Z Using cached selenium-4.43.0-py3-none-any.whl (9.6 MB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6890231Z Using cached trio-0.33.0-py3-none-any.whl (510 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6915112Z Using cached trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6934988Z Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6954691Z Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6974343Z Using cached websocket_client-1.9.0-py3-none-any.whl (82 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.6995109Z Using cached sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7013803Z Using cached tblib-3.2.2-py3-none-any.whl (12 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7090498Z Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7647114Z Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7667273Z Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7686618Z Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7705511Z Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7754333Z Downloading certifi-2026.4.22-py3-none-any.whl (135 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7938351Z Using cached cffi-2.0.0-cp314-cp314-win_amd64.whl (185 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.7980910Z Downloading click-8.3.3-py3-none-any.whl (110 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8153801Z Using cached frozenlist-1.8.0-cp314-cp314-win_amd64.whl (44 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8174085Z Using cached markupsafe-3.0.3-cp314-cp314-win_amd64.whl (15 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8193068Z Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8211681Z Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8252954Z Downloading pathspec-1.1.0-py3-none-any.whl (56 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8426464Z Using cached platformdirs-4.9.6-py3-none-any.whl (21 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8445413Z Using cached propcache-0.4.1-cp314-cp314-win_amd64.whl (41 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8464323Z Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8487837Z Using cached wsproto-1.3.2-py3-none-any.whl (24 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8518915Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8550053Z Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-win_amd64.whl (31 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8568416Z Using cached atpublic-7.0.0-py3-none-any.whl (6.4 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8585954Z Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.8604947Z Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:48.9996090Z Building wheels for collected packages: Django
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:49.0028857Z   Building editable for Django (pyproject.toml): started
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:54.0532471Z   Building editable for Django (pyproject.toml): finished with status 'done'
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:54.0572975Z   Created wheel for Django: filename=django-6.1.dev20260426215224-0.editable-py3-none-any.whl size=46330 sha256=4b4fdbd57e1197972f392a2df7494270c2dd73d7731a5eaae9a9a28589348bdc
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:54.0574975Z   Stored in directory: C:\Users\runneradmin\AppData\Local\Temp\pip-ephem-wheel-cache-319bx3v_\wheels\27\53\4c\edab2663efd23f7649859922919494b5bf7138818f71bc0282
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:54.0609450Z Successfully built Django
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:53:54.1684643Z Installing collected packages: sortedcontainers, websocket-client, urllib3, tzdata, typing_extensions, tblib, sqlparse, sniffio, redis, PyYAML, pytokens, pysocks, pymemcache, pycparser, propcache, platformdirs, Pillow, pathspec, numpy, mypy-extensions, multidict, maxminddb, MarkupSafe, idna, h11, frozenlist, docutils, colorama, charset_normalizer, certifi, bcrypt, attrs, atpublic, asgiref, aiohappyeyeballs, yarl, wsproto, requests, outcome, jinja2, Django, click, cffi, aiosmtpd, aiosignal, trio, black, argon2-cffi-bindings, aiohttp, trio-websocket, geoip2, argon2-cffi, selenium
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:54:10.7841871Z 
+Windows, SQLite, Python 3.14	Run python -m pip install -r tests/requirements/py3.txt -e .	2026-04-26T21:54:10.7899077Z Successfully installed Django-6.1.dev20260426215224 MarkupSafe-3.0.3 Pillow-12.2.0 PyYAML-6.0.3 aiohappyeyeballs-2.6.1 aiohttp-3.13.5 aiosignal-1.4.0 aiosmtpd-1.4.6 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 asgiref-3.11.1 atpublic-7.0.0 attrs-26.1.0 bcrypt-5.0.0 black-26.3.1 certifi-2026.4.22 cffi-2.0.0 charset_normalizer-3.4.7 click-8.3.3 colorama-0.4.6 docutils-0.22.4 frozenlist-1.8.0 geoip2-5.2.0 h11-0.16.0 idna-3.13 jinja2-3.1.6 maxminddb-3.1.1 multidict-6.7.1 mypy-extensions-1.1.0 numpy-2.4.4 outcome-1.3.0.post0 pathspec-1.1.0 platformdirs-4.9.6 propcache-0.4.1 pycparser-3.0 pymemcache-4.0.0 pysocks-1.7.1 pytokens-0.4.1 redis-7.4.0 requests-2.33.1 selenium-4.43.0 sniffio-1.3.1 sortedcontainers-2.4.0 sqlparse-0.5.5 tblib-3.2.2 trio-0.33.0 trio-websocket-0.12.2 typing_extensions-4.15.0 tzdata-2026.2 urllib3-2.6.3 websocket-client-1.9.0 wsproto-1.3.2 yarl-1.23.0
+Windows, SQLite, Python 3.14	Run tests	﻿2026-04-26T21:54:11.3273986Z ##[group]Run python -Wall tests/runtests.py -v2
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3274447Z [36;1mpython -Wall tests/runtests.py -v2[0m
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3385798Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3386376Z env:
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3386802Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3387604Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.4\x64/lib/pkgconfig
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3388426Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3389149Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3389865Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.4\x64
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:11.3390431Z ##[endgroup]
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:20.3536241Z Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:20.3536850Z 
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:54:22.2452645Z Testing against Django installed in 'D:\a\django\django\django' with up to 4 processes
+
+# === AROUND DRIFT-003 HIT (lines 20801-21000) ===
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.2835017Z test_fields_ordering_equality (migrations.test_state.ModelStateTests.test_fields_ordering_equality) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.2871020Z test_from_model_constraints (migrations.test_state.ModelStateTests.test_from_model_constraints) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.2936840Z test_order_with_respect_to_private_field (migrations.test_state.ModelStateTests.test_order_with_respect_to_private_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3071323Z test_repr (migrations.test_state.ModelStateTests.test_repr) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3160017Z test_sanity_check_through (migrations.test_state.ModelStateTests.test_sanity_check_through) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3208794Z test_sanity_check_to (migrations.test_state.ModelStateTests.test_sanity_check_to) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3269414Z test_sanity_index_name (migrations.test_state.ModelStateTests.test_sanity_index_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3388704Z test_abstract_base (migrations.test_state.RelatedModelsTests.test_abstract_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3491324Z test_base (migrations.test_state.RelatedModelsTests.test_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3547303Z test_base_to_base_fk (migrations.test_state.RelatedModelsTests.test_base_to_base_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3691328Z test_base_to_subclass_fk (migrations.test_state.RelatedModelsTests.test_base_to_subclass_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3713395Z test_circle (migrations.test_state.RelatedModelsTests.test_circle) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3807599Z test_direct_fk (migrations.test_state.RelatedModelsTests.test_direct_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.3864277Z test_direct_hidden_fk (migrations.test_state.RelatedModelsTests.test_direct_hidden_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4025115Z test_direct_m2m (migrations.test_state.RelatedModelsTests.test_direct_m2m) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4043149Z test_direct_m2m_self (migrations.test_state.RelatedModelsTests.test_direct_m2m_self) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4143530Z test_fk_through_proxy (migrations.test_state.RelatedModelsTests.test_fk_through_proxy) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4201560Z test_generic_fk (migrations.test_state.RelatedModelsTests.test_generic_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4345566Z test_intermediate_m2m (migrations.test_state.RelatedModelsTests.test_intermediate_m2m) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4361177Z test_intermediate_m2m_base (migrations.test_state.RelatedModelsTests.test_intermediate_m2m_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4467004Z test_intermediate_m2m_extern_fk (migrations.test_state.RelatedModelsTests.test_intermediate_m2m_extern_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4539555Z test_intermediate_m2m_self (migrations.test_state.RelatedModelsTests.test_intermediate_m2m_self) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4696445Z test_multiple_bases (migrations.test_state.RelatedModelsTests.test_multiple_bases) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4698921Z test_multiple_mixed_bases (migrations.test_state.RelatedModelsTests.test_multiple_mixed_bases) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4797161Z test_multiple_nested_bases (migrations.test_state.RelatedModelsTests.test_multiple_nested_bases) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.4879846Z test_nested_abstract_base (migrations.test_state.RelatedModelsTests.test_nested_abstract_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5016093Z test_nested_base (migrations.test_state.RelatedModelsTests.test_nested_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5022451Z test_nested_fk (migrations.test_state.RelatedModelsTests.test_nested_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5114934Z test_nested_proxy_base (migrations.test_state.RelatedModelsTests.test_nested_proxy_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5197046Z test_proxy_base (migrations.test_state.RelatedModelsTests.test_proxy_base) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5334367Z test_two_sided (migrations.test_state.RelatedModelsTests.test_two_sided) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5354147Z test_unrelated (migrations.test_state.RelatedModelsTests.test_unrelated) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5432792Z test_failing_migration (migrations.test_commands.MakeMigrationsTests.test_failing_migration) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5534519Z test_files_content (migrations.test_commands.MakeMigrationsTests.test_files_content) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5652148Z test_makemigration_merge_dry_run (migrations.test_commands.MakeMigrationsTests.test_makemigration_merge_dry_run)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5672021Z makemigrations respects --dry-run option when fixing migration ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5770830Z test_makemigration_merge_dry_run_verbosity_3 (migrations.test_commands.MakeMigrationsTests.test_makemigration_merge_dry_run_verbosity_3)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5870666Z `makemigrations --merge --dry-run` writes the merge migration file to ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.5975368Z test_makemigrations_auto_merge_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_auto_merge_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6015416Z test_makemigrations_auto_now_add_interactive (migrations.test_commands.MakeMigrationsTests.test_makemigrations_auto_now_add_interactive)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6091354Z makemigrations prompts the user when adding auto_now_add to an existing ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6205505Z test_makemigrations_auto_now_add_interactive_quit (migrations.test_commands.MakeMigrationsTests.test_makemigrations_auto_now_add_interactive_quit) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6305520Z test_makemigrations_check_no_changes (migrations.test_commands.MakeMigrationsTests.test_makemigrations_check_no_changes)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6347143Z makemigrations --check should exit with a zero status when there are no ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6423719Z test_makemigrations_check_with_changes (migrations.test_commands.MakeMigrationsTests.test_makemigrations_check_with_changes)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6548136Z makemigrations --check should exit with a non-zero status when ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6649373Z test_makemigrations_conflict_exit (migrations.test_commands.MakeMigrationsTests.test_makemigrations_conflict_exit)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6700187Z makemigrations exits if it detects a conflict. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6759917Z test_makemigrations_consistency_checks_respect_routers (migrations.test_commands.MakeMigrationsTests.test_makemigrations_consistency_checks_respect_routers)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6879024Z The history consistency checks in makemigrations respect ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.6977866Z test_makemigrations_continues_number_sequence_after_squash (migrations.test_commands.MakeMigrationsTests.test_makemigrations_continues_number_sequence_after_squash) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7098024Z test_makemigrations_default_merge_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_default_merge_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7197390Z test_makemigrations_disabled_migrations_for_app (migrations.test_commands.MakeMigrationsTests.test_makemigrations_disabled_migrations_for_app)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7314224Z makemigrations raises a nice error when migrations are disabled for an ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7335692Z test_makemigrations_dry_run (migrations.test_commands.MakeMigrationsTests.test_makemigrations_dry_run)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7434396Z `makemigrations --dry-run` should not ask for defaults. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7514708Z test_makemigrations_dry_run_verbosity_3 (migrations.test_commands.MakeMigrationsTests.test_makemigrations_dry_run_verbosity_3)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7651729Z Allow `makemigrations --dry-run` to output the migrations file to ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7673641Z test_makemigrations_empty_connections (migrations.test_commands.MakeMigrationsTests.test_makemigrations_empty_connections) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7761156Z test_makemigrations_empty_migration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_empty_migration)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7832160Z makemigrations properly constructs an empty migration. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7971351Z test_makemigrations_empty_no_app_specified (migrations.test_commands.MakeMigrationsTests.test_makemigrations_empty_no_app_specified)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.7994762Z makemigrations exits if no app is specified with 'empty' mode. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8088399Z test_makemigrations_failure_to_format_code (migrations.test_commands.MakeMigrationsTests.test_makemigrations_failure_to_format_code) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8170644Z test_makemigrations_field_rename_interactive (migrations.test_commands.MakeMigrationsTests.test_makemigrations_field_rename_interactive) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8289622Z test_makemigrations_handle_merge (migrations.test_commands.MakeMigrationsTests.test_makemigrations_handle_merge)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8326955Z makemigrations properly merges the conflicting migrations with ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8426183Z test_makemigrations_inconsistent_history (migrations.test_commands.MakeMigrationsTests.test_makemigrations_inconsistent_history)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8494402Z makemigrations should raise InconsistentMigrationHistory exception if ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8610654Z test_makemigrations_inconsistent_history_db_failure (migrations.test_commands.MakeMigrationsTests.test_makemigrations_inconsistent_history_db_failure) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8693149Z test_makemigrations_interactive_accept (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_accept)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8766500Z makemigrations enters interactive mode and merges properly. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8824210Z test_makemigrations_interactive_by_default (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_by_default)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.8943257Z The user is prompted to merge by default if there are conflicts and ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9023736Z test_makemigrations_interactive_not_null_addition (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_not_null_addition)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9082189Z makemigrations messages when adding a NOT NULL field in interactive ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9144493Z test_makemigrations_interactive_not_null_alteration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_not_null_alteration)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9261086Z makemigrations messages when changing a NULL field to NOT NULL in ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9359171Z test_makemigrations_interactive_reject (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_reject)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9399711Z makemigrations enters and exits interactive mode properly. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9461941Z test_makemigrations_interactive_unique_callable_default_addition (migrations.test_commands.MakeMigrationsTests.test_makemigrations_interactive_unique_callable_default_addition)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9578603Z makemigrations prompts the user when adding a unique field with ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9677372Z test_makemigrations_merge_dont_output_dependency_operations (migrations.test_commands.MakeMigrationsTests.test_makemigrations_merge_dont_output_dependency_operations)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9717233Z makemigrations --merge does not output any operations from apps that ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9778710Z test_makemigrations_merge_no_conflict (migrations.test_commands.MakeMigrationsTests.test_makemigrations_merge_no_conflict)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9895998Z makemigrations exits if in merge mode with no conflicts. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:46.9994924Z test_makemigrations_migration_path_output (migrations.test_commands.MakeMigrationsTests.test_makemigrations_migration_path_output)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0039821Z makemigrations should print the relative paths to the migrations unless ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0096041Z test_makemigrations_migration_path_output_valueerror (migrations.test_commands.MakeMigrationsTests.test_makemigrations_migration_path_output_valueerror)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0216250Z makemigrations prints the absolute path if os.path.relpath() raises a ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0318149Z test_makemigrations_migrations_announce (migrations.test_commands.MakeMigrationsTests.test_makemigrations_migrations_announce)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0358003Z makemigrations announces the migration at the default verbosity level. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0414173Z test_makemigrations_migrations_modules_nonexistent_toplevel_package (migrations.test_commands.MakeMigrationsTests.test_makemigrations_migrations_modules_nonexistent_toplevel_package) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0533990Z test_makemigrations_migrations_modules_path_not_exist (migrations.test_commands.MakeMigrationsTests.test_makemigrations_migrations_modules_path_not_exist)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0651766Z makemigrations creates migrations when specifying a custom location ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0691548Z test_makemigrations_model_rename_interactive (migrations.test_commands.MakeMigrationsTests.test_makemigrations_model_rename_interactive) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0751778Z test_makemigrations_no_apps_initial (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_apps_initial)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0850505Z makemigrations should detect initial is needed on empty migration ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.0973833Z test_makemigrations_no_changes (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_changes)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1029335Z makemigrations exits when there are no changes to an app. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1089550Z test_makemigrations_no_changes_no_apps (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_changes_no_apps)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1167857Z makemigrations exits when there are no changes and no apps are ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1306921Z test_makemigrations_no_common_ancestor (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_common_ancestor)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1346994Z makemigrations fails to merge migrations with no common ancestor. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1412467Z test_makemigrations_no_init (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_init)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1490390Z Migration directories without an __init__.py file are allowed. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1626858Z test_makemigrations_no_init_ambiguous (migrations.test_commands.MakeMigrationsTests.test_makemigrations_no_init_ambiguous)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1666791Z Migration directories without an __init__.py file are not allowed if ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1735170Z test_makemigrations_non_interactive_auto_now_add_addition (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_auto_now_add_addition)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1825552Z Non-interactive makemigrations fails when a default is missing on a ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1946760Z test_makemigrations_non_interactive_no_field_rename (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_no_field_rename)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.1994361Z makemigrations adds and removes a possible field rename in ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2065301Z test_makemigrations_non_interactive_no_model_rename (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_no_model_rename)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2145447Z makemigrations adds and removes a possible model rename in ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2269333Z test_makemigrations_non_interactive_not_null_addition (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_not_null_addition)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2324436Z Non-interactive makemigrations fails when a default is missing on a ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2382791Z test_makemigrations_non_interactive_not_null_alteration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_not_null_alteration)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2463084Z Non-interactive makemigrations fails when a default is missing on a ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2604661Z test_makemigrations_non_interactive_unique_callable_default_addition (migrations.test_commands.MakeMigrationsTests.test_makemigrations_non_interactive_unique_callable_default_addition) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2642244Z test_makemigrations_order (migrations.test_commands.MakeMigrationsTests.test_makemigrations_order)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2699882Z makemigrations should recognize number-only migrations (0001.py). ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2780959Z test_makemigrations_scriptable (migrations.test_commands.MakeMigrationsTests.test_makemigrations_scriptable)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2921137Z With scriptable=True, log output is diverted to stderr, and only the ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.2959894Z test_makemigrations_scriptable_merge (migrations.test_commands.MakeMigrationsTests.test_makemigrations_scriptable_merge) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3017968Z test_makemigrations_unspecified_app_with_conflict_merge (migrations.test_commands.MakeMigrationsTests.test_makemigrations_unspecified_app_with_conflict_merge)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3098138Z makemigrations does not create a merge for an unspecified app even if ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3238817Z test_makemigrations_unspecified_app_with_conflict_no_merge (migrations.test_commands.MakeMigrationsTests.test_makemigrations_unspecified_app_with_conflict_no_merge)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3276962Z makemigrations does not raise a CommandError when an unspecified app ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3334766Z test_makemigrations_update (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3416273Z test_makemigrations_update_applied_migration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_applied_migration) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3555621Z test_makemigrations_update_custom_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_custom_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3595215Z test_makemigrations_update_dependency_migration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_dependency_migration) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3652688Z test_makemigrations_update_existing_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_existing_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3733738Z test_makemigrations_update_manual_porting (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_manual_porting) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3892802Z test_makemigrations_update_no_migration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_no_migration) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3912800Z test_makemigrations_update_squash_migration (migrations.test_commands.MakeMigrationsTests.test_makemigrations_update_squash_migration) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.3970709Z test_makemigrations_with_custom_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_with_custom_name)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4069527Z makemigrations --name generate a custom migration name. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4209756Z test_makemigrations_with_invalid_custom_name (migrations.test_commands.MakeMigrationsTests.test_makemigrations_with_invalid_custom_name) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4230603Z test_merge_makemigrations_failure_to_format_code (migrations.test_commands.MakeMigrationsTests.test_merge_makemigrations_failure_to_format_code) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4288148Z test_add_field (migrations.test_state.StateRelationsTests.test_add_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4386744Z test_add_field_m2m_with_through (migrations.test_state.StateRelationsTests.test_add_field_m2m_with_through) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4526186Z test_add_model (migrations.test_state.StateRelationsTests.test_add_model) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4553034Z test_add_model_no_relations (migrations.test_state.StateRelationsTests.test_add_model_no_relations) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4623618Z test_add_model_other_app (migrations.test_state.StateRelationsTests.test_add_model_other_app) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4703635Z test_alter_field (migrations.test_state.StateRelationsTests.test_alter_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4842302Z test_alter_field_m2m_to_fk (migrations.test_state.StateRelationsTests.test_alter_field_m2m_to_fk) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4883708Z test_many_relations_to_same_model (migrations.test_state.StateRelationsTests.test_many_relations_to_same_model) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.4941465Z test_relations_population (migrations.test_state.StateRelationsTests.test_relations_population) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5022032Z test_remove_field (migrations.test_state.StateRelationsTests.test_remove_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5180399Z test_remove_field_no_relations (migrations.test_state.StateRelationsTests.test_remove_field_no_relations) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5200973Z test_remove_model (migrations.test_state.StateRelationsTests.test_remove_model) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5262480Z test_rename_field (migrations.test_state.StateRelationsTests.test_rename_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5339255Z test_rename_field_no_relations (migrations.test_state.StateRelationsTests.test_rename_field_no_relations) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5503711Z test_rename_model (migrations.test_state.StateRelationsTests.test_rename_model) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5536812Z test_rename_model_no_relations (migrations.test_state.StateRelationsTests.test_rename_model_no_relations) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5594799Z test_args_kwargs_signature (migrations.test_writer.OperationWriterTests.test_args_kwargs_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5656289Z test_args_signature (migrations.test_writer.OperationWriterTests.test_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5834465Z test_empty_signature (migrations.test_writer.OperationWriterTests.test_empty_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5871808Z test_expand_args_signature (migrations.test_writer.OperationWriterTests.test_expand_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5912904Z test_keyword_only_args_signature (migrations.test_writer.OperationWriterTests.test_keyword_only_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.5973413Z test_kwargs_signature (migrations.test_writer.OperationWriterTests.test_kwargs_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6152564Z test_multiline_args_signature (migrations.test_writer.OperationWriterTests.test_multiline_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6189958Z test_nested_args_signature (migrations.test_writer.OperationWriterTests.test_nested_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6231086Z test_nested_operation_expand_args_signature (migrations.test_writer.OperationWriterTests.test_nested_operation_expand_args_signature) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6309535Z test_add_relations (migrations.test_state.StateTests.test_add_relations)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6470261Z #24573 - Adding relations to existing models should reload the ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6511077Z test_apps_bulk_update (migrations.test_state.StateTests.test_apps_bulk_update)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6567150Z StateApps.bulk_update() should update apps.ready to False and reset ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6628823Z test_choices_iterator (migrations.test_state.StateTests.test_choices_iterator)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6787457Z #24483 - ProjectState.from_apps should not destructively consume ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6844050Z test_composite_pk_state (migrations.test_state.StateTests.test_composite_pk_state) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6884333Z test_create (migrations.test_state.StateTests.test_create)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.6945921Z Tests making a ProjectState from an Apps ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7104915Z test_custom_base_manager (migrations.test_state.StateTests.test_custom_base_manager) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7161826Z test_custom_default_manager (migrations.test_state.StateTests.test_custom_default_manager) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7203981Z test_custom_default_manager_added_to_the_model_state (migrations.test_state.StateTests.test_custom_default_manager_added_to_the_model_state)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7263817Z When the default manager of the model is a custom manager, ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7441851Z test_custom_default_manager_named_objects_with_false_migration_flag (migrations.test_state.StateTests.test_custom_default_manager_named_objects_with_false_migration_flag)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7481297Z When a manager is added with a name of 'objects' but it does not ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7521750Z test_dangling_references_throw_error (migrations.test_state.StateTests.test_dangling_references_throw_error) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7582078Z test_equality (migrations.test_state.StateTests.test_equality)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7775864Z == and != are implemented correctly. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7798691Z test_get_order_field_after_removed_order_with_respect_to_field (migrations.test_state.StateTests.test_get_order_field_after_removed_order_with_respect_to_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7857130Z test_ignore_order_wrt (migrations.test_state.StateTests.test_ignore_order_wrt)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.7917736Z Makes sure ProjectState doesn't include OrderWrt fields when ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8093709Z test_manager_refer_correct_model_version (migrations.test_state.StateTests.test_manager_refer_correct_model_version)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8115010Z #24147 - Managers refer to the correct version of a ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8175682Z test_modelstate_get_field_no_order_wrt_order_field (migrations.test_state.StateTests.test_modelstate_get_field_no_order_wrt_order_field) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8235982Z test_modelstate_get_field_order_wrt (migrations.test_state.StateTests.test_modelstate_get_field_order_wrt) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8410817Z test_no_duplicate_managers (migrations.test_state.StateTests.test_no_duplicate_managers)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8431901Z When a manager is added with `use_in_migrations = True` and a parent ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8493460Z test_real_apps (migrations.test_state.StateTests.test_real_apps)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8553725Z Including real apps can resolve dangling FK errors. ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8750129Z test_real_apps_non_set (migrations.test_state.StateTests.test_real_apps_non_set) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8768743Z test_reference_mixed_case_app_label (migrations.test_state.StateTests.test_reference_mixed_case_app_label) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8830164Z test_reload_model_relationship_consistency (migrations.test_state.StateTests.test_reload_model_relationship_consistency) ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.8871307Z test_reload_related_model_on_non_relational_fields (migrations.test_state.StateTests.test_reload_related_model_on_non_relational_fields)
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.9067448Z The model is reloaded even on changes that are not involved in ... ok
+Windows, SQLite, Python 3.14	Run tests	2026-04-26T21:57:47.9086316Z test_remove_relations (migrations.test_state.StateTests.test_remove_relations)
+
+# === TAIL (last 200 lines) ===
+Scripts tests	Checkout	2026-04-26T21:52:32.1453169Z [command]/usr/bin/git log -1 --format=%H
+Scripts tests	Checkout	2026-04-26T21:52:32.1477669Z 66c305a0786c3748a298923b71eb13a40bbe8d79
+Scripts tests	Checkout	2026-04-26T21:52:32.1487142Z ##[group]Removing auth
+Scripts tests	Checkout	2026-04-26T21:52:32.1487614Z Removing SSH command configuration
+Scripts tests	Checkout	2026-04-26T21:52:32.1490861Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Scripts tests	Checkout	2026-04-26T21:52:32.1522020Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Scripts tests	Checkout	2026-04-26T21:52:32.1765129Z Removing HTTP extra header
+Scripts tests	Checkout	2026-04-26T21:52:32.1768660Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Scripts tests	Checkout	2026-04-26T21:52:32.1801542Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Scripts tests	Checkout	2026-04-26T21:52:32.2041826Z Removing includeIf entries pointing to credentials config files
+Scripts tests	Checkout	2026-04-26T21:52:32.2045247Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Scripts tests	Checkout	2026-04-26T21:52:32.2069827Z includeif.gitdir:/home/runner/work/django/django/.git.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2070570Z includeif.gitdir:/home/runner/work/django/django/.git/worktrees/*.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2071047Z includeif.gitdir:/github/workspace/.git.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2071465Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2079063Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/django/django/.git.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2101887Z /home/runner/work/_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2112000Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/django/django/.git.path /home/runner/work/_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2144720Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/django/django/.git/worktrees/*.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2166797Z /home/runner/work/_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2175213Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/django/django/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2206268Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2228919Z /github/runner_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2237969Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2268945Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Scripts tests	Checkout	2026-04-26T21:52:32.2292794Z /github/runner_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2303385Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config
+Scripts tests	Checkout	2026-04-26T21:52:32.2335344Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Scripts tests	Checkout	2026-04-26T21:52:32.2572052Z Removing credentials config '/home/runner/work/_temp/git-credentials-591e6dec-a94e-4cd5-8993-f24466712a7a.config'
+Scripts tests	Checkout	2026-04-26T21:52:32.2579957Z ##[endgroup]
+Scripts tests	Set up Python	﻿2026-04-26T21:52:32.2814146Z ##[group]Run actions/setup-python@v6
+Scripts tests	Set up Python	2026-04-26T21:52:32.2814496Z with:
+Scripts tests	Set up Python	2026-04-26T21:52:32.2814728Z   python-version: 3.14
+Scripts tests	Set up Python	2026-04-26T21:52:32.2814997Z   check-latest: false
+Scripts tests	Set up Python	2026-04-26T21:52:32.2815390Z   token: ***
+Scripts tests	Set up Python	2026-04-26T21:52:32.2815631Z   update-environment: true
+Scripts tests	Set up Python	2026-04-26T21:52:32.2815921Z   allow-prereleases: false
+Scripts tests	Set up Python	2026-04-26T21:52:32.2816181Z   freethreaded: false
+Scripts tests	Set up Python	2026-04-26T21:52:32.2816435Z ##[endgroup]
+Scripts tests	Set up Python	2026-04-26T21:52:32.4042664Z ##[group]Installed versions
+Scripts tests	Set up Python	2026-04-26T21:52:32.4123801Z Successfully set up CPython (3.14.4)
+Scripts tests	Set up Python	2026-04-26T21:52:32.4124551Z ##[endgroup]
+Scripts tests	Run python -m unittest discover -v -s scripts/	﻿2026-04-26T21:52:32.4250906Z ##[group]Run python -m unittest discover -v -s scripts/
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4251445Z [36;1mpython -m unittest discover -v -s scripts/[0m
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4289398Z shell: /usr/bin/bash -e {0}
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4289740Z env:
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4290042Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.4/x64
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4360980Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib/pkgconfig
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4361771Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4362468Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4363164Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4363789Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.4364278Z ##[endgroup]
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8884584Z test_ai_used_exactly_five_word_description_passes (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_ai_used_exactly_five_word_description_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8886472Z test_ai_used_no_description_fails (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_ai_used_no_description_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8888102Z test_ai_used_short_description_fails (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_ai_used_short_description_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8889553Z test_ai_used_with_description_passes (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_ai_used_with_description_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8890931Z test_both_options_checked_fails (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_both_options_checked_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8891916Z test_commented_out_checkbox_not_counted (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_commented_out_checkbox_not_counted) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8892943Z test_missing_section_fails (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_missing_section_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8894266Z test_neither_option_checked_fails (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_neither_option_checked_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8895522Z test_no_ai_checked_passes (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_no_ai_checked_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8896793Z test_uppercase_x_in_checkbox_passes (pr_quality.tests.test_check_pr.TestCheckAIDisclosure.test_uppercase_x_in_checkbox_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8898689Z test_crlf_line_endings_pass (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_crlf_line_endings_pass) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8899672Z test_empty_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_empty_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8900441Z test_exactly_five_words_passes (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_exactly_five_words_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8901398Z test_html_comment_only_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_html_comment_only_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8902784Z test_html_comment_words_not_counted (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_html_comment_words_not_counted) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8904213Z test_missing_section_header_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_missing_section_header_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8905011Z test_multiline_passes (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_multiline_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8905735Z test_placeholder_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_placeholder_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8906591Z test_placeholder_with_appended_text_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_placeholder_with_appended_text_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8907952Z test_too_short_fails (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_too_short_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8909091Z test_valid_passes (pr_quality.tests.test_check_pr.TestCheckBranchDescription.test_valid_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8910399Z test_all_nine_checked_passes (pr_quality.tests.test_check_pr.TestCheckChecklist.test_all_nine_checked_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8911573Z test_crlf_line_endings_pass (pr_quality.tests.test_check_pr.TestCheckChecklist.test_crlf_line_endings_pass) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8912763Z test_first_five_checked_passes (pr_quality.tests.test_check_pr.TestCheckChecklist.test_first_five_checked_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8914030Z test_four_of_five_checked_fails (pr_quality.tests.test_check_pr.TestCheckChecklist.test_four_of_five_checked_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8915089Z test_missing_section_fails (pr_quality.tests.test_check_pr.TestCheckChecklist.test_missing_section_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8916201Z test_none_checked_fails (pr_quality.tests.test_check_pr.TestCheckChecklist.test_none_checked_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8917130Z test_three_of_five_checked_fails (pr_quality.tests.test_check_pr.TestCheckChecklist.test_three_of_five_checked_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8917894Z test_uppercase_x_passes (pr_quality.tests.test_check_pr.TestCheckChecklist.test_uppercase_x_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8918674Z test_empty_title_fails (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_empty_title_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8919545Z test_failure_message_contains_ticket_id (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_failure_message_contains_ticket_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8920382Z test_refs_format_passes (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_refs_format_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8921128Z test_ticket_in_title_passes (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_ticket_in_title_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8921955Z test_ticket_missing_from_title_fails (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_ticket_missing_from_title_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8922921Z test_wrong_ticket_number_fails (pr_quality.tests.test_check_pr.TestCheckPrTitleHasTicket.test_wrong_ticket_number_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8924162Z test_already_set_passes (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_already_set_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8925351Z test_failure_message_contains_ticket_id (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_failure_message_contains_ticket_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8926454Z test_fetch_error_during_poll_skips_check (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_fetch_error_during_poll_skips_check) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8927459Z test_none_data_skips_check (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_none_data_skips_check) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8928197Z test_not_set_times_out_fails (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_not_set_times_out_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8929316Z test_set_on_second_poll_passes (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_set_on_second_poll_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8930621Z test_ticket_not_found_skips_check (pr_quality.tests.test_check_pr.TestCheckTracHasPatch.test_ticket_not_found_skips_check) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8932121Z test_accepted_assigned_unresolved_passes (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_accepted_assigned_unresolved_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8933654Z test_failure_message_contains_current_state (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_failure_message_contains_current_state) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8934622Z test_failure_message_contains_ticket_id (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_failure_message_contains_ticket_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8935987Z test_non_accepted_stage_fails (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_non_accepted_stage_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8937160Z test_none_data_skips_check (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_none_data_skips_check) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8938020Z test_ready_for_checkin_assigned_unresolved_passes (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_ready_for_checkin_assigned_unresolved_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8939261Z test_resolved_ticket_fails (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_resolved_ticket_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8940310Z test_ticket_not_found_current_state (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_ticket_not_found_current_state) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8941621Z test_unassigned_ticket_fails (pr_quality.tests.test_check_pr.TestCheckTracStatus.test_unassigned_ticket_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8942822Z test_missing_large_pr_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_missing_large_pr_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8943979Z test_missing_small_pr_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_missing_small_pr_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8945113Z test_na_at_threshold_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_na_at_threshold_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8946267Z test_na_bare_small_pr_passes (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_na_bare_small_pr_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8947601Z test_na_just_below_threshold_passes (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_na_just_below_threshold_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8948728Z test_na_large_pr_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_na_large_pr_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8949650Z test_na_small_pr_passes (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_na_small_pr_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8950727Z test_placeholder_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_placeholder_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8951846Z test_ticket_na_format_fails (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_ticket_na_format_fails) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8953081Z test_valid_ticket_large_pr_passes (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_valid_ticket_large_pr_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8953908Z test_valid_ticket_small_pr_passes (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_valid_ticket_small_pr_passes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8954718Z test_various_ticket_lengths_pass (pr_quality.tests.test_check_pr.TestCheckTracTicket.test_various_ticket_lengths_pass) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8955676Z test_case_insensitive (pr_quality.tests.test_check_pr.TestExtractTicketId.test_case_insensitive) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8956748Z test_na_returns_none (pr_quality.tests.test_check_pr.TestExtractTicketId.test_na_returns_none) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8957654Z test_no_ticket_returns_none (pr_quality.tests.test_check_pr.TestExtractTicketId.test_no_ticket_returns_none) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8958882Z test_returns_first_ticket_id (pr_quality.tests.test_check_pr.TestExtractTicketId.test_returns_first_ticket_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8959672Z test_ticket_in_sentence_returns_id (pr_quality.tests.test_check_pr.TestExtractTicketId.test_ticket_in_sentence_returns_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8960805Z test_ticket_placeholder_returns_none (pr_quality.tests.test_check_pr.TestExtractTicketId.test_ticket_placeholder_returns_none) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8961779Z test_valid_ticket_returns_id (pr_quality.tests.test_check_pr.TestExtractTicketId.test_valid_ticket_returns_id) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8962593Z test_http_404_returns_ticket_not_found (pr_quality.tests.test_check_pr.TestFetchTracTicket.test_http_404_returns_ticket_not_found) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8963392Z test_http_500_returns_none (pr_quality.tests.test_check_pr.TestFetchTracTicket.test_http_500_returns_none) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8964139Z test_network_error_returns_none (pr_quality.tests.test_check_pr.TestFetchTracTicket.test_network_error_returns_none) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8967891Z test_success_returns_dict (pr_quality.tests.test_check_pr.TestFetchTracTicket.test_success_returns_dict) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8974334Z test_uses_trac_api_url (pr_quality.tests.test_check_pr.TestFetchTracTicket.test_uses_trac_api_url) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8977282Z test_api_path_includes_author_since_and_max_count (pr_quality.tests.test_check_pr.TestGetRecentCommitCount.test_api_path_includes_author_since_and_max_count) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8979024Z test_no_commits_returns_zero (pr_quality.tests.test_check_pr.TestGetRecentCommitCount.test_no_commits_returns_zero) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8980866Z test_returns_number_of_commits (pr_quality.tests.test_check_pr.TestGetRecentCommitCount.test_returns_number_of_commits) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8990296Z test_autoclose_false_posts_comment_does_not_close (pr_quality.tests.test_check_pr.TestIntegration.test_autoclose_false_posts_comment_does_not_close) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8991566Z test_blank_body_fails_non_status_checks (pr_quality.tests.test_check_pr.TestIntegration.test_blank_body_fails_non_status_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.8996270Z test_established_author_skips_all_checks (pr_quality.tests.test_check_pr.TestIntegration.test_established_author_skips_all_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9010124Z test_fully_valid_pr_no_comment_posted (pr_quality.tests.test_check_pr.TestIntegration.test_fully_valid_pr_no_comment_posted) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9013538Z test_fully_valid_pr_passes_all_checks (pr_quality.tests.test_check_pr.TestIntegration.test_fully_valid_pr_passes_all_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9015459Z test_make_pr_body_matches_template (pr_quality.tests.test_check_pr.TestIntegration.test_make_pr_body_matches_template) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9024469Z test_missing_pr_author_treated_as_untrusted (pr_quality.tests.test_check_pr.TestIntegration.test_missing_pr_author_treated_as_untrusted) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9032814Z test_no_ticket_results_include_skipped_sentinels (pr_quality.tests.test_check_pr.TestIntegration.test_no_ticket_results_include_skipped_sentinels) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9058855Z test_no_ticket_skips_trac_status_and_has_patch (pr_quality.tests.test_check_pr.TestIntegration.test_no_ticket_skips_trac_status_and_has_patch) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9066991Z test_non_accepted_ticket_skips_has_patch (pr_quality.tests.test_check_pr.TestIntegration.test_non_accepted_ticket_skips_has_patch) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9075065Z test_pr_before_ai_disclosure_date_skips_ai_check (pr_quality.tests.test_check_pr.TestIntegration.test_pr_before_ai_disclosure_date_skips_ai_check) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9080519Z test_pr_before_template_date_skips_all_checks (pr_quality.tests.test_check_pr.TestIntegration.test_pr_before_template_date_skips_all_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9094544Z test_trusted_author_failures_no_close (pr_quality.tests.test_check_pr.TestIntegration.test_trusted_author_failures_no_close) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9097174Z test_unedited_template_fails_all_checks (pr_quality.tests.test_check_pr.TestIntegration.test_unedited_template_fails_all_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9105294Z test_untrusted_author_failures_posts_comment_and_closes (pr_quality.tests.test_check_pr.TestIntegration.test_untrusted_author_failures_posts_comment_and_closes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9113170Z test_warnings_alongside_failures_still_closes (pr_quality.tests.test_check_pr.TestIntegration.test_warnings_alongside_failures_still_closes) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9121431Z test_warnings_only_posts_comment_does_not_close (pr_quality.tests.test_check_pr.TestIntegration.test_warnings_only_posts_comment_does_not_close) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9122709Z test_empty_string (pr_quality.tests.test_check_pr.TestStripHtmlComments.test_empty_string) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9123789Z test_no_comment_unchanged (pr_quality.tests.test_check_pr.TestStripHtmlComments.test_no_comment_unchanged) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9124754Z test_removes_multiline_comment (pr_quality.tests.test_check_pr.TestStripHtmlComments.test_removes_multiline_comment) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9125545Z test_removes_multiple_comments (pr_quality.tests.test_check_pr.TestStripHtmlComments.test_removes_multiple_comments) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9126334Z test_removes_single_line_comment (pr_quality.tests.test_check_pr.TestStripHtmlComments.test_removes_single_line_comment) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9130019Z test_all_passed (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_all_passed) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9133932Z test_appends_to_existing_file (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_appends_to_existing_file) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9135044Z test_no_summary_file_does_nothing (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_no_summary_file_does_nothing) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9137768Z test_skipped_checks (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_skipped_checks) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9141116Z test_with_failures (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_with_failures) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9144239Z test_with_warning (pr_quality.tests.test_check_pr.TestWriteJobSummary.test_with_warning) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9145193Z test_adds_backport_note (tests.ProcessCommitMessageTests.test_adds_backport_note) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9146115Z test_adds_stable_prefix (tests.ProcessCommitMessageTests.test_adds_stable_prefix) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9147202Z test_adds_trailing_period (tests.ProcessCommitMessageTests.test_adds_trailing_period) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9148377Z test_backport_note_separated_by_blank_line (tests.ProcessCommitMessageTests.test_backport_note_separated_by_blank_line) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9149603Z test_capitalizes_first_letter (tests.ProcessCommitMessageTests.test_capitalizes_first_letter) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9150919Z test_capitalizes_first_letter_after_existing_prefix (tests.ProcessCommitMessageTests.test_capitalizes_first_letter_after_existing_prefix) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9152333Z test_does_not_double_add_backport_note (tests.ProcessCommitMessageTests.test_does_not_double_add_backport_note) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9153532Z test_does_not_double_add_prefix (tests.ProcessCommitMessageTests.test_does_not_double_add_prefix) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9154708Z test_does_not_double_add_trailing_period (tests.ProcessCommitMessageTests.test_does_not_double_add_trailing_period) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9155435Z test_empty_body_unchanged (tests.ProcessCommitMessageTests.test_empty_body_unchanged) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9156098Z test_git_comments_preserved_at_end (tests.ProcessCommitMessageTests.test_git_comments_preserved_at_end) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9157198Z test_leading_blank_lines_stripped (tests.ProcessCommitMessageTests.test_leading_blank_lines_stripped) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9157920Z test_no_cherry_sha_no_backport_note (tests.ProcessCommitMessageTests.test_no_cherry_sha_no_backport_note) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9158661Z test_non_stable_branch_no_prefix_added (tests.ProcessCommitMessageTests.test_non_stable_branch_no_prefix_added) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9159403Z test_non_stable_branch_period_added (tests.ProcessCommitMessageTests.test_non_stable_branch_period_added) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9160195Z test_non_stable_branch_with_period_unchanged (tests.ProcessCommitMessageTests.test_non_stable_branch_with_period_unchanged) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9160964Z test_only_blank_lines_unchanged (tests.ProcessCommitMessageTests.test_only_blank_lines_unchanged) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9161830Z test_prefix_and_period_and_backport_combined (tests.ProcessCommitMessageTests.test_prefix_and_period_and_backport_combined) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9163026Z test_summary_leading_whitespace_no_double_space_before_prefix (tests.ProcessCommitMessageTests.test_summary_leading_whitespace_no_double_space_before_prefix) ... ok
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9163656Z 
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9163853Z ----------------------------------------------------------------------
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9164198Z Ran 125 tests in 0.028s
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9164350Z 
+Scripts tests	Run python -m unittest discover -v -s scripts/	2026-04-26T21:52:32.9164455Z OK
+Scripts tests	Post Set up Python	﻿2026-04-26T21:52:32.9418713Z Post job cleanup.
+Scripts tests	Post Checkout	﻿2026-04-26T21:52:33.0657512Z Post job cleanup.
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1451097Z [command]/usr/bin/git version
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1518434Z git version 2.53.0
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1556119Z Temporarily overriding HOME='/home/runner/work/_temp/20a9bac8-e026-4b9c-9dd1-7970e3379ef4' before making global git config changes
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1557603Z Adding repository directory to the temporary git global config as a safe directory
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1562440Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/django/django
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1593114Z Removing SSH command configuration
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1599514Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1631947Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1881803Z Removing HTTP extra header
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1887938Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Scripts tests	Post Checkout	2026-04-26T21:52:33.1925143Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Scripts tests	Post Checkout	2026-04-26T21:52:33.2182682Z Removing includeIf entries pointing to credentials config files
+Scripts tests	Post Checkout	2026-04-26T21:52:33.2189665Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Scripts tests	Post Checkout	2026-04-26T21:52:33.2223824Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Scripts tests	Complete job	﻿2026-04-26T21:52:33.2619897Z Cleaning up orphan processes

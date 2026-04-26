@@ -1,0 +1,1005 @@
+# === SETUP + EARLY TESTS (first 500 lines) ===
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	﻿2026-04-08T21:24:21.6484766Z Current runner version: '2.333.1'
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6511900Z ##[group]Runner Image Provisioner
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6512854Z Hosted Compute Agent
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6513373Z Version: 20260213.493
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6514109Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6514801Z Build Date: 2026-02-13T00:28:41Z
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6515482Z Worker ID: {1806cea5-9a70-4a30-9969-0a0a32318a1b}
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6516250Z Azure Region: eastus
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6516780Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6518259Z ##[group]Operating System
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6518906Z Ubuntu
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6519432Z 24.04.4
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6519866Z LTS
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6520735Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6521218Z ##[group]Runner Image
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6521772Z Image: ubuntu-24.04
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6522350Z Version: 20260406.80.1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6523593Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260406.80/images/ubuntu/Ubuntu2404-Readme.md
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6525083Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260406.80
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6525984Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6527010Z ##[group]GITHUB_TOKEN Permissions
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6529282Z Contents: read
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6529799Z Metadata: read
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6530565Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6533142Z Secret source: Actions
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6534106Z Prepare workflow directory
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6920532Z Prepare all required actions
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6959273Z Getting action download info
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.0537424Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.1753455Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4649847Z Complete job name: pep484-3.12-ubuntu-latest
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5362757Z ##[group]Run actions/checkout@v4
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5363626Z with:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5364053Z   repository: sqlalchemy/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5364856Z   token: ***
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5365266Z   ssh-strict: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5365691Z   ssh-user: git
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5366109Z   persist-credentials: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5366578Z   clean: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5366999Z   sparse-checkout-cone-mode: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5367567Z   fetch-depth: 1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5367988Z   fetch-tags: false
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5368436Z   show-progress: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5368878Z   lfs: false
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5369277Z   submodules: false
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5369733Z   set-safe-directory: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5370830Z env:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5371262Z   TOX_WORKERS: -n2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5371685Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6537751Z Syncing repository: sqlalchemy/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6541095Z ##[group]Getting Git version info
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6542548Z Working directory is '/home/runner/work/alembic/alembic'
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6544299Z [command]/usr/bin/git version
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6545230Z git version 2.53.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6570405Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6586655Z Temporarily overriding HOME='/home/runner/work/_temp/da08f3ae-9da3-46c9-9e39-531dbe2c5f36' before making global git config changes
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6589190Z Adding repository directory to the temporary git global config as a safe directory
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6601700Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alembic/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6640574Z Deleting the contents of '/home/runner/work/alembic/alembic'
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6644254Z ##[group]Initializing the repository
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6648640Z [command]/usr/bin/git init /home/runner/work/alembic/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6719604Z hint: Using 'master' as the name for the initial branch. This default branch name
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6722129Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6724005Z hint: to use in all of your new repositories, which will suppress this warning,
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6725908Z hint: call:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6726737Z hint:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6727734Z hint: 	git config --global init.defaultBranch <name>
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6728907Z hint:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6729982Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6731957Z hint: 'development'. The just-created branch can be renamed via this command:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6733415Z hint:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6734334Z hint: 	git branch -m <name>
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6735324Z hint:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6736686Z hint: Disable this message with "git config set advice.defaultBranchName false"
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6739383Z Initialized empty Git repository in /home/runner/work/alembic/alembic/.git/
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6743556Z [command]/usr/bin/git remote add origin https://github.com/sqlalchemy/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6768322Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6770026Z ##[group]Disabling automatic garbage collection
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6771702Z [command]/usr/bin/git config --local gc.auto 0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6807397Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6808141Z ##[group]Setting up auth
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6818158Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6856426Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7184996Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7219055Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7472005Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7514641Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7763257Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7800502Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7801562Z ##[group]Fetching the repository
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7809166Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +02d72c21d97c0f62b43d4856b60767524f17a00f:refs/remotes/origin/main
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1014665Z From https://github.com/sqlalchemy/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1017046Z  * [new ref]         02d72c21d97c0f62b43d4856b60767524f17a00f -> origin/main
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1043845Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1045351Z ##[group]Determining the checkout info
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1047085Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1052503Z [command]/usr/bin/git sparse-checkout disable
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1091221Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1117013Z ##[group]Checking out the ref
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1120791Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1323448Z Switched to a new branch 'main'
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1324889Z branch 'main' set up to track 'origin/main'.
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1333207Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1370882Z [command]/usr/bin/git log -1 --format=%H
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1394301Z 02d72c21d97c0f62b43d4856b60767524f17a00f
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1697681Z ##[group]Run actions/setup-python@v4
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1698819Z with:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1699622Z   python-version: 3.12
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1700695Z   check-latest: false
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1701896Z   token: ***
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1702740Z   update-environment: true
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1703739Z   allow-prereleases: false
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1704687Z env:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1705440Z   TOX_WORKERS: -n2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1706284Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3415152Z ##[group]Installed versions
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3499845Z Successfully set up CPython (3.12.13)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3502326Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3666914Z ##[group]Run python -m pip install --upgrade pip
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3668338Z [36;1mpython -m pip install --upgrade pip[0m
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3669628Z [36;1mpip install --upgrade nox setuptools[0m
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3671007Z [36;1mpip list[0m
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3827507Z shell: /usr/bin/bash -e {0}
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3828459Z env:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3829168Z   TOX_WORKERS: -n2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3830539Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3832236Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3833939Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3835477Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3837009Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3838711Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3840005Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6892529Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages (26.0.1)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.3148293Z Collecting nox
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.3677762Z   Downloading nox-2026.2.9-py3-none-any.whl.metadata (5.0 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.4852393Z Collecting setuptools
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.4892664Z   Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5271874Z Collecting argcomplete<4,>=1.9.4 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5307242Z   Downloading argcomplete-3.6.3-py3-none-any.whl.metadata (16 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5455142Z Collecting attrs>=24.1 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5486901Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5646097Z Collecting colorlog<7,>=2.6.1 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5681730Z   Downloading colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5793430Z Collecting dependency-groups>=1.1 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5829043Z   Downloading dependency_groups-1.3.1-py3-none-any.whl.metadata (2.3 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.5973127Z Collecting humanize>=4 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6008397Z   Downloading humanize-4.15.0-py3-none-any.whl.metadata (7.8 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6151017Z Collecting packaging>=22 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6190896Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6513512Z Collecting virtualenv>=20.15 (from nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6550348Z   Downloading virtualenv-21.2.0-py3-none-any.whl.metadata (3.5 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6687695Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.15->nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6720082Z   Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6896197Z Collecting filelock<4,>=3.24.2 (from virtualenv>=20.15->nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.6931443Z   Downloading filelock-3.25.2-py3-none-any.whl.metadata (2.0 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7092704Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.15->nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7129890Z   Downloading platformdirs-4.9.4-py3-none-any.whl.metadata (4.7 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7240437Z Collecting python-discovery>=1 (from virtualenv>=20.15->nox)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7278034Z   Downloading python_discovery-1.2.2-py3-none-any.whl.metadata (5.4 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7401140Z Downloading nox-2026.2.9-py3-none-any.whl (74 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7471292Z Downloading argcomplete-3.6.3-py3-none-any.whl (43 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7526738Z Downloading colorlog-6.10.1-py3-none-any.whl (11 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7584930Z Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7715323Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 98.3 MB/s  0:00:00
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7753528Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7807917Z Downloading dependency_groups-1.3.1-py3-none-any.whl (8.7 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7862042Z Downloading humanize-4.15.0-py3-none-any.whl (132 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.7936544Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8027051Z Downloading virtualenv-21.2.0-py3-none-any.whl (5.8 MB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8257475Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 283.8 MB/s  0:00:00
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8297576Z Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8360874Z Downloading filelock-3.25.2-py3-none-any.whl (26 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8410935Z Downloading platformdirs-4.9.4-py3-none-any.whl (21 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8460704Z Downloading python_discovery-1.2.2-py3-none-any.whl (31 kB)
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:26.8903733Z Installing collected packages: distlib, setuptools, platformdirs, packaging, humanize, filelock, colorlog, attrs, argcomplete, python-discovery, dependency-groups, virtualenv, nox
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.0052988Z 
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.0071520Z Successfully installed argcomplete-3.6.3 attrs-26.1.0 colorlog-6.10.1 dependency-groups-1.3.1 distlib-0.4.0 filelock-3.25.2 humanize-4.15.0 nox-2026.2.9 packaging-26.0 platformdirs-4.9.4 python-discovery-1.2.2 setuptools-82.0.1 virtualenv-21.2.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3155241Z Package           Version
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3155923Z ----------------- --------
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3157686Z argcomplete       3.6.3
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3159224Z attrs             26.1.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3161140Z colorlog          6.10.1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3163094Z dependency-groups 1.3.1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3164800Z distlib           0.4.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3166661Z filelock          3.25.2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3168375Z humanize          4.15.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3169942Z nox               2026.2.9
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3171756Z packaging         26.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3173326Z pip               26.0.1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3174883Z platformdirs      4.9.4
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3176488Z python-discovery  1.2.2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3178055Z setuptools        82.0.1
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3179622Z virtualenv        21.2.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3512473Z ##[group]Run nox -s pep484
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3512774Z [36;1mnox -s pep484[0m
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3536540Z shell: /usr/bin/bash -e {0}
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3536788Z env:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3536963Z   TOX_WORKERS: -n2
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3537240Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3537662Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3538076Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3538444Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3538802Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3539168Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.3539469Z ##[endgroup]
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.5511578Z nox > Running session pep484
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.5516769Z nox > Creating virtual environment (virtualenv) using python in .nox/pep484
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:29.3511835Z nox > python -m pip install 'mypy>=1.16.0' nox 'pytest<10,>8'
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:34.8431425Z nox > python -m pip install -e .
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:39.1669438Z nox > mypy noxfile.py ./alembic/ --exclude alembic/templates
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.1349146Z Success: no issues found in 52 source files
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.1525373Z nox > Session pep484 was successful in 17 seconds.
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.1787742Z Post job cleanup.
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.3462274Z Post job cleanup.
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4426172Z [command]/usr/bin/git version
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4463088Z git version 2.53.0
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4505799Z Temporarily overriding HOME='/home/runner/work/_temp/e8d608c8-bb48-4da5-af11-1b876753e4b3' before making global git config changes
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4507194Z Adding repository directory to the temporary git global config as a safe directory
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4519780Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alembic/alembic
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4557031Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4590983Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4838220Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4861726Z http.https://github.com/.extraheader
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4874687Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.4907822Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.5145558Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.5178213Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.5547790Z Cleaning up orphan processes
+pep484-3.12-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.5805280Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	﻿2026-04-08T21:24:21.6672276Z Current runner version: '2.333.1'
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6703845Z ##[group]Runner Image Provisioner
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6704893Z Hosted Compute Agent
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6705678Z Version: 20260213.493
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6706686Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6707729Z Build Date: 2026-02-13T00:28:41Z
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6708681Z Worker ID: {909f0b38-e863-454e-a406-3a5c61ee00e2}
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6709737Z Azure Region: eastus
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6710741Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6712593Z ##[group]Operating System
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6713580Z Ubuntu
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6714257Z 24.04.4
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6714918Z LTS
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6715687Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6716369Z ##[group]Runner Image
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6717141Z Image: ubuntu-24.04
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6717993Z Version: 20260329.72.1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6719838Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6722362Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6723790Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6725266Z ##[group]GITHUB_TOKEN Permissions
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6727723Z Contents: read
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6728563Z Metadata: read
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6729260Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6732225Z Secret source: Actions
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.6733130Z Prepare workflow directory
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.7251652Z Prepare all required actions
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:21.7305386Z Getting action download info
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.0568139Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.1877239Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4160765Z Complete job name: pep484-3.13-ubuntu-latest
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4827755Z ##[group]Run actions/checkout@v4
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4828515Z with:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4828905Z   repository: sqlalchemy/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4829564Z   token: ***
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4829948Z   ssh-strict: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4830511Z   ssh-user: git
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4830905Z   persist-credentials: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4831324Z   clean: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4831709Z   sparse-checkout-cone-mode: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4832163Z   fetch-depth: 1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4832536Z   fetch-tags: false
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4832925Z   show-progress: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4833305Z   lfs: false
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4833657Z   submodules: false
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4834035Z   set-safe-directory: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4834641Z env:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4834994Z   TOX_WORKERS: -n2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.4835384Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5889428Z Syncing repository: sqlalchemy/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5891531Z ##[group]Getting Git version info
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5892267Z Working directory is '/home/runner/work/alembic/alembic'
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5893182Z [command]/usr/bin/git version
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5930981Z git version 2.53.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5954566Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5968189Z Temporarily overriding HOME='/home/runner/work/_temp/01a2b0a0-903a-46df-8dad-b6ce21d7d333' before making global git config changes
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5969667Z Adding repository directory to the temporary git global config as a safe directory
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.5982584Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alembic/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6015923Z Deleting the contents of '/home/runner/work/alembic/alembic'
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6019557Z ##[group]Initializing the repository
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6023407Z [command]/usr/bin/git init /home/runner/work/alembic/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6081423Z hint: Using 'master' as the name for the initial branch. This default branch name
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6084758Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6086422Z hint: to use in all of your new repositories, which will suppress this warning,
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6087943Z hint: call:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6088513Z hint:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6089220Z hint: 	git config --global init.defaultBranch <name>
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6090391Z hint:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6091221Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6092595Z hint: 'development'. The just-created branch can be renamed via this command:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6093713Z hint:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6094306Z hint: 	git branch -m <name>
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6094985Z hint:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6095889Z hint: Disable this message with "git config set advice.defaultBranchName false"
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6097330Z Initialized empty Git repository in /home/runner/work/alembic/alembic/.git/
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6099637Z [command]/usr/bin/git remote add origin https://github.com/sqlalchemy/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6126568Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6127648Z ##[group]Disabling automatic garbage collection
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6131354Z [command]/usr/bin/git config --local gc.auto 0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6160195Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6161215Z ##[group]Setting up auth
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6167649Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6197443Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6507990Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6541756Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6799408Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.6846868Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7110633Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7149539Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7151825Z ##[group]Fetching the repository
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:22.7159159Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +02d72c21d97c0f62b43d4856b60767524f17a00f:refs/remotes/origin/main
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0588397Z From https://github.com/sqlalchemy/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0590155Z  * [new ref]         02d72c21d97c0f62b43d4856b60767524f17a00f -> origin/main
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0620288Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0621368Z ##[group]Determining the checkout info
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0622706Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0628567Z [command]/usr/bin/git sparse-checkout disable
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0668597Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0697546Z ##[group]Checking out the ref
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0702541Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0909346Z Switched to a new branch 'main'
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0912391Z branch 'main' set up to track 'origin/main'.
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0918901Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0954977Z [command]/usr/bin/git log -1 --format=%H
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.0978932Z 02d72c21d97c0f62b43d4856b60767524f17a00f
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1270283Z ##[group]Run actions/setup-python@v4
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1271398Z with:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1272110Z   python-version: 3.13
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1272970Z   check-latest: false
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1274075Z   token: ***
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1274849Z   update-environment: true
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1275782Z   allow-prereleases: false
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1276664Z env:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1277346Z   TOX_WORKERS: -n2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.1278102Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.2957785Z ##[group]Installed versions
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3039466Z Successfully set up CPython (3.13.12)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3042648Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3186396Z ##[group]Run python -m pip install --upgrade pip
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3187770Z [36;1mpython -m pip install --upgrade pip[0m
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3189041Z [36;1mpip install --upgrade nox setuptools[0m
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3190450Z [36;1mpip list[0m
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3232488Z shell: /usr/bin/bash -e {0}
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3233447Z env:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3234201Z   TOX_WORKERS: -n2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3235268Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3236833Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.12/x64/lib/pkgconfig
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3238433Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3239848Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3241559Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3243003Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.12/x64/lib
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:23.3244185Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:24.2780784Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.12/x64/lib/python3.13/site-packages (26.0.1)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.3539872Z Collecting nox
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.4076595Z   Downloading nox-2026.2.9-py3-none-any.whl.metadata (5.0 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5221714Z Collecting setuptools
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5261410Z   Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5506514Z Collecting argcomplete<4,>=1.9.4 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5544465Z   Downloading argcomplete-3.6.3-py3-none-any.whl.metadata (16 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5702313Z Collecting attrs>=24.1 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5737343Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5899824Z Collecting colorlog<7,>=2.6.1 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.5935975Z   Downloading colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6047739Z Collecting dependency-groups>=1.1 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6082734Z   Downloading dependency_groups-1.3.1-py3-none-any.whl.metadata (2.3 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6227664Z Collecting humanize>=4 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6271409Z   Downloading humanize-4.15.0-py3-none-any.whl.metadata (7.8 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6414312Z Collecting packaging>=22 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6451863Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6745898Z Collecting virtualenv>=20.15 (from nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6783082Z   Downloading virtualenv-21.2.0-py3-none-any.whl.metadata (3.5 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6915034Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.15->nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.6950582Z   Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7103867Z Collecting filelock<4,>=3.24.2 (from virtualenv>=20.15->nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7138695Z   Downloading filelock-3.25.2-py3-none-any.whl.metadata (2.0 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7280174Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.15->nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7315177Z   Downloading platformdirs-4.9.4-py3-none-any.whl.metadata (4.7 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7441244Z Collecting python-discovery>=1 (from virtualenv>=20.15->nox)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7479294Z   Downloading python_discovery-1.2.2-py3-none-any.whl.metadata (5.4 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7603736Z Downloading nox-2026.2.9-py3-none-any.whl (74 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7685614Z Downloading argcomplete-3.6.3-py3-none-any.whl (43 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7746366Z Downloading colorlog-6.10.1-py3-none-any.whl (11 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7806979Z Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7950403Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 90.9 MB/s  0:00:00
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.7986761Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8043614Z Downloading dependency_groups-1.3.1-py3-none-any.whl (8.7 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8098718Z Downloading humanize-4.15.0-py3-none-any.whl (132 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8157558Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8216766Z Downloading virtualenv-21.2.0-py3-none-any.whl (5.8 MB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8447471Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 269.2 MB/s  0:00:00
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8492678Z Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8556572Z Downloading filelock-3.25.2-py3-none-any.whl (26 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8612065Z Downloading platformdirs-4.9.4-py3-none-any.whl (21 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.8665464Z Downloading python_discovery-1.2.2-py3-none-any.whl (31 kB)
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:25.9106840Z Installing collected packages: distlib, setuptools, platformdirs, packaging, humanize, filelock, colorlog, attrs, argcomplete, python-discovery, dependency-groups, virtualenv, nox
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.0143540Z 
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.0164217Z Successfully installed argcomplete-3.6.3 attrs-26.1.0 colorlog-6.10.1 dependency-groups-1.3.1 distlib-0.4.0 filelock-3.25.2 humanize-4.15.0 nox-2026.2.9 packaging-26.0 platformdirs-4.9.4 python-discovery-1.2.2 setuptools-82.0.1 virtualenv-21.2.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2872902Z Package           Version
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2873452Z ----------------- --------
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2875178Z argcomplete       3.6.3
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2876879Z attrs             26.1.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2878164Z colorlog          6.10.1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2879850Z dependency-groups 1.3.1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2881312Z distlib           0.4.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2883017Z filelock          3.25.2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2884108Z humanize          4.15.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2885406Z nox               2026.2.9
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2886752Z packaging         26.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2888165Z pip               26.0.1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2889441Z platformdirs      4.9.4
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2891004Z python-discovery  1.2.2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2892243Z setuptools        82.0.1
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.2893810Z virtualenv        21.2.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3203852Z ##[group]Run nox -s pep484
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3204121Z [36;1mnox -s pep484[0m
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3233885Z shell: /usr/bin/bash -e {0}
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3234125Z env:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3234301Z   TOX_WORKERS: -n2
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3234577Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3234992Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.12/x64/lib/pkgconfig
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3235393Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3235761Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3236116Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.12/x64
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3236467Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.12/x64/lib
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.3236761Z ##[endgroup]
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.4979464Z nox > Running session pep484
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:27.4982761Z nox > Creating virtual environment (virtualenv) using python in .nox/pep484
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:28.1373203Z nox > python -m pip install 'mypy>=1.16.0' nox 'pytest<10,>8'
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:33.6979652Z nox > python -m pip install -e .
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:38.8361463Z nox > mypy noxfile.py ./alembic/ --exclude alembic/templates
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.6220758Z Success: no issues found in 52 source files
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.6411106Z nox > Session pep484 was successful in 18 seconds.
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.6679594Z Post job cleanup.
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.8314919Z Post job cleanup.
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9269037Z [command]/usr/bin/git version
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9305424Z git version 2.53.0
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9347786Z Temporarily overriding HOME='/home/runner/work/_temp/82520380-a891-4050-b8b7-b6760b42d9c4' before making global git config changes
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9348992Z Adding repository directory to the temporary git global config as a safe directory
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9362145Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alembic/alembic
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9400415Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9434086Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9674677Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9696696Z http.https://github.com/.extraheader
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9708814Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9740160Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:45.9975950Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.0008107Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.0370954Z Cleaning up orphan processes
+pep484-3.13-ubuntu-latest	UNKNOWN STEP	2026-04-08T21:24:46.0647708Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	﻿2026-04-08T21:24:22.2803516Z Current runner version: '2.333.1'
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2828193Z ##[group]Runner Image Provisioner
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2829113Z Hosted Compute Agent
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2829637Z Version: 20260213.493
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2830234Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2830952Z Build Date: 2026-02-13T00:28:41Z
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2831616Z Worker ID: {36ecff1e-6ec1-4d96-8a0f-e58e70de187e}
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2832257Z Azure Region: centralus
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2832847Z ##[endgroup]
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2834410Z ##[group]Operating System
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2834989Z Ubuntu
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2835532Z 22.04.5
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2835974Z LTS
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2836425Z ##[endgroup]
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2836885Z ##[group]Runner Image
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2837482Z Image: ubuntu-22.04
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2837954Z Version: 20260329.74.1
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2839194Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260329.74/images/ubuntu/Ubuntu2204-Readme.md
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2840608Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260329.74
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2841541Z ##[endgroup]
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2842493Z ##[group]GITHUB_TOKEN Permissions
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2844556Z Contents: read
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2845223Z Metadata: read
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2845743Z ##[endgroup]
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2848203Z Secret source: Actions
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.2849020Z Prepare workflow directory
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.3291535Z Prepare all required actions
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.3335081Z Getting action download info
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:22.6691642Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.1851707Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4052682Z Complete job name: 3.10-sqla20-ubuntu-22.04
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4767893Z ##[group]Run actions/checkout@v4
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4768757Z with:
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4769213Z   repository: sqlalchemy/alembic
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4769895Z   token: ***
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4770313Z   ssh-strict: true
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4770718Z   ssh-user: git
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4771142Z   persist-credentials: true
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4771604Z   clean: true
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4772031Z   sparse-checkout-cone-mode: true
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4772547Z   fetch-depth: 1
+3.10-sqla20-ubuntu-22.04	UNKNOWN STEP	2026-04-08T21:24:23.4772960Z   fetch-tags: false
+
+# === AROUND DRIFT-005 HIT (lines 125301-125600) ===
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0940830Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0941430Z     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0941880Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0942430Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0943040Z     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0943370Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0943950Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0944470Z     raise exception
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0944990Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0945530Z     teardown.throw(exception)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0946120Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0946660Z     return (yield)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0946810Z             ^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0947290Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0947800Z     teardown.throw(exception)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0948710Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0949280Z     return (yield)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0949420Z             ^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0949910Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0950450Z     res = hook_impl.function(*args)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0950640Z           ^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0951190Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/_pytest/runner.py", line 179, in pytest_runtest_call
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0951730Z     item.runtest()
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0952230Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/_pytest/python.py", line 1720, in runtest
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0952770Z     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0953330Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0953980Z     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0954350Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0954930Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0955540Z     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0955860Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0956600Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0957110Z     raise exception
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0957600Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0958130Z     res = hook_impl.function(*args)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0958330Z           ^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0958860Z   File "/Users/runner/work/alembic/alembic/.nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/_pytest/python.py", line 166, in pytest_pyfunc_call
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0959390Z     result = testfunction(**testargs)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0959590Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0959960Z   File "/Users/runner/work/alembic/alembic/tests/test_command.py", line 1180, in test_edit_b
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0960340Z     command.edit(self.cfg, self.b[0:3])
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0960710Z   File "/Users/runner/work/alembic/alembic/alembic/command.py", line 822, in edit
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0961040Z     revs = script.get_revisions(rev)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0961230Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0961620Z   File "/Users/runner/work/alembic/alembic/alembic/script/base.py", line 273, in get_revisions
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0962010Z     with self._catch_revision_errors():
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0962200Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0962630Z   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0963060Z     self.gen.throw(value)
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0963480Z   File "/Users/runner/work/alembic/alembic/alembic/script/base.py", line 245, in _catch_revision_errors
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0963920Z     raise util.CommandError(resolution) from re
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0964270Z alembic.util.exc.CommandError: Can't locate revision identified by 'b05'
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0964680Z ---------------------------- Captured stdout setup -----------------------------
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0965130Z Creating directory /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0966040Z Creating directory /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/versions ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0966650Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/script.py.mako ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0967230Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/env.py ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0967760Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/README ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0968290Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/test_alembic.ini ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0969010Z Please edit configuration/connection/logging settings in /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/test_alembic.ini before proceeding.
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0969790Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/versions/b05cacac6e22_revision_a.py ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0970510Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/versions/b05d5b5cf247_revision_b.py ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0971200Z Generating /Users/runner/work/alembic/alembic/scratch_test_d1e574ba8144/scripts/versions/e2dc2c415e92_revision_c.py ...  done
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0971700Z ---------------------------- Captured stderr setup -----------------------------
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0972000Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0972200Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0972390Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0972590Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0972790Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0973260Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0973450Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0973740Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0973970Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0974180Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0974390Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0974570Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0974750Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0974950Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0975170Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0975370Z %(levelname)-5.5s [%(name)s] %(message)s
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0975620Z =========================== short test summary info ============================
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0976640Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_053] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0978340Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_054] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0979990Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_055] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0981630Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_056] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0983670Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_057] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0985320Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_058] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0986980Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_059] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0988590Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_060] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0990150Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_061] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0991670Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_062] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0993170Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_063] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0994890Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_064] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0996380Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_065] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0997910Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_066] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.0999500Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_067] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1001110Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_068] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1002580Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_49_1::test_drop_fk_with_mixed_case_name[not_use_naming_convention-lowercase] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1004380Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_069] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1005940Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_49_1::test_drop_fk_with_mixed_case_name[not_use_naming_convention-uppercase] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1007390Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_49_1::test_drop_fk_with_mixed_case_name[use_naming_convention-lowercase] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1008800Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_49_1::test_drop_fk_with_mixed_case_name[use_naming_convention-uppercase] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1010180Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[<lambda>-<lambda>] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1011520Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[asc-desc] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1012840Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::AutogenPlaceholderTableTest_sqlite+pysqlite_3_49_1::test_fk_to_filtered_table_cross_schema (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1014450Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[desc-<lambda>] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1015780Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[desc-asc] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1017140Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[nulls_first-nulls_last] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1018530Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_changed[nulls_last-nulls_first] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1019920Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[<lambda>-<lambda>] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1021300Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[<lambda>-asc] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1022850Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[<lambda>-nulls_last] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1024190Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[asc-asc] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1025790Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[desc-<lambda>] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1027150Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[desc-desc] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1028540Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[nulls_first-nulls_first] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1029970Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_column_sort_not_changed[nulls_last-nulls_last] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1031370Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_49_1::test_nothing_changed_covering_index (call)' : not postgresql >= (11,) and not mssql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1032870Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_datetime_comparisons[cola0-colb0-False-_exclusions_00] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1034570Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_datetime_comparisons[cola1-colb1-True-_exclusions_01] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1036060Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_datetime_comparisons[cola2-colb2-True-_exclusions_02] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1037590Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_introspected_columns_match_metadata_columns[cola17-_exclusions_017] (call)' : not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1039040Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateUniqueIndexTest_sqlite+pysqlite_3_49_1::test_remove_uq_constraint (call)' : sqlite
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1040450Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_string_comparisons[cola10-colb10-False-_exclusions_010] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1042050Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_string_comparisons[cola11-colb11-False-_exclusions_011] (call)' : not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1043600Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_string_comparisons[cola12-colb12-True-_exclusions_012] (call)' : not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1045510Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_string_comparisons[cola13-colb13-False-_exclusions_013] (call)' : not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1047120Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_49_1::test_string_comparisons[cola14-colb14-True-_exclusions_014] (call)' : not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1048340Z SKIPPED [4] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: unique constraint reflection disabled for this suite
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1049510Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[DATETIME-(getdate())] (call)' : not mssql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1050950Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[DATETIME-(now())] (call)' : sqlite
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1052450Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[VARCHAR(30)-substring('name', 1, 3)] (call)' : not mssql and not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1054020Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[VARCHAR(30)-substring('name',1,3)] (call)' : not mssql and not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1056310Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[VARCHAR(30)-substring(:substring_1, :substring_2, :substring_3)] (call)' : not mssql and not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1058010Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[VARCHAR(50)-substring(user_name(), charindex('',user_name())+(1),len(user_name()))] (call)' : not mssql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1059700Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_49_1::test_server_default_no_false_positives[VARCHAR(50)-substring(user_name(),charindex('',user_name())+(1),len(user_name()))] (call)' : not mssql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1061140Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::NoUqReflectionIndexTest_sqlite+pysqlite_3_49_1::test_remove_uq_constraint (call)' : sqlite
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1062720Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_016] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1064220Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_017] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1066150Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_018] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1067660Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_019] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1069140Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_020] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1070630Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_021] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1942780Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_022] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1944590Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_023] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1946200Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_024] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1948110Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_025] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1949610Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_026] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1951140Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_027] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1952660Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions_028] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1954020Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::NoUqReportsIndAsUqTest_sqlite+pysqlite_3_49_1::test_remove_uq_constraint (call)' : sqlite
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1955470Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_render.py::AutogenRenderTest::test_render_add_column_identity[kw4-sa.Identity(always=False, start=42, oracle_on_null=True, oracle_order=False)-_exclusions_04] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1957480Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_render.py::AutogenRenderTest::test_render_alter_column_add_identity[kw4-sa.Identity(always=False, start=42, oracle_on_null=True, oracle_order=False)-_exclusions_04] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1959090Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_032] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1960610Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_033] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1962100Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_034] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1963610Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_035] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1965100Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_036] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1966600Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_037] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1968310Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_038] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1969820Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_039] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1971320Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_040] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1972820Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_041] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1974350Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_042] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1975840Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_043] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1977540Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_044] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1979070Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_045] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1980570Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_046] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1982340Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_047] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1983920Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_048] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1985410Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_049] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1986870Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_add_column_auto_identity (call)' : not postgresql >= (10,) and not oracle >= (12,) and not mssql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1988560Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_050] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1989910Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_add_column_comment (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1991070Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_add_column_comment_recreate (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1992410Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_051] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1993920Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_49_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions_052] (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1995230Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_add_table_comment (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1996360Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_drop_table_comment (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1998140Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_alter_column_comment (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.1999370Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_batch.py::BatchRoundTripTest_sqlite+pysqlite_3_49_1::test_alter_column_comment_recreate (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2000410Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_op.py::OpTest::test_run_async_ok (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2001540Z SKIPPED [4] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests.test_script_consumption.BranchedOnlineTransactionalDDLTest' unsupported on any DB implementation 'sqlite(3.49.1)+pysqlite'SQLAlchemy 1.x test
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2002860Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_server_default[False] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2004110Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_server_default[True] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2005340Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_deferrable (call)' : not postgresql and not oracle
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2006590Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_initially_deferrable_nochange_one (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2008150Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_initially_deferrable_nochange_three (call)' : not postgresql and not oracle
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2009510Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_initially_deferrable_nochange_two (call)' : not postgresql and not oracle
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2010810Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_initially_deferred (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2012050Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_add_initially_immediate_plus_deferrable (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2013340Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_remove_deferrable (call)' : not postgresql and not oracle
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2014590Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_remove_initially_deferred (call)' : not postgresql
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2015910Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_49_1::test_remove_initially_immediate_plus_deferrable (call)' : not postgresql and not oracle
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2017500Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutogenerateForeignKeysTest_sqlite+pysqlite_3_49_1::test_casing_convention_changed_so_put_drops_first (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2018920Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AutoincrementTest_sqlite+pysqlite_3_49_1::test_alter_column_autoincrement_compositepk_explicit_true (call)' : not supported by database
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2020280Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::MigrationTransactionTest_sqlite+pysqlite_3_49_1::test_autocommit_block (call)' : not postgresql and not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2021650Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::MigrationTransactionTest_sqlite+pysqlite_3_49_1::test_autocommit_block_no_transaction (call)' : not postgresql and not mysql and not mariadb
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2023120Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled[False] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2024270Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled[True] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2025450Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_comment[False] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2026690Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_comment[True] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2028130Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_notnull[False] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2029330Z SKIPPED [1] .nox/tests-py312-sqla20-sqlite/lib/python3.12/site-packages/sqlalchemy/testing/config.py:430: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_49_1::test_all_existings_filled_in_notnull[True] (call)' : custom function
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2030310Z FAILED tests/test_command.py::EditTest::test_edit_b - alembic.util.exc.CommandError: Can't locate revision identified by 'b05'
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.2030790Z ================= 1 failed, 1746 passed, 129 skipped in 11.28s =================
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.3295120Z nox > Command python -m pytest -n2 --db=sqlite failed with exit code 1
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.3326260Z nox > Session tests(py312-sqla20-sqlite) failed.
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.3579520Z ##[error]Process completed with exit code 1.
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.3698910Z Post job cleanup.
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.4968560Z [command]/opt/homebrew/bin/git version
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5049700Z git version 2.53.0
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5072930Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/6e209b05-5ea2-4603-9638-704ce0e32e12/.gitconfig'
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5080000Z Temporarily overriding HOME='/Users/runner/work/_temp/6e209b05-5ea2-4603-9638-704ce0e32e12' before making global git config changes
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5081610Z Adding repository directory to the temporary git global config as a safe directory
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5087920Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/alembic/alembic
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5155220Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5217850Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.5962810Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.6014600Z http.https://github.com/.extraheader
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.6023410Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.6085570Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.6860440Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.6929320Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:11.7871260Z Cleaning up orphan processes
+3.12-sqla20-macos-latest	UNKNOWN STEP	2026-04-08T21:26:12.1467480Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+3.12-sqlamain-macos-latest	UNKNOWN STEP	﻿2026-04-08T21:25:04.9428580Z Current runner version: '2.333.1'
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9443780Z ##[group]Runner Image Provisioner
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9444280Z Hosted Compute Agent
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9444630Z Version: 20260213.493
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9445030Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9445480Z Build Date: 2026-02-13T00:28:41Z
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9445900Z Worker ID: {05eefa97-6baf-4545-8b02-7bdc063cbf3b}
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9446350Z Azure Region: westus
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9446690Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9447540Z ##[group]Operating System
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9447900Z macOS
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9448210Z 15.7.4
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9448490Z 24G517
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9448780Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9449090Z ##[group]Runner Image
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9449430Z Image: macos-15-arm64
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9449750Z Version: 20260406.0256.1
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9450550Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260406.0256/images/macos/macos-15-arm64-Readme.md
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9451680Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260406.0256
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9452290Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9452930Z ##[group]GITHUB_TOKEN Permissions
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9454140Z Contents: read
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9454450Z Metadata: read
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9454760Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9456630Z Secret source: Actions
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:04.9457050Z Prepare workflow directory
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:05.0061250Z Prepare all required actions
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:05.0097690Z Getting action download info
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:05.4143670Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:05.9430390Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2061290Z Complete job name: 3.12-sqlamain-macos-latest
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2620460Z ##[group]Run actions/checkout@v4
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2621280Z with:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2621670Z   repository: sqlalchemy/alembic
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2622380Z   token: ***
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2622700Z   ssh-strict: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2623030Z   ssh-user: git
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2623360Z   persist-credentials: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2623720Z   clean: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2624050Z   sparse-checkout-cone-mode: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2624440Z   fetch-depth: 1
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2624750Z   fetch-tags: false
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2625080Z   show-progress: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2625440Z   lfs: false
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2625760Z   submodules: false
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2626100Z   set-safe-directory: true
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2626630Z env:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2626970Z   TOX_WORKERS: -n2
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.2627300Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.8828990Z Syncing repository: sqlalchemy/alembic
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.8831870Z ##[group]Getting Git version info
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.8832630Z Working directory is '/Users/runner/work/alembic/alembic'
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.8833540Z [command]/opt/homebrew/bin/git version
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9677440Z git version 2.53.0
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9718210Z ##[endgroup]
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9732900Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/934ec5b0-b8ae-4c55-8bae-b08066af8e8e/.gitconfig'
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9745610Z Temporarily overriding HOME='/Users/runner/work/_temp/934ec5b0-b8ae-4c55-8bae-b08066af8e8e' before making global git config changes
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9748670Z Adding repository directory to the temporary git global config as a safe directory
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9756350Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/alembic/alembic
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9950590Z Deleting the contents of '/Users/runner/work/alembic/alembic'
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9951680Z ##[group]Initializing the repository
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:06.9952360Z [command]/opt/homebrew/bin/git init /Users/runner/work/alembic/alembic
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0255750Z hint: Using 'master' as the name for the initial branch. This default branch name
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0259320Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0260240Z hint: to use in all of your new repositories, which will suppress this warning,
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0260890Z hint: call:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0261280Z hint:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0261810Z hint: 	git config --global init.defaultBranch <name>
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0262430Z hint:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0262900Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0263700Z hint: 'development'. The just-created branch can be renamed via this command:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0264310Z hint:
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0264700Z hint: 	git branch -m <name>
+3.12-sqlamain-macos-latest	UNKNOWN STEP	2026-04-08T21:25:07.0265110Z hint:
+
+# === TAIL (last 200 lines) ===
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1873900Z tests/test_version_traversal.py::RevisionPathTest::test_invalid_move_higher_to_lower 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1874470Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_invalid_move_higher_to_lower 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1875020Z tests/test_version_traversal.py::RevisionPathTest::test_invalid_move_rev_to_none 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1875570Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_invalid_move_rev_to_none 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1876130Z [gw0] [ 99%] PASSED tests/test_version_traversal.py::NotQuiteTwinMergeTest::test_upgrade 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1876670Z tests/test_version_traversal.py::RevisionPathTest::test_invalid_relative_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1877470Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_invalid_relative_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1878040Z tests/test_version_traversal.py::RevisionPathTest::test_invalid_relative_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1878610Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_invalid_relative_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1879170Z tests/test_version_traversal.py::RevisionPathTest::test_relative_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1879680Z tests/test_version_traversal.py::RevisionPathTest::test_downgrade_base_no_version 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1880220Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_relative_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1880760Z tests/test_version_traversal.py::RevisionPathTest::test_relative_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1881300Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_relative_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1881810Z tests/test_version_traversal.py::RevisionPathTest::test_stamp_to_base 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1882290Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_stamp_to_base 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1882810Z tests/test_version_traversal.py::RevisionPathTest::test_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1883280Z [gw1] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_upgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1883840Z [gw0] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_downgrade_base_no_version 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1884370Z tests/test_version_traversal.py::RevisionPathTest::test_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1884790Z tests/test_version_traversal.py::TwinMergeTest::test_upgrade 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:48.1885330Z [gw0] [ 99%] PASSED tests/test_version_traversal.py::RevisionPathTest::test_downgrade_path 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0427400Z [gw1] [100%] PASSED tests/test_version_traversal.py::TwinMergeTest::test_upgrade 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0428050Z 
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0428340Z =========================== short test summary info ============================
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0429660Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[<lambda>-<lambda>] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0431400Z SKIPPED [3] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenerateDiffTestWSchema' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0433360Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[asc-desc] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0459880Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[desc-<lambda>] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0467380Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[desc-asc] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0469110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[nulls_first-nulls_last] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0490310Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_changed[nulls_last-nulls_first] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0492250Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[<lambda>-<lambda>] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0494530Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[<lambda>-asc] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0495960Z SKIPPED [7] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenCrossSchemaTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0497490Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[<lambda>-nulls_last] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0500290Z SKIPPED [2] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenCustomVersionTableAndSchemaTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0505790Z SKIPPED [2] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenCustomVersionTableSchemaTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0507110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[asc-asc] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0508520Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[desc-<lambda>] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0510120Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[desc-desc] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0512010Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[nulls_first-nulls_first] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0513460Z SKIPPED [3] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenDefaultSchemaTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0515220Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_column_sort_not_changed[nulls_last-nulls_last] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0516730Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_45_1::test_drop_fk_with_mixed_case_name[not_use_naming_convention-lowercase] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0518410Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_45_1::test_drop_fk_with_mixed_case_name[not_use_naming_convention-uppercase] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0520100Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_45_1::test_drop_fk_with_mixed_case_name[use_naming_convention-lowercase] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0521820Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::AutogenFKTest_sqlite+pysqlite_3_45_1::test_drop_fk_with_mixed_case_name[use_naming_convention-uppercase] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0529340Z SKIPPED [2] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenInspectorCacheTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'SQLAlchemy 2.x test
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0533450Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateIndexTest_sqlite+pysqlite_3_45_1::test_nothing_changed_covering_index (call)' : not postgresql >= (11,) and not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0537870Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::AutogenPlaceholderTableTest_sqlite+pysqlite_3_45_1::test_fk_to_filtered_table_cross_schema (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0541610Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenSystemColTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0545830Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_datetime_comparisons[cola0-colb0-False-_exclusions0] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0550750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_datetime_comparisons[cola1-colb1-True-_exclusions1] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0552570Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_datetime_comparisons[cola2-colb2-True-_exclusions2] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0554590Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_introspected_columns_match_metadata_columns[cola17-_exclusions17] (call)' : not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0556860Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateUniqueIndexTest_sqlite+pysqlite_3_45_1::test_remove_uq_constraint (call)' : sqlite
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0558870Z SKIPPED [4] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: unique constraint reflection disabled for this suite
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0560150Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_string_comparisons[cola10-colb10-False-_exclusions10] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0561830Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_string_comparisons[cola11-colb11-False-_exclusions11] (call)' : not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0563440Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_string_comparisons[cola12-colb12-True-_exclusions12] (call)' : not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0565170Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_string_comparisons[cola13-colb13-False-_exclusions13] (call)' : not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0567200Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareMetadataToInspectorTest_sqlite+pysqlite_3_45_1::test_string_comparisons[cola14-colb14-True-_exclusions14] (call)' : not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0569520Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[DATETIME-(getdate())] (call)' : not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0572810Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[DATETIME-(now())] (call)' : sqlite
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0574450Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::NoUqReflectionIndexTest_sqlite+pysqlite_3_45_1::test_remove_uq_constraint (call)' : sqlite
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0576110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[VARCHAR(30)-substring('name', 1, 3)] (call)' : not mssql and not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0578000Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[VARCHAR(30)-substring('name',1,3)] (call)' : not mssql and not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0580270Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[VARCHAR(30)-substring(:substring_1, :substring_2, :substring_3)] (call)' : not mssql and not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0590540Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[VARCHAR(50)-substring(user_name(), charindex('',user_name())+(1),len(user_name()))] (call)' : not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0593280Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_diffs.py::CompareServerDefaultTest_sqlite+pysqlite_3_45_1::test_server_default_no_false_positives[VARCHAR(50)-substring(user_name(),charindex('',user_name())+(1),len(user_name()))] (call)' : not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0595380Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGCompareMetaData' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0596910Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::NoUqReportsIndAsUqTest_sqlite+pysqlite_3_45_1::test_remove_uq_constraint (call)' : sqlite
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0598860Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions16] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0601160Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions17] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0602870Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions18] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0605050Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions19] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0606960Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions20] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0608750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions21] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0612110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions22] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0613930Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_render.py::AutogenRenderTest::test_render_add_column_identity[kw4-sa.Identity(always=False, start=42, oracle_on_null=True, oracle_order=False)-_exclusions4] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0615860Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions23] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0617710Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions24] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0619460Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions25] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0621640Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions26] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.0623610Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions27] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1691750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_render.py::AutogenRenderTest::test_render_alter_column_add_identity[kw4-sa.Identity(always=False, start=42, oracle_on_null=True, oracle_order=False)-_exclusions4] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1693790Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_changed[<lambda>-<lambda>-_exclusions28] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1696380Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_add_table_comment (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1697580Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_alter_column_comment (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1698870Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_alter_column_comment_recreate (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1700110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_drop_table_comment (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1701490Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions32] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1703260Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions33] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1706790Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions34] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1708480Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions35] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1710180Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions36] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1712200Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions37] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1714210Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions38] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1716010Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions39] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1717720Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions40] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1719510Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions41] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1721260Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions42] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1723110Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions43] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1726860Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions44] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1728770Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions45] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1730860Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions46] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1733680Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions47] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1735470Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions48] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1737250Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions49] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1738970Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions50] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1740940Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions51] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1744000Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions52] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1745810Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions53] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1747700Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions54] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1749570Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions55] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1751880Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions56] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1753960Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions57] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1756380Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions58] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1758200Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions59] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1759960Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions60] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1761690Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions61] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1763410Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions62] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1765240Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions63] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1768310Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions64] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1770380Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions65] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1772750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions66] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1774540Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions67] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1776360Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions68] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1778440Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_autogen_indexes.py::AutogenerateExpressionIndexTest_sqlite+pysqlite_3_45_1::test_expression_indexes_no_change[<lambda>-<lambda>-_exclusions69] (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1780140Z SKIPPED [54] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'BatchRoundTripMySQLTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1781290Z SKIPPED [55] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'BatchRoundTripPostgresqlTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1782750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_add_column_auto_identity (call)' : not postgresql >= (10,) and not oracle >= (12,) and not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1784050Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_add_column_comment (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1786660Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_batch.py::BatchRoundTripTest::test_add_column_comment_recreate (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1794750Z SKIPPED [7] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'RoundTripTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1796650Z SKIPPED [6] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'MySQLBackendOpTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1799060Z SKIPPED [9] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'MySQLDefaultCompareTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1800310Z SKIPPED [6] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'MySQLEnumCompareTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1805050Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_op.py::OpTest::test_run_async_ok (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1807450Z SKIPPED [17] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'IdentityTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1808680Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGAutocommitBlockTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1812080Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGAutocommitBlockTestFuture' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1813480Z SKIPPED [38] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGIndexAutogenerateTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1814970Z SKIPPED [24] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGNullsNotDistinctAutogenerateTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1816340Z SKIPPED [7] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PGUniqueIndexAutogenerateTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1818530Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_postgresql.py::PostgresqlAutogenRenderTest::test_inline_exclude_constraint_fn (call)' : SQLAlchemy 2.x test
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1820790Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_postgresql.py::PostgresqlAutogenRenderTest::test_inline_exclude_constraint_text (call)' : SQLAlchemy 2.x test
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1822410Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_postgresql.py::PostgresqlAutogenRenderTest::test_render_index_nulls_not_distinct_constraint (call)' : sqlalchemy with nulls not distinct support needed
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1825590Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_postgresql.py::PostgresqlAutogenRenderTest::test_render_unique_nulls_not_distinct_constraint (call)' : sqlalchemy with nulls not distinct support needed
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1830470Z SKIPPED [27] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PostgresqlDefaultCompareTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1836750Z SKIPPED [10] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PostgresqlDetectSerialTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1838020Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'PostgresqlInlineLiteralTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1839270Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_remove_deferrable (call)' : not postgresql and not oracle
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1840800Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_remove_initially_deferred (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1842300Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_remove_initially_immediate_plus_deferrable (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1847750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateForeignKeysTest_sqlite+pysqlite_3_45_1::test_casing_convention_changed_so_put_drops_first (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1851380Z SKIPPED [3] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'TestStubFiles' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'sqlalchemy 2 is required, python 3.12 is required
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1852840Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'TestStubFiles' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'python 3.12 is required, sqlalchemy 2 is required
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1854250Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled[False] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1855750Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled[True] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1857190Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_comment[False] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1858970Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_comment[True] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1861620Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_notnull[False] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1863140Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_notnull[True] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1864920Z SKIPPED [12] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenerateIdentityTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'not postgresql >= (10,) and not oracle >= (12,) and not mssql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1867850Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_server_default[False] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1869630Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AlterColumnTest_sqlite+pysqlite_3_45_1::test_all_existings_filled_in_server_default[True] (call)' : custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1873150Z SKIPPED [8] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'AutogenerateCommentsTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1878230Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutoincrementTest_sqlite+pysqlite_3_45_1::test_alter_column_autoincrement_compositepk_explicit_true (call)' : not supported by database
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1881870Z SKIPPED [6] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'BackendAlterColumnTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'no ALTER COLUMN support
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1883440Z SKIPPED [5] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'IncludeHooksTest' unsupported on any DB implementation 'sqlite(3.45.1)+pysqlite'custom function
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1885240Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::MigrationTransactionTest_sqlite+pysqlite_3_45_1::test_autocommit_block (call)' : not postgresql and not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1886980Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::MigrationTransactionTest_sqlite+pysqlite_3_45_1::test_autocommit_block_no_transaction (call)' : not postgresql and not mysql and not mariadb
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1889240Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_deferrable (call)' : not postgresql and not oracle
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1890710Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_initially_deferrable_nochange_one (call)' : not postgresql and not oracle
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1893440Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_initially_deferrable_nochange_three (call)' : not postgresql and not oracle
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1895780Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_initially_deferrable_nochange_two (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1897670Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_initially_deferred (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1899540Z SKIPPED [1] .nox/tests-py311-sqla14-sqlite/lib/python3.11/site-packages/sqlalchemy/testing/config.py:325: 'tests/test_suite.py::AutogenerateFKOptionsTest_sqlite+pysqlite_3_45_1::test_add_initially_immediate_plus_deferrable (call)' : not postgresql
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.1900510Z ====================== 1742 passed, 448 skipped in 10.33s ======================
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.3429050Z nox > Session tests(py311-sqla14-sqlite) was successful in 34 seconds.
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.3793420Z Post job cleanup.
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.7695660Z Post job cleanup.
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8698410Z [command]/opt/homebrew/bin/git version
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8886480Z git version 2.53.0
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8929540Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/c7911ee7-f224-41ab-8dfc-16e1567383eb/.gitconfig'
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8943350Z Temporarily overriding HOME='/Users/runner/work/_temp/c7911ee7-f224-41ab-8dfc-16e1567383eb' before making global git config changes
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8945330Z Adding repository directory to the temporary git global config as a safe directory
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.8950990Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/alembic/alembic
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.9049680Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.9122260Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:49.9995230Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.0039670Z http.https://github.com/.extraheader
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.0047480Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.0098130Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.0839220Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.0928430Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.1724190Z Cleaning up orphan processes
+3.11-sqla14-macos-latest	UNKNOWN STEP	2026-04-08T21:26:50.6495770Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
