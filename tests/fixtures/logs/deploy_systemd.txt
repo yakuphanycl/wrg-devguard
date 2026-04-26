@@ -1,0 +1,7 @@
+2026-04-26 09:15:00 ci-host deploy-api[1200]: deployment started release=2026.04.26-1 image=registry.example.invalid/wrg-devguard:sha-abc123
+2026-04-26 09:15:08 ci-host deploy-api[1200]: docker image pulled in 8s
+2026-04-26 09:15:12 ci-host systemd[1]: Started wrg-devguard.service.
+2026-04-26 09:15:44 ci-host deploy-api[1200]: deployment completed in 44s status=success
+2026-04-26 10:02:00 ci-host deploy-api[1220]: rollback started release=2026.04.26-0 reason=synthetic_healthcheck
+2026-04-26 10:02:09 ci-host systemd[1]: Stopped wrg-devguard.service.
+2026-04-26 10:02:22 ci-host deploy-api[1220]: rollback completed in 22s status=success

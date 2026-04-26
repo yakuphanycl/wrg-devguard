@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] — v0.3.0 wave 1
+
+### Added — log analysis adapters (CI / CD)
+
+- `wrg_devguard.adapters.log_analysis` — stream-friendly parsers that
+  normalize CI and deployment log formats to a common
+  `{ok, source, events, warnings?}` envelope (matches the v1.0.2
+  `wrg_mcp_server` envelope contract from audit §6 #3).
+  - `GitHubActionsLogAdapter` — recognizes `##[group]` / `##[endgroup]`
+    step boundaries, `##[error]` / `##[warning]` markers, ANSI escape
+    sequences, and timestamped runner lines.
+  - `SystemdDeploymentLogAdapter` — parses
+    `journalctl -o short-iso`-shaped streams; classifies deploy vs
+    rollback lifecycle, captures unit + service identifiers + ISO-8601
+    timestamps.
+  - `_normalize` shared layer — `iter_clean_lines` (decoding, ANSI
+    strip, control-byte skip, truncation flag), `make_event`
+    constructor, `envelope` builder with `ok` first by construction,
+    and a `WRG_DEVGUARD_LOG_ANALYSIS_MUTATIONS` mutation gate boundary
+    for future state-changing sinks.
+- 13 new tests across 3 files (`test_normalize`,
+  `test_ci_github_actions`, `test_cd_deployment`) plus three sample
+  fixtures (`github_actions_clean.txt`, `deploy_systemd.txt`,
+  `mixed_edge.txt`) covering happy-path, truncated-stream, and
+  malformed-line / encoding-edge scenarios. Fixtures are
+  scrubbed/synthetic — no customer data.
+
+### Notes
+- Adapters ship as standalone importable modules; CLI dispatch
+  integration into `wrg-devguard scan-logs --source ci|cc-endpoint`
+  follows in a separate Wave-1 PR (the seam already exists at
+  `scan_logs.py:29 ALLOWED_SOURCES`).
+- Full suite: 266 passed (253 baseline + 13 new), no regressions.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection
