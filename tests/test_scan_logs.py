@@ -67,6 +67,13 @@ def _no_op_detector(_: str) -> list:
     return []
 
 
+def _capturing_detector(seen: list[str]):
+    def _detect(text: str) -> list:
+        seen.append(text)
+        return []
+    return _detect
+
+
 # ──────────────────────────────────────────────────────────────────────
 # scan_text — schema conformance
 # ──────────────────────────────────────────────────────────────────────
@@ -171,6 +178,14 @@ def test_unknown_source_rejected() -> None:
                    detector=_no_op_detector)
 
 
+def test_run_scan_logs_unknown_source_rejected_after_load(tmp_path) -> None:
+    log = tmp_path / "build.log"
+    log.write_bytes(b"hello\n")
+
+    with pytest.raises(ValueError, match="source must be one of"):
+        run_scan_logs(path=str(log), source="stdin", detector=_no_op_detector)
+
+
 def test_input_meta_required() -> None:
     with pytest.raises(ValueError, match="input_meta"):
         scan_text("t", source="manual", input_meta=None,
@@ -269,6 +284,63 @@ def test_run_scan_logs_reads_file(tmp_path, validator) -> None:
     assert r["input"]["lines"] == 2
     assert r["input"]["size_bytes"] == 18
     assert "sha256" in r["input"]
+
+
+def test_run_scan_logs_source_ci_dispatches_github_actions_events(tmp_path, validator) -> None:
+    log = tmp_path / "github-actions.log"
+    log.write_bytes(
+        (
+            "\n".join(
+                [
+                    "2026-04-26T08:00:00Z ##[group]Run tests",
+                    "2026-04-26T08:00:01Z plain runner line admin@example.com",
+                    "2026-04-26T08:00:02Z ##[error]Contact admin@example.com before retry",
+                    "2026-04-26T08:00:03Z ##[endgroup]",
+                ]
+            )
+            + "\n"
+        ).encode("utf-8")
+    )
+    seen: list[str] = []
+
+    r = run_scan_logs(path=str(log), source="ci", detector=_capturing_detector(seen))
+
+    validator.validate(r)
+    assert r["source"] == "ci"
+    assert len(seen) == 1
+    assert "Contact admin@example.com before retry" in seen[0]
+    assert "##[error]" not in seen[0]
+    assert "plain runner line" not in seen[0]
+
+
+def test_run_scan_logs_source_cc_endpoint_warns_and_falls_back(tmp_path, validator) -> None:
+    log = tmp_path / "cc-endpoint.log"
+    log.write_bytes(b"raw cc endpoint payload admin@example.com\n")
+    seen: list[str] = []
+
+    with pytest.warns(RuntimeWarning, match="cc-endpoint adapter not yet implemented"):
+        r = run_scan_logs(
+            path=str(log),
+            source="cc-endpoint",
+            detector=_capturing_detector(seen),
+        )
+
+    validator.validate(r)
+    assert r["source"] == "cc-endpoint"
+    assert seen == ["raw cc endpoint payload admin@example.com\n"]
+
+
+def test_run_scan_logs_source_manual_keeps_raw_text(tmp_path, validator) -> None:
+    log = tmp_path / "manual.log"
+    raw = "2026-04-26T08:00:02Z ##[error]Contact admin@example.com\n"
+    log.write_bytes(raw.encode("utf-8"))
+    seen: list[str] = []
+
+    r = run_scan_logs(path=str(log), source="manual", detector=_capturing_detector(seen))
+
+    validator.validate(r)
+    assert r["source"] == "manual"
+    assert seen == [raw]
 
 
 def test_run_scan_logs_counts_unterminated_trailing_line(tmp_path, validator) -> None:

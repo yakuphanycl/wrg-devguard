@@ -28,6 +28,9 @@ All notable changes to this project will be documented in this file.
   `mixed_edge.txt`) covering happy-path, truncated-stream, and
   malformed-line / encoding-edge scenarios. Fixtures are
   scrubbed/synthetic — no customer data.
+- `scan-logs --source ci` pipes input through `GitHubActionsLogAdapter`
+  before PII detection. `--source cc-endpoint` is reserved (adapter not
+  yet implemented; falls back to manual with a warning).
 
 ### Notes
 - Adapters ship as standalone importable modules; CLI dispatch

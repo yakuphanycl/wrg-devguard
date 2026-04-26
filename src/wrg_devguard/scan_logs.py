@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import sys
+import warnings
 from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -72,6 +73,49 @@ def _default_detector() -> PIIDetector:
 
 def _no_op_detector(text: str) -> list[_PIIFindingProto]:  # noqa: ARG001
     return []
+
+
+# ──────────────────────────────────────────────────────────────────────
+# Source dispatch / normalization
+# ──────────────────────────────────────────────────────────────────────
+
+
+def _normalize_for_source(text: str, source: str) -> str:
+    """Return the text surface that PII detection should scan."""
+
+    if source == "manual":
+        return text
+    if source == "ci":
+        return _normalize_ci_text(text)
+    if source == "cc-endpoint":
+        warnings.warn(
+            "scan-logs --source cc-endpoint adapter not yet implemented; "
+            "falling back to manual mode",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+        return text
+    return text
+
+
+def _normalize_ci_text(text: str) -> str:
+    try:
+        from .adapters.log_analysis import GitHubActionsLogAdapter
+    except ImportError:
+        warnings.warn(
+            "GitHubActionsLogAdapter unavailable; falling back to manual mode",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+        return text
+
+    adapter = GitHubActionsLogAdapter()
+    messages = [
+        event.msg
+        for event in adapter.iter_events(text.splitlines(keepends=True))
+        if event.msg
+    ]
+    return "\n".join(messages) if messages else text
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -183,7 +227,8 @@ def scan_text(
         raise ValueError("input_meta with at least a 'path' key is required")
 
     detect = detector or _default_detector()
-    raw_findings = detect(text) or []
+    detection_text = _normalize_for_source(text, source)
+    raw_findings = detect(detection_text) or []
     findings = [_finding_to_dict(f) for f in raw_findings]
     findings.sort(key=lambda f: (f["line_no"], f["span"][0]))
 
