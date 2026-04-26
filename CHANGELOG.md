@@ -31,6 +31,8 @@ All notable changes to this project will be documented in this file.
 - `scan-logs --source ci` pipes input through `GitHubActionsLogAdapter`
   before PII detection. `--source cc-endpoint` is reserved (adapter not
   yet implemented; falls back to manual with a warning).
+- `CcEndpointLogAdapter` parses Control Center JSONL endpoint events and
+  `scan-logs --source cc-endpoint` now scans normalized event messages.
 
 ### Notes
 - Adapters ship as standalone importable modules; CLI dispatch

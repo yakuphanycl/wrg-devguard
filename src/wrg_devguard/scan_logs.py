@@ -88,13 +88,7 @@ def _normalize_for_source(text: str, source: str) -> str:
     if source == "ci":
         return _normalize_ci_text(text)
     if source == "cc-endpoint":
-        warnings.warn(
-            "scan-logs --source cc-endpoint adapter not yet implemented; "
-            "falling back to manual mode",
-            RuntimeWarning,
-            stacklevel=2,
-        )
-        return text
+        return _normalize_cc_endpoint_text(text)
     return text
 
 
@@ -110,6 +104,26 @@ def _normalize_ci_text(text: str) -> str:
         return text
 
     adapter = GitHubActionsLogAdapter()
+    messages = [
+        event.msg
+        for event in adapter.iter_events(text.splitlines(keepends=True))
+        if event.msg
+    ]
+    return "\n".join(messages) if messages else text
+
+
+def _normalize_cc_endpoint_text(text: str) -> str:
+    try:
+        from .adapters.log_analysis import CcEndpointLogAdapter
+    except ImportError:
+        warnings.warn(
+            "CcEndpointLogAdapter unavailable; falling back to manual mode",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+        return text
+
+    adapter = CcEndpointLogAdapter()
     messages = [
         event.msg
         for event in adapter.iter_events(text.splitlines(keepends=True))
