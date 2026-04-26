@@ -60,6 +60,20 @@ All notable changes to this project will be documented in this file.
 - `tests/schemas/test_log_scan_result_schema.py`: `pii_name` added to
   the expected Category enum.
 
+### Changed
+
+- **`NAME-001` NER fallback now disabled by default**; opt-in via
+  `WRG_DEVGUARD_NAME_NER=1` (response to PR #27 dogfood: 100% FP rate
+  on real CI logs — 219 false hits per 1608-line GitHub Actions log,
+  dominated by `Post Run`, `Runner Image`, `Build Date`, `Azure Region`
+  bigrams). Curated dictionary tier (0.95 → MEDIUM) unchanged.
+- **GitHub Actions scaffold guard**: lines beginning with `##[...]`
+  annotations and the `<job>\t<step>\t<timestamp> <content>` envelope
+  produced by `gh run view --log` are now skipped by `detect_names`
+  outright. Adapters (PR #21 / cc-endpoint) remain responsible for
+  stripping the envelope before payload reaches the detector pipeline;
+  this guard is a defence-in-depth net for raw-log paths.
+
 ## [0.2.0] — 2026-04-26
 
 ### Added — log scanning + PII detection
