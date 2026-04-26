@@ -1,0 +1,10 @@
+2026-04-26T08:00:00Z ##[group]Checkout repository
+2026-04-26T08:00:01Z Syncing repository: example/wrg-devguard
+2026-04-26T08:00:03Z ##[endgroup]
+2026-04-26T08:00:04Z ##[group]Run tests
+2026-04-26T08:00:05Z python -m pytest
+2026-04-26T08:00:06Z Traceback (most recent call last):
+2026-04-26T08:00:06Z   File "tests/test_example.py", line 12, in test_example
+2026-04-26T08:00:06Z AssertionError: expected scrubbed value
+2026-04-26T08:00:07Z ##[error]Process completed with exit code 1.
+2026-04-26T08:00:09Z ##[endgroup]

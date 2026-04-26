@@ -1,0 +1,7 @@
+2026-04-26T11:00:00Z [32m##[group]Lint package[0m
+2026-04-26T11:00:01Z flake check passed
+2026-04-26T11:00:02Z ##[error]The process '/usr/bin/bash' failed with exit code 2.
+2026-04-26 11:05:00 ci-host deploy-api[1300]: deployment started release=edge-case
+2026-04-26 11:05:05 ci-host deploy-api[1300]: failed health check after deploy
+2026-04-26 11:05:07 ci-host deploy-api[1300]: rollback started release=previous
+2026-04-26T11:00:03Z partial line without newline
