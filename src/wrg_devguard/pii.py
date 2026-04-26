@@ -110,6 +110,16 @@ _IPV6_RE = re.compile(
     r"|(?:[A-Fa-f0-9]{1,4}:){1,7}:"
     r"|::(?:[A-Fa-f0-9]{1,4}:){0,6}[A-Fa-f0-9]{1,4}"
 )
+# GitHub Actions workflow command prefixes — lines starting with `::<cmd>::`
+# or `::<cmd> ` look like IPv6 to the regex above (the leading `::` followed
+# by a single hex-shaped char like `e` in `error` or `w` in `warning`).
+# Reject the entire line for IPv6 detection when this shape is present.
+# Source: https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions
+_GH_ANNOTATION_PREFIX_RE = re.compile(
+    r"^::(?:error|warning|notice|debug|group|endgroup|"
+    r"set-output|set-env|add-mask|add-path|add-matcher|"
+    r"remove-matcher|stop-commands|save-state)(?:::|\s|$)"
+)
 # TR mobile: optional `+` and 90 prefix, then 5 + 9 digits.
 _PHONE_TR_RE = re.compile(r"(?<!\d)\+?(?:90)?5\d{9}(?!\d)")
 # US 10-digit (with optional separators). Conservative: require area
@@ -496,8 +506,32 @@ def _detect_ip_001(line: str, line_no: int) -> list[PIIFinding]:
     return out
 
 
+def _is_timestamp_shape(candidate: str) -> bool:
+    """True if candidate looks like an HH:MM:SS clock-shape, not IPv6.
+
+    Requires ≥3 colon-separated non-empty groups, every group ≤2 chars
+    AND all-decimal. Real IPv6 needs `::` to compress, so a sequence of
+    3+ short decimal groups separated by single `:` is a timestamp.
+    Excludes loopback `::1` (single group) and addresses with hex chars
+    like `::ffff` from this guard so they keep flagging.
+
+    Eliminates a 100%-FP class observed on real GitHub Actions log
+    lines like `MB 24.4 MB/s  0:00:00` (PR #27 dogfood, §3.2).
+    """
+    groups = [g for g in candidate.split(":") if g]
+    if len(groups) < 3:
+        return False
+    return all(len(g) <= 2 and g.isdigit() for g in groups)
+
+
 def _detect_ip_002(line: str, line_no: int) -> list[PIIFinding]:
     out: list[PIIFinding] = []
+    # Skip the line entirely when it opens with a GitHub Actions workflow
+    # command (`::error::...`, `::warning::...`, `::group::...`, etc.).
+    # The leading `::` plus a single hex-shaped char satisfies the IPv6
+    # regex's third alt-branch, producing a 100%-FP class on CI logs.
+    if _GH_ANNOTATION_PREFIX_RE.match(line):
+        return out
     seen_spans: list[tuple[int, int]] = []
     for m in _IPV6_RE.finditer(line):
         candidate = m.group(0)
@@ -506,6 +540,11 @@ def _detect_ip_002(line: str, line_no: int) -> list[PIIFinding]:
         if ":" not in candidate:
             continue
         if candidate.count(":") < 2 and "::" not in candidate:
+            continue
+        # Reject HH:MM:SS / 0:00:00 / similar all-decimal short-group
+        # shapes — never a real IPv6, common in CI throughput / timing
+        # output lines.
+        if _is_timestamp_shape(candidate):
             continue
         # De-duplicate overlapping alt-branch matches (the union regex
         # can produce multiple matches at the same span).

@@ -348,6 +348,82 @@ def test_ip_002_negative(text: str) -> None:
     assert not _has(detect_line(text, 1), "IP-002")
 
 
+# IP-002 — false-positive guards added in v0.2.1
+# Source: PR #27 dogfood report against real GitHub Actions logs found
+# 10/10 IP-002 hits were FP — 6 from `::error::` annotation prefixes and
+# 4 from `0:00:00`-shape throughput timestamps. Both are now rejected.
+
+
+@pytest.mark.parametrize("text", [
+    "MB 24.4 MB/s  0:00:00",
+    "elapsed 1:23:45",
+    "boot 0:00:00 ready",
+    "10:20:30",  # bare HH:MM:SS at start of line
+    "1:2:3 short timestamp",
+    "11:22:33 morning shift",
+])
+def test_ip_002_rejects_timestamp_shape(text: str) -> None:
+    """HH:MM:SS-shape strings (all-decimal, ≤2-char groups) are timestamps,
+    not IPv6 addresses. The shape slipped through because [0-9] is a
+    subset of [A-Fa-f0-9]; v0.2.1 explicitly rejects it.
+    """
+    assert not _has(detect_line(text, 1), "IP-002")
+
+
+@pytest.mark.parametrize("text", [
+    "::error::fail-on must be one of {error, warn, none}",
+    "::warning::deprecated input 'json-out' — use 'format: json' instead",
+    "::group::Run wrg-devguard scan",
+    "::endgroup::",
+    "::notice::scan completed in 12s",
+    "::debug::initialised pattern engine",
+    "::set-output name=findings::0",
+    "::add-mask::secret-value",
+    "::group::Operating System",
+])
+def test_ip_002_rejects_gh_annotation_prefix(text: str) -> None:
+    """Lines opening with a GitHub Actions workflow command (`::error::`,
+    `::warning::`, `::group::`, etc.) trip the IPv6 regex's third
+    alt-branch (the leading `::` plus a single hex-shaped char like `e`
+    or `w`). v0.2.1 skips IPv6 detection on these lines entirely.
+    """
+    assert not _has(detect_line(text, 1), "IP-002")
+
+
+def test_ip_002_real_ipv6_after_annotation_keyword_in_prose() -> None:
+    """Sanity: a line that contains the substring 'error' but is NOT a
+    workflow-command-prefix line still detects real IPv6 normally.
+    """
+    # Not at the start of the line and not preceded by '::', so the
+    # annotation guard does not fire.
+    text = "logged error from peer addr 2001:db8::1"
+    assert _has(detect_line(text, 1), "IP-002")
+
+
+def test_ip_002_real_ipv6_alongside_timestamp_on_same_line() -> None:
+    """Sanity: a line with both a timestamp-shape string AND a real IPv6
+    still flags the real address. The per-candidate guard rejects the
+    timestamp candidate, leaves the IPv6 candidate intact.
+    """
+    text = "0:00:00 connect to 2001:db8::1"
+    findings = detect_line(text, 1)
+    ipv6_findings = [f for f in findings if f.pattern_id == "IP-002"]
+    # At least one IPv6 finding for the real address; the `0:00:00`
+    # timestamp candidate is rejected by `_is_timestamp_shape`.
+    assert len(ipv6_findings) >= 1
+    # The matched span must overlap the real address, not the timestamp
+    real_addr_start = text.index("2001:db8")
+    assert any(f.span[0] >= real_addr_start for f in ipv6_findings)
+
+
+def test_ip_002_short_loopback_not_timestamp_shape() -> None:
+    """`::1` and similar single-group compressed IPv6 must NOT be
+    rejected by the timestamp guard (group count <3).
+    """
+    findings = detect_line("connect ::1 ok", 1)
+    assert _has(findings, "IP-002")
+
+
 # ──────────────────────────────────────────────────────────────────────
 # PHONE-001 — TR mobile
 # ──────────────────────────────────────────────────────────────────────
