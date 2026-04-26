@@ -1,0 +1,1262 @@
+# === RAIL INSPECTOR SUCCESS (8.1.3 release) ===
+rail_inspector tests	UNKNOWN STEP	﻿2026-03-24T20:24:58.3262807Z Current runner version: '2.332.0'
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3288505Z ##[group]Runner Image Provisioner
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3289328Z Hosted Compute Agent
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3290013Z Version: 20260213.493
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3290711Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3291466Z Build Date: 2026-02-13T00:28:41Z
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3292115Z Worker ID: {f473e973-ed66-4591-9f41-cfc3a4d40e9e}
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3292838Z Azure Region: northcentralus
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3293467Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3295306Z ##[group]Operating System
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3295895Z Ubuntu
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3296359Z 24.04.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3296946Z LTS
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3297379Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3297897Z ##[group]Runner Image
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3298483Z Image: ubuntu-24.04
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3299014Z Version: 20260309.50.1
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3300276Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260309.50/images/ubuntu/Ubuntu2404-Readme.md
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3301758Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260309.50
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3302729Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3303766Z ##[group]GITHUB_TOKEN Permissions
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3306601Z Contents: read
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3307330Z Metadata: read
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3307842Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3310363Z Secret source: Actions
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3311595Z Prepare workflow directory
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3651043Z Prepare all required actions
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.3692332Z Getting action download info
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.7684523Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:58.9022792Z Download action repository 'ruby/setup-ruby@v1' (SHA:319994f95fa847cf3fb3cd3dbe89f6dcde9f178f)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4197640Z Complete job name: rail_inspector tests
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4956278Z ##[group]Run actions/checkout@v6
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4957317Z with:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4957769Z   repository: rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4958506Z   token: ***
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4958929Z   ssh-strict: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4959366Z   ssh-user: git
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4959820Z   persist-credentials: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4960305Z   clean: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4960748Z   sparse-checkout-cone-mode: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4961284Z   fetch-depth: 1
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4961717Z   fetch-tags: false
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4962168Z   show-progress: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4962626Z   lfs: false
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4963035Z   submodules: false
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4963484Z   set-safe-directory: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.4964730Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.5954301Z Syncing repository: rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.5956414Z ##[group]Getting Git version info
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.5957139Z Working directory is '/home/runner/work/rails/rails'
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.5958222Z [command]/usr/bin/git version
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6035625Z git version 2.53.0
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6060079Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6075377Z Temporarily overriding HOME='/home/runner/work/_temp/c1a40c0a-5fc9-48c7-bf70-c8f0c4f99007' before making global git config changes
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6077914Z Adding repository directory to the temporary git global config as a safe directory
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6080470Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6128084Z Deleting the contents of '/home/runner/work/rails/rails'
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6133098Z ##[group]Initializing the repository
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6138639Z [command]/usr/bin/git init /home/runner/work/rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6286239Z hint: Using 'master' as the name for the initial branch. This default branch name
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6288616Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6291037Z hint: to use in all of your new repositories, which will suppress this warning,
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6292906Z hint: call:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6293577Z hint:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6294918Z hint: 	git config --global init.defaultBranch <name>
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6295735Z hint:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6296509Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6297785Z hint: 'development'. The just-created branch can be renamed via this command:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6298958Z hint:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6299894Z hint: 	git branch -m <name>
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6300770Z hint:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6301611Z hint: Disable this message with "git config set advice.defaultBranchName false"
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6302958Z Initialized empty Git repository in /home/runner/work/rails/rails/.git/
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6305508Z [command]/usr/bin/git remote add origin https://github.com/rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6377264Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6378101Z ##[group]Disabling automatic garbage collection
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6381164Z [command]/usr/bin/git config --local gc.auto 0
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6413620Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6414687Z ##[group]Setting up auth
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6415604Z Removing SSH command configuration
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6423260Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6459293Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6903560Z Removing HTTP extra header
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6911481Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.6949109Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7185897Z Removing includeIf entries pointing to credentials config files
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7192323Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7226902Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7475314Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7517864Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rails/rails/.git.path /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7578282Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rails/rails/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7594081Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7631437Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7665305Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7666665Z ##[group]Fetching the repository
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:24:59.7674365Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/tags/v8.1.3:refs/tags/v8.1.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4168341Z From https://github.com/rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4172331Z  * [new tag]         v8.1.3     -> v8.1.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4215589Z [command]/usr/bin/git tag --list v8.1.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4255467Z v8.1.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4265205Z [command]/usr/bin/git rev-parse refs/tags/v8.1.3^{commit}
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4296940Z fa8f0812160665bff083a089d2bb2fc1817ea03e
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4302763Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4304416Z ##[group]Determining the checkout info
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4306000Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4308224Z [command]/usr/bin/git sparse-checkout disable
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4353824Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4385015Z ##[group]Checking out the ref
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.4387984Z [command]/usr/bin/git checkout --progress --force refs/tags/v8.1.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7869599Z Note: switching to 'refs/tags/v8.1.3'.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7870745Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7871209Z You are in 'detached HEAD' state. You can look around, make experimental
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7872255Z changes and commit them, and you can discard any commits you make in this
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7873210Z state without impacting any branches by switching back to a branch.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7873783Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7874397Z If you want to create a new branch to retain commits you create, you may
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7875375Z do so (now or later) by using -c with the switch command. Example:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7875883Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7876087Z   git switch -c <new-branch-name>
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7876457Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7876668Z Or undo this operation with:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7876986Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7877165Z   git switch -
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7877417Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7877888Z Turn off this advice by setting config variable advice.detachedHead to false
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7878557Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7878840Z HEAD is now at fa8f081 Preparing for 8.1.3 release
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7888729Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7943109Z [command]/usr/bin/git log -1 --format=%H
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.7973647Z fa8f0812160665bff083a089d2bb2fc1817ea03e
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8194605Z ##[group]Run rm -f Gemfile.lock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8195015Z [36;1mrm -f Gemfile.lock[0m
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8252256Z shell: /usr/bin/bash -e {0}
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8252587Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8458335Z ##[group]Run ruby/setup-ruby@v1
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8458711Z with:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8458932Z   ruby-version: 3.4
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8459177Z   bundler-cache: true
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8459677Z   token: ***
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.8459902Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9718506Z ##[group]Modifying PATH
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9719315Z Entries added to PATH to use selected Ruby:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9720824Z   /opt/hostedtoolcache/Ruby/3.4.9/x64/bin
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9729359Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9734816Z ##[group]Downloading Ruby
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:01.9738211Z https://github.com/ruby/ruby-builder/releases/download/ruby-3.4.9/ruby-3.4.9-ubuntu-24.04-x64.tar.gz
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.3802404Z Took   0.41 seconds
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.3803181Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.3804049Z ##[group]Extracting  Ruby
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.3837564Z [command]/usr/bin/tar -xz -C /opt/hostedtoolcache/Ruby/3.4.9 -f /home/runner/work/_temp/1b74011a-eabd-445f-bf6c-a19ddeec2174
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8789123Z Took   0.50 seconds
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8789995Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8790887Z ##[group]Print Ruby version
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8807812Z [command]/opt/hostedtoolcache/Ruby/3.4.9/x64/bin/ruby --version
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8887198Z ruby 3.4.9 (2026-03-11 revision 76cca827ab) +PRISM [x86_64-linux]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8895315Z Took   0.01 seconds
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8896015Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8897164Z ##[group]Installing Bundler
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8901045Z Using Bundler shipped with ruby-3.4.9
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8902107Z Took   0.00 seconds
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8902726Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8903130Z > bundle install
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8906932Z Setting BUNDLER_VERSION=2 for "bundle config|lock" commands below to ensure Bundler 2 is used
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:02.8924224Z [command]/opt/hostedtoolcache/Ruby/3.4.9/x64/bin/bundle config set --local path /home/runner/work/rails/rails/vendor/bundle
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:03.0266544Z [command]/opt/hostedtoolcache/Ruby/3.4.9/x64/bin/bundle lock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:03.8834945Z Writing lockfile to /home/runner/work/rails/rails/Gemfile.lock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:06.1112124Z Fetching gem metadata from https://rubygems.org/.........
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:06.5465194Z Resolving dependencies...
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0696209Z ##[group]Print lockfile
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0724500Z [command]/usr/bin/cat Gemfile.lock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0760085Z PATH
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0760440Z   remote: .
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0760718Z   specs:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0761049Z     actioncable (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0761478Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0762034Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0766715Z       nio4r (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0767158Z       websocket-driver (>= 0.6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0775069Z       zeitwerk (~> 2.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0775559Z     actionmailbox (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0775945Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0776349Z       activejob (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0776769Z       activerecord (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0777187Z       activestorage (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0777591Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0777995Z       mail (>= 2.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0778360Z     actionmailer (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0778713Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0779078Z       actionview (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0779431Z       activejob (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0779799Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0780166Z       mail (>= 2.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0780508Z       rails-dom-testing (~> 2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0780889Z     actionpack (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0781235Z       actionview (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0781470Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0781706Z       nokogiri (>= 1.8.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0781912Z       rack (>= 2.2.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0782120Z       rack-session (>= 1.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0782336Z       rack-test (>= 0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0782554Z       rails-dom-testing (~> 2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0783368Z       rails-html-sanitizer (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0784104Z       useragent (~> 0.16)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0784435Z     actiontext (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0784801Z       action_text-trix (~> 2.1.15)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0785092Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0785302Z       activerecord (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0785532Z       activestorage (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0785753Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0785972Z       globalid (>= 0.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0786174Z       nokogiri (>= 1.8.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0786369Z     actionview (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0786581Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0786790Z       builder (~> 3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0786975Z       erubi (~> 1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0787172Z       rails-dom-testing (~> 2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0787415Z       rails-html-sanitizer (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0787643Z     activejob (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0787858Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0788220Z       globalid (>= 0.3.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0788526Z     activemodel (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0788736Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0788959Z     activerecord (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0789168Z       activemodel (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0789375Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0789590Z       timeout (>= 0.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0789782Z     activestorage (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0790177Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0790534Z       activejob (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0790898Z       activerecord (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0791289Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0791665Z       marcel (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0792000Z     activesupport (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0792382Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0792805Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0793019Z       concurrent-ruby (~> 1.0, >= 1.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0793470Z       connection_pool (>= 2.2.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0793715Z       drb
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0794100Z       i18n (>= 1.6, < 2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0794455Z       json
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0794759Z       logger (>= 1.4.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0795529Z       minitest (>= 5.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0795905Z       securerandom (>= 0.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0796293Z       tzinfo (~> 2.0, >= 2.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0796662Z       uri (>= 0.13.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0796992Z     rails (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0797337Z       actioncable (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0797580Z       actionmailbox (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0798052Z       actionmailer (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0798344Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0798565Z       actiontext (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0798773Z       actionview (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0798979Z       activejob (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0799181Z       activemodel (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0799394Z       activerecord (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0799604Z       activestorage (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0799841Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0800046Z       bundler (>= 1.15.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0800245Z       railties (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0800721Z     railties (8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0800924Z       actionpack (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0801132Z       activesupport (= 8.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0801335Z       irb (~> 1.13)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0801515Z       rackup (>= 1.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0801864Z       rake (>= 12.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0802190Z       thor (~> 1.0, >= 1.2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0802543Z       tsort (>= 0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0802876Z       zeitwerk (~> 2.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0803093Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0803203Z PATH
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0803493Z   remote: tools/releaser
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0804009Z   specs:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0804301Z     releaser (1.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0804612Z       minitest
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0804902Z       rake (~> 13.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0805096Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0805214Z GEM
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0805776Z   remote: https://rubygems.org/
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0806192Z   specs:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0806484Z     action_text-trix (2.1.17)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0806851Z       railties
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0807161Z     addressable (2.8.9)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0807525Z       public_suffix (>= 2.0.2, < 8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0807958Z     amq-protocol (2.5.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0808187Z     ast (2.4.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0808381Z     aws-eventstream (1.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0808653Z     aws-partitions (1.1229.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0886401Z     aws-sdk-core (3.244.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0886824Z       aws-eventstream (~> 1, >= 1.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0887303Z       aws-partitions (~> 1, >= 1.992.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0887760Z       aws-sigv4 (~> 1.9)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0888128Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0888454Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0888814Z       jmespath (~> 1, >= 1.6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0889220Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0889541Z     aws-sdk-kms (1.123.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0889937Z       aws-sdk-core (~> 3, >= 3.244.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0890343Z       aws-sigv4 (~> 1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0890690Z     aws-sdk-s3 (1.217.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0891102Z       aws-sdk-core (~> 3, >= 3.244.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0891517Z       aws-sdk-kms (~> 1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0891853Z       aws-sigv4 (~> 1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0892191Z     aws-sdk-sns (1.113.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0892545Z       aws-sdk-core (~> 3, >= 3.244.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0892930Z       aws-sigv4 (~> 1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0893258Z     aws-sigv4 (1.12.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0893588Z       aws-eventstream (~> 1, >= 1.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0894215Z     backburner (1.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0894542Z       beaneater (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0894886Z       concurrent-ruby (~> 1.0, >= 1.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0895271Z       dante (> 0.1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0895578Z     base64 (0.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0895890Z     bcrypt (3.1.22)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0896213Z     bcrypt_pbkdf (1.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0896552Z     beaneater (1.1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0896905Z     bigdecimal (4.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0897274Z     bindex (0.8.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0897605Z     bootsnap (1.23.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0898372Z       msgpack (~> 1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0898705Z     brakeman (8.0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0899033Z       racc
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0899347Z     builder (3.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0899695Z     bundler-audit (0.9.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0900100Z       bundler (>= 1.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0900470Z       thor (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0900798Z     bunny (2.24.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0901126Z       amq-protocol (~> 2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0901514Z       sorted_set (~> 1, >= 1.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0901896Z     capybara (3.40.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0902230Z       addressable
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0902532Z       matrix
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0902835Z       mini_mime (>= 0.1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0903179Z       nokogiri (~> 1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0903525Z       rack (>= 1.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0904107Z       rack-test (>= 0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0904521Z       regexp_parser (>= 1.5, < 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0904945Z       xpath (~> 3.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0905293Z     chef-utils (19.2.12)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0905681Z       concurrent-ruby
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0906034Z     childprocess (5.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0906376Z       logger (~> 1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0906717Z     concurrent-ruby (1.3.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0907110Z     connection_pool (2.5.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0907482Z     crack (1.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0907813Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0908111Z       rexml
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0908401Z     crass (1.0.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0908735Z     cssbundling-rails (1.4.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0909180Z       railties (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0909631Z     dalli (4.3.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0909932Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0910220Z     dante (0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0910528Z     dartsass-rails (0.5.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0910914Z       railties (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0911606Z       sass-embedded (~> 1.63)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0912027Z     date (3.5.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0912343Z     debug (1.11.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0912671Z       irb (~> 1.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0912980Z       reline (>= 0.3.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0913322Z     declarative (0.0.20)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0913696Z     digest-crc (0.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0914270Z       rake (>= 12.0.0, < 14.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0914658Z     dotenv (3.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0914974Z     drb (2.2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0915291Z     ed25519 (1.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0915589Z     erb (6.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0915896Z     erubi (1.13.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0916192Z     et-orbi (1.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0916514Z       tzinfo
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0916846Z     event_emitter (0.2.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0917242Z     execjs (2.10.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0917618Z     faraday (2.14.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0918017Z       faraday-net_http (>= 2.0, < 3.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0918431Z       json
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0918722Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0919064Z     faraday-follow_redirects (0.5.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0919498Z       faraday (>= 1, < 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0919894Z     faraday-net_http (3.4.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0920272Z       net-http (~> 0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0920654Z     ffi (1.17.3-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0921073Z     ffi (1.17.3-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0921491Z     ffi (1.17.3-arm-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0921868Z     ffi (1.17.3-arm-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0922256Z     ffi (1.17.3-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0922670Z     ffi (1.17.3-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0923047Z     fugit (1.12.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0923366Z       et-orbi (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0923691Z       raabro (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0924275Z     globalid (1.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0924614Z       activesupport (>= 6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0925000Z     google-apis-core (1.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0925377Z       addressable (~> 2.8, >= 2.8.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0925769Z       faraday (~> 2.13)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0926108Z       faraday-follow_redirects (~> 0.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0926505Z       googleauth (~> 1.14)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0926824Z       mini_mime (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0927424Z       representable (~> 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0927773Z       retriable (~> 3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0928132Z     google-apis-iamcredentials_v1 (0.26.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0928580Z       google-apis-core (>= 0.15.0, < 2.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0928981Z     google-apis-storage_v1 (0.61.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0929417Z       google-apis-core (>= 0.15.0, < 2.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0929834Z     google-cloud-core (1.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0930221Z       google-cloud-env (>= 1.0, < 3.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0930641Z       google-cloud-errors (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0931033Z     google-cloud-env (2.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0931408Z       base64 (~> 0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0931751Z       faraday (>= 1.0, < 3.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0932141Z     google-cloud-errors (1.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0932548Z     google-cloud-storage (1.58.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0932969Z       addressable (~> 2.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0933332Z       digest-crc (~> 0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0933744Z       google-apis-core (>= 0.18, < 2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0935248Z       google-apis-iamcredentials_v1 (~> 0.18)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0935796Z       google-apis-storage_v1 (>= 0.42)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0936265Z       google-cloud-core (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0936650Z       googleauth (~> 1.9)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0937012Z       mini_mime (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0937400Z     google-logging-utils (0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0937828Z     google-protobuf (4.34.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0938206Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0938546Z       rake (~> 13.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0938942Z     google-protobuf (4.34.1-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0939424Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0939741Z       rake (~> 13.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0940128Z     google-protobuf (4.34.1-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0940891Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0941267Z       rake (~> 13.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0941689Z     google-protobuf (4.34.1-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0942164Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0942408Z       rake (~> 13.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0942641Z     google-protobuf (4.34.1-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0942926Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0943105Z       rake (~> 13.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0943307Z     googleauth (1.16.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0943621Z       faraday (>= 1.0, < 3.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0944178Z       google-cloud-env (~> 2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0944561Z       google-logging-utils (~> 0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0944840Z       jwt (>= 1.4, < 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0945100Z       multi_json (~> 1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0945302Z       os (>= 0.9, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0945501Z       signet (>= 0.16, < 2.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0945711Z     hashdiff (1.2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0945888Z     i18n (1.14.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0946085Z       concurrent-ruby (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0946304Z     image_processing (1.14.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0946520Z       mini_magick (>= 4.9.5, < 6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0946739Z       ruby-vips (>= 2.0.17, < 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0946967Z     importmap-rails (2.2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0947176Z       actionpack (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0947386Z       activesupport (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0947598Z       railties (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0947802Z     io-console (0.8.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0947995Z     irb (1.17.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0948178Z       pp (>= 0.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0948366Z       prism (>= 1.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0948548Z       rdoc (>= 4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0948737Z       reline (>= 0.4.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0948923Z     jbuilder (2.14.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0949114Z       actionview (>= 7.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0949324Z       activesupport (>= 7.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0949539Z     jmespath (1.6.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0949727Z     jsbundling-rails (1.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0949945Z       railties (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0950134Z     json (2.19.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0950311Z     jwt (3.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0950481Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0950985Z     kamal (2.11.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0951171Z       activesupport (>= 7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0951373Z       base64 (~> 0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0951563Z       bcrypt_pbkdf (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0951768Z       concurrent-ruby (~> 1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0951976Z       dotenv (~> 3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0952149Z       ed25519 (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0952333Z       net-ssh (~> 7.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0952517Z       sshkit (>= 1.23.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0952727Z       thor (~> 1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0952913Z       zeitwerk (>= 2.6.18, < 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0953142Z     kramdown (2.5.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0953336Z       rexml (>= 3.4.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0953545Z     kramdown-parser-gfm (1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0953774Z       kramdown (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0954251Z     language_server-protocol (3.17.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0954524Z     launchy (3.1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0954723Z       addressable (~> 2.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0954931Z       childprocess (~> 5.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0955140Z       logger (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0955325Z     libxml-ruby (5.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0955522Z     lint_roller (1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0955713Z     listen (3.10.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0955884Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0956062Z       rb-fsevent (~> 0.10, >= 0.10.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0956296Z       rb-inotify (~> 0.9, >= 0.9.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0956519Z     logger (1.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0956692Z     loofah (2.25.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0956867Z       crass (~> 1.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0957052Z       nokogiri (>= 1.12.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0957254Z     mail (2.9.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0957419Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0957592Z       mini_mime (>= 0.1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0957785Z       net-imap
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958106Z       net-pop
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958278Z       net-smtp
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958439Z     marcel (1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958615Z     matrix (0.4.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958780Z     mdl (0.15.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0958961Z       kramdown (~> 2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0959168Z       kramdown-parser-gfm (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0959397Z       mixlib-cli
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0959568Z       mixlib-config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0959753Z       mixlib-shellout
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0959938Z     mini_magick (5.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0960125Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0960286Z     mini_mime (1.1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0960473Z     minitest (6.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0960657Z       drb (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0960834Z       prism (~> 1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0961024Z     minitest-mock (5.27.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0961231Z     minitest-retry (0.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0961433Z       minitest (>= 5.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0961619Z     mixlib-cli (2.1.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0961816Z     mixlib-config (3.0.27)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962008Z       tomlrb
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962184Z     mixlib-shellout (3.4.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962389Z       chef-utils
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962572Z     mono_logger (1.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962761Z     msgpack (1.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0962946Z     multi_json (1.19.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0963140Z     mustermann (3.0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0963339Z       ruby2_keywords (~> 0.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0963550Z     mutex_m (0.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0963720Z     mysql2 (0.5.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0964129Z     net-http (0.9.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0964336Z       uri (>= 0.11.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0964527Z     net-imap (0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0964702Z       date
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0964870Z       net-protocol
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965046Z     net-pop (0.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965226Z       net-protocol
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965402Z     net-protocol (0.2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965605Z       timeout
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965769Z     net-scp (4.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0965961Z       net-ssh (>= 2.6.5, < 8.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0966183Z     net-sftp (4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0966364Z       net-ssh (>= 5.0.0, < 8.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0966578Z     net-smtp (0.5.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0966898Z       net-protocol
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0967072Z     net-ssh (7.3.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0967242Z     nio4r (2.7.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0967440Z     nokogiri (1.19.2-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0967675Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0967892Z     nokogiri (1.19.2-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0968204Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0968496Z     nokogiri (1.19.2-arm-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0968733Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0968918Z     nokogiri (1.19.2-arm-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0969320Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0969681Z     nokogiri (1.19.2-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0970014Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0970340Z     nokogiri (1.19.2-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0970595Z       racc (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0970766Z     os (1.1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0970948Z     ostruct (0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0971249Z     parallel (1.27.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0971441Z     parser (3.3.10.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0971628Z       ast (~> 2.4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0971806Z       racc
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0971973Z     pg (1.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0972152Z     pg (1.6.3-aarch64-linux)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0972408Z     pg (1.6.3-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0972633Z     pg (1.6.3-x86_64-linux)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0972852Z     pg (1.6.3-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0973058Z     pp (0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0973233Z       prettyprint
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0973414Z     prettyprint (0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0973615Z     prism (1.9.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0973791Z     propshaft (1.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0974188Z       actionpack (>= 7.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0974404Z       activesupport (>= 7.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0974617Z       rack
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0974786Z     psych (5.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0975119Z       date
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0975294Z       stringio
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0975467Z     public_suffix (7.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0975671Z     puma (7.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0975841Z       nio4r (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976031Z     queue_classic (4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976223Z       pg (>= 1.1, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976423Z     raabro (1.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976592Z     racc (1.8.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976763Z     rack (3.2.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0976933Z     rack-cache (1.17.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0977123Z       rack (>= 0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0977310Z     rack-protection (4.2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0977512Z       base64 (>= 0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0977698Z       logger (>= 1.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0977889Z       rack (>= 3.0.0, < 4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0978098Z     rack-session (2.1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0978290Z       base64 (>= 0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0978473Z       rack (>= 3.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0978653Z     rack-test (2.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0978841Z       rack (>= 1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979011Z     rackup (2.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979186Z       rack (>= 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979369Z     rails-dom-testing (2.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979599Z       activesupport (>= 5.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979810Z       minitest
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0979980Z       nokogiri (>= 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0980189Z     rails-html-sanitizer (1.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0980408Z       loofah (~> 2.25)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0980790Z       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0981207Z     rainbow (3.1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0981389Z     rake (13.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0981574Z     rb-fsevent (0.11.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0981769Z     rb-inotify (0.11.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0981952Z       ffi (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982124Z     rbtree (0.4.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982295Z     rdoc (7.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982460Z       erb
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982630Z       psych (>= 4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982808Z       tsort
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0982977Z     redcarpet (3.6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0983158Z     redis (5.4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0983491Z       redis-client (>= 0.22.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0983706Z     redis-client (0.28.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0984112Z       connection_pool
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0984313Z     redis-namespace (1.11.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0984538Z       redis (>= 4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0984722Z     regexp_parser (2.11.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0984927Z     reline (0.6.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0985108Z       io-console (~> 0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0985307Z     representable (3.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0985510Z       declarative (< 0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0985745Z       trailblazer-option (>= 0.1.1, < 0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0985995Z       uber (< 0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0986169Z     resque (3.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0986344Z       base64 (~> 0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0986514Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0986688Z       mono_logger (~> 1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0986881Z       multi_json (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0987073Z       redis (>= 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0987258Z       redis-namespace (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0987474Z       sinatra (>= 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0987670Z     resque-scheduler (5.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0987872Z       base64 (~> 0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0988046Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0988207Z       mono_logger (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0988405Z       redis (>= 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0988576Z       resque (>= 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0988774Z       rufus-scheduler (~> 3.2, != 3.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989004Z     retriable (3.4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989190Z     rexml (3.4.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989359Z     rouge (4.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989538Z     rubocop (1.79.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989712Z       json (~> 2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0989915Z       language_server-protocol (~> 3.17.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0990172Z       lint_roller (~> 1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0990507Z       parallel (~> 1.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0990716Z       parser (>= 3.3.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0990908Z       rainbow (>= 2.2.2, < 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0991134Z       regexp_parser (>= 2.9.3, < 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0991377Z       rubocop-ast (>= 1.46.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0991616Z       ruby-progressbar (~> 1.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0991848Z       unicode-display_width (>= 2.4.0, < 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0992104Z     rubocop-ast (1.49.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0992300Z       parser (>= 3.3.7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0992494Z       prism (~> 1.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0992678Z     rubocop-md (2.0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0992865Z       lint_roller (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0993070Z       rubocop (>= 1.72.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0993266Z     rubocop-minitest (0.39.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0993486Z       lint_roller (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0993686Z       rubocop (>= 1.75.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0994170Z       rubocop-ast (>= 1.38.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0994446Z     rubocop-packaging (0.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0994673Z       lint_roller (~> 1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0994882Z       rubocop (>= 1.72.1, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0995112Z     rubocop-performance (1.26.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0995342Z       lint_roller (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0995539Z       rubocop (>= 1.75.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0995758Z       rubocop-ast (>= 1.47.1, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0995983Z     rubocop-rails (2.34.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0996194Z       activesupport (>= 4.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0996419Z       lint_roller (~> 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0996621Z       rack (>= 1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0996800Z       rubocop (>= 1.75.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0997022Z       rubocop-ast (>= 1.44.0, < 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0997268Z     rubocop-rails-omakase (1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0997489Z       rubocop (>= 1.72)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0997696Z       rubocop-performance (>= 1.24)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0997927Z       rubocop-rails (>= 2.30)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0998149Z     ruby-progressbar (1.13.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0998362Z     ruby-vips (2.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0998548Z       ffi (~> 1.12)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0998742Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0998916Z     ruby2_keywords (0.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0999269Z     rubyzip (2.4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0999455Z     rufus-scheduler (3.9.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0999662Z       fugit (~> 1.1, >= 1.11.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.0999889Z     sass-embedded (1.98.0-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1000152Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1000387Z     sass-embedded (1.98.0-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1000648Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1000891Z     sass-embedded (1.98.0-arm-linux-gnueabihf)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1001154Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1001393Z     sass-embedded (1.98.0-arm-linux-musleabihf)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1001662Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1001891Z     sass-embedded (1.98.0-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1002138Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1002369Z     sass-embedded (1.98.0-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1002610Z       google-protobuf (~> 4.31)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1002817Z     sdoc (2.6.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1002990Z       rdoc (>= 5.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1003173Z     securerandom (0.4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1003377Z     selenium-webdriver (4.41.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1003589Z       base64 (~> 0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1003767Z       logger (~> 1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1004184Z       rexml (~> 3.2, >= 3.2.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1004397Z       rubyzip (>= 1.2.2, < 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1004611Z       websocket (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1004814Z     serverengine (2.0.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005019Z       sigdump (~> 0.2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005214Z     sidekiq (7.3.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005389Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005568Z       connection_pool (>= 2.3.0, < 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005789Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1005957Z       rack (>= 2.2.4, < 3.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1006302Z       redis-client (>= 0.23.0, < 1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1006532Z     sigdump (0.2.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1006708Z     signet (0.21.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1006892Z       addressable (~> 2.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1007109Z       faraday (>= 0.17.5, < 3.a)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1007324Z       jwt (>= 1.5, < 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1007523Z       multi_json (~> 1.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1007714Z     sinatra (4.2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1007896Z       logger (>= 1.6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1008087Z       mustermann (~> 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1008289Z       rack (>= 3.0.0, < 4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1008488Z       rack-protection (= 4.2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1008716Z       rack-session (>= 2.0.0, < 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1008933Z       tilt (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1009115Z     sneakers (2.11.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1009294Z       bunny (~> 2.12)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1009489Z       concurrent-ruby (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1009700Z       rake
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1009865Z       serverengine (~> 2.0.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1010071Z       thor
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1010231Z     solid_cable (3.0.12)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1010435Z       actioncable (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1010632Z       activejob (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1010835Z       activerecord (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1011040Z       railties (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1011235Z     solid_cache (1.0.10)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1011424Z       activejob (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1011624Z       activerecord (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1011820Z       railties (>= 7.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012010Z     solid_queue (1.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012200Z       activejob (>= 7.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012391Z       activerecord (>= 7.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012600Z       concurrent-ruby (>= 1.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012812Z       fugit (~> 1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1012997Z       railties (>= 7.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1013177Z       thor (>= 1.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1013361Z     sorted_set (1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1013537Z       rbtree
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1013709Z     sprockets (4.2.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1014127Z       concurrent-ruby (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1014353Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1014516Z       rack (>= 2.2.4, < 4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1014859Z     sprockets-rails (3.5.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1015071Z       actionpack (>= 6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1015274Z       activesupport (>= 6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1015489Z       sprockets (>= 3.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1015699Z     sqlite3 (2.9.2-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1015950Z     sqlite3 (2.9.2-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1016190Z     sqlite3 (2.9.2-arm-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1016432Z     sqlite3 (2.9.2-arm-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1016662Z     sqlite3 (2.9.2-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1016898Z     sqlite3 (2.9.2-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1017116Z     sshkit (1.25.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1017294Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1017459Z       logger
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1017629Z       net-scp (>= 1.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1017839Z       net-sftp (>= 2.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018032Z       net-ssh (>= 2.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018225Z       ostruct
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018396Z     stackprof (0.2.28)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018602Z     stimulus-rails (1.3.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018803Z       railties (>= 6.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1018999Z     stringio (3.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1019189Z     tailwindcss-rails (4.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1019405Z       railties (>= 7.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1019606Z       tailwindcss-ruby (~> 4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1019835Z     tailwindcss-ruby (4.2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1020081Z     tailwindcss-ruby (4.2.1-aarch64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1020368Z     tailwindcss-ruby (4.2.1-aarch64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1020649Z     tailwindcss-ruby (4.2.1-x86_64-linux-gnu)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1020913Z     tailwindcss-ruby (4.2.1-x86_64-linux-musl)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1021161Z     terser (1.2.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1021339Z       execjs (>= 0.3.0, < 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1021542Z     thor (1.5.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1021906Z     thruster (0.1.19)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1022115Z     thruster (0.1.19-aarch64-linux)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1022347Z     thruster (0.1.19-x86_64-linux)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1022569Z     tilt (2.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1022744Z     timeout (0.6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1022919Z     tomlrb (2.0.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1023109Z     trailblazer-option (0.1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1023318Z     trilogy (2.11.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1023500Z       bigdecimal
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1023666Z     tsort (0.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1024005Z     turbo-rails (2.0.23)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1024211Z       actionpack (>= 7.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1024422Z       railties (>= 7.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1024613Z     tzinfo (2.0.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1024800Z       concurrent-ruby (~> 1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025008Z     uber (0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025189Z     unicode-display_width (3.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025420Z       unicode-emoji (~> 4.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025626Z     unicode-emoji (4.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025826Z     uri (1.1.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1025999Z     useragent (0.16.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1026196Z     w3c_validators (1.3.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1026389Z       json (>= 1.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1026569Z       nokogiri (~> 1.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1026751Z       rexml (~> 3.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1026936Z     web-console (4.3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1027124Z       actionview (>= 8.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1027322Z       bindex (>= 0.4.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1027506Z       railties (>= 8.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1027693Z     webmock (3.26.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1027878Z       addressable (>= 2.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1028073Z       crack (>= 0.3.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1028266Z       hashdiff (>= 0.4.0, < 2.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1028477Z     webrick (1.9.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1028659Z     websocket (1.2.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1028860Z     websocket-client-simple (0.9.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029086Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029247Z       event_emitter
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029424Z       mutex_m
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029583Z       websocket
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029760Z     websocket-driver (0.8.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1029963Z       base64
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1030267Z       websocket-extensions (>= 0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1030514Z     websocket-extensions (0.1.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1030730Z     xpath (3.2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1030918Z       nokogiri (~> 1.8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031101Z     zeitwerk (2.7.5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031219Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031295Z PLATFORMS
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031454Z   aarch64-linux
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031630Z   aarch64-linux-gnu
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031807Z   aarch64-linux-musl
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1031991Z   arm-linux-gnu
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032161Z   arm-linux-gnueabihf
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032350Z   arm-linux-musl
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032528Z   arm-linux-musleabihf
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032710Z   x86_64-linux-gnu
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032886Z   x86_64-linux-musl
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1032993Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1033062Z DEPENDENCIES
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1033236Z   aws-sdk-s3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1033398Z   aws-sdk-sns
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1033567Z   backburner
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1033725Z   bcrypt (~> 3.1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034023Z   bootsnap (>= 1.4.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034205Z   brakeman
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034367Z   bundler-audit
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034538Z   capybara (>= 3.39)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034729Z   connection_pool (< 3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1034926Z   cssbundling-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1035100Z   dalli (>= 3.0.1, < 5)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1035288Z   dartsass-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1035457Z   debug (>= 1.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1035652Z   google-cloud-storage (~> 1.11)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1035876Z   image_processing (~> 1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1036092Z   importmap-rails (>= 1.2.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1036295Z   jbuilder
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1036464Z   jsbundling-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1036643Z   json (>= 2.0.0, != 2.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1036843Z   kamal (>= 2.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1037012Z   launchy
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1037301Z   libxml-ruby
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1037478Z   listen (~> 3.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1037645Z   mdl (!= 0.13.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1037831Z   minitest (~> 6.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038012Z   minitest-mock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038195Z   minitest-retry
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038368Z   msgpack (>= 1.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038557Z   mysql2 (~> 0.5, < 0.5.7)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038761Z   nokogiri (>= 1.8.1, != 1.11.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1038974Z   pg (~> 1.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1039139Z   prism
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1039311Z   propshaft (>= 0.1.7, != 1.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1039518Z   puma (>= 5.0.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1039701Z   queue_classic (>= 4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1039900Z   rack (~> 3.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040068Z   rack-cache (~> 1.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040256Z   rails!
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040412Z   rake (>= 13)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040585Z   redcarpet (~> 3.6.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040768Z   redis (>= 4.0.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1040949Z   redis-namespace
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041130Z   releaser!
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041290Z   resque
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041448Z   resque-scheduler
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041621Z   rexml
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041770Z   rouge
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1041933Z   rubocop (= 1.79.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1042109Z   rubocop-md
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1042279Z   rubocop-minitest
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1042463Z   rubocop-packaging
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1042650Z   rubocop-performance
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1042840Z   rubocop-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1043019Z   rubocop-rails-omakase
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1043222Z   rubyzip (~> 2.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1043389Z   sdoc (~> 2.6.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1043577Z   selenium-webdriver (>= 4.20.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1043793Z   sidekiq (< 8)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044075Z   sneakers
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044233Z   solid_cable
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044401Z   solid_cache
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044560Z   solid_queue
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044742Z   sprockets-rails (>= 2.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1044990Z   sqlite3 (>= 2.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1045170Z   stackprof
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1045336Z   stimulus-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1045511Z   tailwindcss-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1045697Z   terser (>= 1.1.4)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1045867Z   thruster
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1046171Z   trilogy (>= 2.7.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1046349Z   turbo-rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1046515Z   tzinfo-data
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1046672Z   uri (>= 0.13.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1046847Z   useragent
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047015Z   w3c_validators (~> 1.3.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047220Z   wdm (>= 0.1.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047389Z   web-console
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047553Z   webmock
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047714Z   webrick
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1047884Z   websocket-client-simple
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1048027Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1048107Z BUNDLED WITH
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1048266Z    2.6.9
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1048940Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1049837Z Cache key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.9-wd-/home/runner/work/rails/rails-with--without--only--Gemfile.lock-24c7241d32bdccb4f62206a0e2ead421da30e540c20f83e50bb7565270fb5d4e
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:08.1938587Z Cache hit for restore-key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.9-wd-/home/runner/work/rails/rails-with--without--only--Gemfile.lock-b55992f52a3e89f15bda2e402411d1a6d15d57c60d0314883af5bfdae4f78b03
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:09.4119762Z Received 134217728 of 202885267 (66.2%), 120.8 MBs/sec
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:09.8021368Z Received 202885267 of 202885267 (100.0%), 133.4 MBs/sec
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:09.8023647Z Cache Size: ~193 MB (202885267 B)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:09.8133588Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9838d0ac-a63b-4985-9648-30f37538b04a/cache.tzst -P -C /home/runner/work/rails/rails --use-compress-program unzstd
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:10.9022903Z Cache restored successfully
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:10.9447642Z Found cache for key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.9-wd-/home/runner/work/rails/rails-with--without--only--Gemfile.lock-b55992f52a3e89f15bda2e402411d1a6d15d57c60d0314883af5bfdae4f78b03
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:10.9488318Z [command]/opt/hostedtoolcache/Ruby/3.4.9/x64/bin/bundle install --jobs 4
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4015210Z Fetching gem metadata from https://rubygems.org/.........
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4984961Z WARN: Unresolved or ambiguous specs during Gem::Specification.reset:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4985681Z       psych (>= 4.0.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4985952Z       Available/installed versions of this gem:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4986248Z       - 5.3.1
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4989188Z       - 5.2.2
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4989489Z WARN: Clearing out unresolved specs. Try 'gem cleanup <gem>'
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.4990076Z Please report a bug if this causes problems.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.5000533Z Fetching connection_pool 2.5.5
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.5382221Z Fetching net-ssh 7.3.2
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.6878035Z Fetching trilogy 2.11.1
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.6884998Z Fetching dalli 4.3.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.7667108Z Installing connection_pool 2.5.5
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.7715812Z Installing dalli 4.3.3
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.7781651Z Installing net-ssh 7.3.2
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.7804145Z Installing trilogy 2.11.1 with native extensions
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.8132928Z Fetching terser 1.2.7
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.9677639Z Fetching sidekiq 7.3.10
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:13.9734341Z Installing terser 1.2.7
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:14.0219217Z Installing sidekiq 7.3.10
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.2421071Z Bundle complete! 80 Gemfile dependencies, 229 gems now installed.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.2421854Z Bundled gems are installed into `./vendor/bundle`
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.2425508Z 1 installed gem you directly depend on is looking for funding.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.2426114Z   Run `bundle fund` for details
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.3277549Z [command]/opt/hostedtoolcache/Ruby/3.4.9/x64/bin/bundle clean
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6373695Z Removing argon2 (2.3.3)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6425693Z Removing connection_pool (3.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6430436Z Removing dalli (5.0.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6447007Z Removing ffi-compiler (1.3.2)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6454587Z Removing net-ssh (7.3.1)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6498437Z Removing terser (1.2.6)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6508838Z Removing trilogy (2.11.0)
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6594853Z Saving cache
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:19.6746690Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/rails/rails --files-from manifest.txt --use-compress-program zstdmt
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:21.9129392Z Sent 0 of 200263399 (0.0%), 0.0 MBs/sec
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.4613225Z Sent 200263399 of 200263399 (100.0%), 123.3 MBs/sec
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.6488131Z Took  19.76 seconds
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.6629065Z ##[group]Run cd tools/rail_inspector && bundle exec rake
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.6629497Z [36;1mcd tools/rail_inspector && bundle exec rake[0m
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.6681335Z shell: /usr/bin/bash -e {0}
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:22.6681591Z ##[endgroup]
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.7715388Z Run options: --seed 2629
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.7715775Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.7715923Z # Running:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.7716137Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.8071135Z .................................
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.8071511Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.8074914Z Finished in 0.033942s, 972.2577 runs/s, 2504.3003 assertions/s.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.8075644Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:23.8076000Z 33 runs, 85 assertions, 0 failures, 0 errors, 0 skips
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:25.3670537Z Running RuboCop...
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.0554396Z Inspecting 27 files
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.0554951Z ...........................
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.0555192Z 
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.0555360Z 27 files inspected, no offenses detected
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.0761815Z Post job cleanup.
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1635918Z [command]/usr/bin/git version
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1708979Z git version 2.53.0
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1751707Z Temporarily overriding HOME='/home/runner/work/_temp/a2bde046-37f5-4259-8d59-56950ef067f7' before making global git config changes
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1753077Z Adding repository directory to the temporary git global config as a safe directory
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1758588Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rails/rails
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1796107Z Removing SSH command configuration
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1803210Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.1842354Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2103787Z Removing HTTP extra header
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2110241Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2150530Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2400447Z Removing includeIf entries pointing to credentials config files
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2408593Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2437248Z includeif.gitdir:/home/runner/work/rails/rails/.git.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2438120Z includeif.gitdir:/home/runner/work/rails/rails/.git/worktrees/*.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2438906Z includeif.gitdir:/github/workspace/.git.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2439621Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2449041Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rails/rails/.git.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2475194Z /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2486752Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rails/rails/.git.path /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2523040Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rails/rails/.git/worktrees/*.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2546799Z /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2556711Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rails/rails/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2590522Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2614415Z /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2623430Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2658716Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2682387Z /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2692771Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2727624Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.2977611Z Removing credentials config '/home/runner/work/_temp/git-credentials-387fd446-72a5-4223-a884-e4e46a4251bc.config'
+rail_inspector tests	UNKNOWN STEP	2026-03-24T20:25:26.3129308Z Cleaning up orphan processes
+
+# === RELEASER TESTS FAILURE (7-2-stable) ===
+releaser tests	UNKNOWN STEP	﻿2026-04-16T23:29:46.0156485Z Current runner version: '2.333.1'
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0181045Z ##[group]Runner Image Provisioner
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0181803Z Hosted Compute Agent
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0182406Z Version: 20260213.493
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0183092Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0183816Z Build Date: 2026-02-13T00:28:41Z
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0184446Z Worker ID: {c0b7ec71-c16f-4e5f-a8db-d14d2651bb75}
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0185259Z Azure Region: northcentralus
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0185855Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0187126Z ##[group]Operating System
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0187805Z Ubuntu
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0188290Z 24.04.4
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0188749Z LTS
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0189248Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0189764Z ##[group]Runner Image
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0190458Z Image: ubuntu-24.04
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0191033Z Version: 20260406.80.1
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0192185Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260406.80/images/ubuntu/Ubuntu2404-Readme.md
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0193663Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260406.80
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0194524Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0195570Z ##[group]GITHUB_TOKEN Permissions
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0197674Z Contents: read
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0198254Z Metadata: read
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0198820Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0201316Z Secret source: Actions
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0202260Z Prepare workflow directory
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0530798Z Prepare all required actions
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.0568004Z Getting action download info
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.4475950Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:46.5984660Z Download action repository 'ruby/setup-ruby@v1' (SHA:7372622e62b60b3cb750dcd2b9e32c247ffec26a)
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1199663Z Complete job name: releaser tests
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1896068Z ##[group]Run actions/checkout@v4
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1896948Z with:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1897393Z   repository: rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1898132Z   token: ***
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1898567Z   ssh-strict: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1899024Z   ssh-user: git
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1899478Z   persist-credentials: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1899999Z   clean: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1900659Z   sparse-checkout-cone-mode: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1901212Z   fetch-depth: 1
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1901657Z   fetch-tags: false
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1902106Z   show-progress: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1902593Z   lfs: false
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1903009Z   submodules: false
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1903481Z   set-safe-directory: true
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.1904263Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.2986760Z Syncing repository: rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.2988520Z ##[group]Getting Git version info
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.2989242Z Working directory is '/home/runner/work/rails/rails'
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.2990568Z [command]/usr/bin/git version
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3032021Z git version 2.53.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3055798Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3077111Z Temporarily overriding HOME='/home/runner/work/_temp/5863f0b8-c428-4387-a3a4-f1d2f057e56e' before making global git config changes
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3078703Z Adding repository directory to the temporary git global config as a safe directory
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3081916Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3113961Z Deleting the contents of '/home/runner/work/rails/rails'
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3117416Z ##[group]Initializing the repository
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3121338Z [command]/usr/bin/git init /home/runner/work/rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3181513Z hint: Using 'master' as the name for the initial branch. This default branch name
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3183093Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3184153Z hint: to use in all of your new repositories, which will suppress this warning,
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3184982Z hint: call:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3185410Z hint:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3186210Z hint: 	git config --global init.defaultBranch <name>
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3186877Z hint:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3187844Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3189143Z hint: 'development'. The just-created branch can be renamed via this command:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3189944Z hint:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3190630Z hint: 	git branch -m <name>
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3191142Z hint:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3191971Z hint: Disable this message with "git config set advice.defaultBranchName false"
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3193070Z Initialized empty Git repository in /home/runner/work/rails/rails/.git/
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3195714Z [command]/usr/bin/git remote add origin https://github.com/rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3225236Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3226083Z ##[group]Disabling automatic garbage collection
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3228623Z [command]/usr/bin/git config --local gc.auto 0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3257898Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3259043Z ##[group]Setting up auth
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3264150Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3294662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3590521Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3619293Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3846955Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.3878652Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.4111170Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.4146257Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.4147556Z ##[group]Fetching the repository
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:47.4156472Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +71e6bd42d081750d1907e6278df1cb477d4fd058:refs/remotes/origin/7-2-stable
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9935546Z From https://github.com/rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9936525Z  * [new ref]         71e6bd42d081750d1907e6278df1cb477d4fd058 -> origin/7-2-stable
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9965066Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9965619Z ##[group]Determining the checkout info
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9967459Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:48.9972896Z [command]/usr/bin/git sparse-checkout disable
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.0009215Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.0035461Z ##[group]Checking out the ref
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.0039195Z [command]/usr/bin/git checkout --progress --force -B 7-2-stable refs/remotes/origin/7-2-stable
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.2981515Z Switched to a new branch '7-2-stable'
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.2982178Z branch '7-2-stable' set up to track 'origin/7-2-stable'.
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.2996335Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3040966Z [command]/usr/bin/git log -1 --format=%H
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3066001Z 71e6bd42d081750d1907e6278df1cb477d4fd058
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3294624Z ##[group]Run ruby/setup-ruby@v1
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3294925Z with:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3295130Z   ruby-version: ruby
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3295344Z   bundler-cache: false
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3295705Z   token: ***
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.3295894Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4487346Z ##[group]Modifying PATH
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4488254Z Entries added to PATH to use selected Ruby:
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4489462Z   /opt/hostedtoolcache/Ruby/4.0.2/x64/bin
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4494004Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4494903Z ##[group]Print Ruby version
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.4530577Z [command]/opt/hostedtoolcache/Ruby/4.0.2/x64/bin/ruby --version
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6446358Z ruby 4.0.2 (2026-03-17 revision d3da9fec82) +PRISM [x86_64-linux]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6475249Z Took   0.20 seconds
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6475976Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6477692Z ##[group]Installing Bundler
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6486994Z Using Bundler 2.7.2 from Gemfile.lock BUNDLED WITH 2.7.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:49.6492947Z [command]/opt/hostedtoolcache/Ruby/4.0.2/x64/bin/gem install bundler -v 2.7.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3299353Z Successfully installed bundler-2.7.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3299878Z 1 gem installed
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3349440Z Took   1.69 seconds
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3350949Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3462511Z ##[group]Run bundle install
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3462843Z [36;1mbundle install[0m
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3492764Z shell: /usr/bin/bash -e {0}
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.3493029Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:51.8045395Z Bundler 4.0.6 is running, but your lockfile was generated with 2.6.3. Installing Bundler 2.6.3 and restarting using that version.
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:52.4629752Z Fetching gem metadata from https://rubygems.org/.
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:52.4699951Z Fetching bundler 2.6.3
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:52.5543306Z Installing bundler 2.6.3
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.4632660Z Fetching gem metadata from https://rubygems.org/...
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.4761771Z Resolving dependencies...
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.5468762Z Fetching rake 13.2.1
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6031589Z Installing rake 13.2.1
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6128990Z Fetching prism 1.9.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6131484Z Fetching uri 1.0.4
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6131845Z Fetching protobug 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6132174Z Fetching thor 1.4.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6317153Z Installing uri 1.0.4
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6383486Z Installing protobug 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6663490Z Installing thor 1.4.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6745116Z Fetching net-http 0.6.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6766011Z Fetching protobug_well_known_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6918655Z Installing net-http 0.6.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.6949611Z Installing protobug_well_known_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7115708Z Fetching protobug_googleapis_field_behavior_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7198651Z Installing protobug_googleapis_field_behavior_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7245334Z Installing prism 1.9.0 with native extensions
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7265639Z Fetching protobug_sigstore_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7343335Z Installing protobug_sigstore_protos 0.1.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7409299Z Fetching sigstore 0.2.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7519059Z Installing sigstore 0.2.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7654578Z Fetching sigstore-cli 0.2.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:29:53.7733611Z Installing sigstore-cli 0.2.2
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5250612Z Fetching minitest 6.0.4 (was 5.25.1)
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5478740Z Installing minitest 6.0.4 (was 5.25.1)
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5657164Z Bundle complete! 2 Gemfile dependencies, 16 gems now installed.
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5657887Z Use `bundle info [gemname]` to see where a bundled gem is installed.
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5997674Z ##[group]Run bundle exec rake
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.5997985Z [36;1mbundle exec rake[0m
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.6020729Z shell: /usr/bin/bash -e {0}
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.6020979Z ##[endgroup]
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9461899Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:294: warning: already initialized constant Gem::Platform::JAVA
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9462901Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:279: warning: previous definition of JAVA was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9463844Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:295: warning: already initialized constant Gem::Platform::MSWIN
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9464761Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:280: warning: previous definition of MSWIN was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9465825Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:296: warning: already initialized constant Gem::Platform::MSWIN64
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9467076Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:281: warning: previous definition of MSWIN64 was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9467967Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:297: warning: already initialized constant Gem::Platform::MINGW
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9468842Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:282: warning: previous definition of MINGW was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9469721Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:298: warning: already initialized constant Gem::Platform::X64_MINGW
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9470827Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:284: warning: previous definition of X64_MINGW was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9471726Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:300: warning: already initialized constant Gem::Platform::WINDOWS
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9472602Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:286: warning: previous definition of WINDOWS was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9473477Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:301: warning: already initialized constant Gem::Platform::X64_LINUX
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9474337Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:287: warning: previous definition of X64_LINUX was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9475232Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/gems/4.0.0/gems/bundler-2.6.3/lib/bundler/rubygems_ext.rb:302: warning: already initialized constant Gem::Platform::X64_LINUX_MUSL
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:05.9476148Z /opt/hostedtoolcache/Ruby/4.0.2/x64/lib/ruby/4.0.0/rubygems/platform.rb:288: warning: previous definition of X64_LINUX_MUSL was here
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.0823597Z Run options: --seed 49703
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.0823914Z 
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.0824025Z # Running:
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.0824183Z 
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4884805Z F...................
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4885172Z 
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4885486Z Finished in 0.405608s, 49.3087 runs/s, 86.2903 assertions/s.
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4885982Z 
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4886139Z   1) Failure:
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4886985Z TestReleaser#test_npm_tag_returns_the_latest_tag_for_a_pre_release [test/releaser_test.rb:64]:
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4887865Z Expected: "latest"
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4888225Z   Actual: "7-2-stable"
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4888452Z 
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4888691Z 20 runs, 35 assertions, 1 failures, 0 errors, 0 skips
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4923596Z rake aborted!
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4924833Z Command failed with status (1): [/opt/hostedtoolcache/Ruby/4.0.2/x64/bin/ruby -Ilib:test:. -w -e 'require "minitest/autorun"; require "test/releaser_test.rb"; require "test/test_helper.rb"' -- ]
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.4926582Z /opt/hostedtoolcache/Ruby/4.0.2/x64/bin/bundle:25:in '<main>'
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.5007263Z Tasks: TOP => default => test
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.5007698Z (See full trace by running task with --trace)
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.5022106Z ##[error]Process completed with exit code 1.
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.5126039Z Post job cleanup.
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6066604Z [command]/usr/bin/git version
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6102963Z git version 2.53.0
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6145082Z Temporarily overriding HOME='/home/runner/work/_temp/0d738730-1645-4800-9a77-21af8b9ab612' before making global git config changes
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6146319Z Adding repository directory to the temporary git global config as a safe directory
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6159047Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rails/rails
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6193472Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6226090Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6470753Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6492450Z http.https://github.com/.extraheader
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6504319Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6535272Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6772127Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.6803386Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.7178863Z Cleaning up orphan processes
+releaser tests	UNKNOWN STEP	2026-04-16T23:30:06.7451700Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
