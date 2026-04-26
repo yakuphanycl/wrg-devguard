@@ -76,6 +76,96 @@ jobs:
 
 See [`action.yml`](./action.yml) for all inputs.
 
+## GitHub Actions Marketplace
+
+3-line quickstart (drop into any `.github/workflows/*.yml`):
+
+```yaml
+- uses: yakuphanycl/wrg-devguard@v1
+  with:
+    path: .
+    fail-on: error
+```
+
+### Inputs
+
+| Name | Required | Default | Description |
+|---|---|---|---|
+| `path` | no | `.` | Root path to scan |
+| `fail-on` | no | `error` | Fail threshold: `error`, `warn`, `none` |
+| `format` | no | `text` | Report format: `text`, `json`, `sarif` |
+| `profile` | no | `baseline` | Policy profile: `baseline` or `strict` |
+| `allowlist` | no | _empty_ | Optional path to allowlist JSON |
+| `python-version` | no | `3.12` | Python version installed by the action |
+| `version` | no | _latest_ | Pip version spec (e.g. `==0.1.1`) |
+
+### Outputs
+
+| Name | Description |
+|---|---|
+| `findings-count` | Total number of findings produced by the scan |
+| `report-path` | Path to the generated report (empty when `format: text`) |
+
+### Use cases
+
+**1. PR check — block any error-severity finding:**
+
+```yaml
+name: security
+on: pull_request
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: yakuphanycl/wrg-devguard@v1
+        with:
+          path: .
+          fail-on: error
+```
+
+**2. Scheduled audit — emit SARIF, never fail the job, upload to code-scanning:**
+
+```yaml
+name: weekly-audit
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - id: dg
+        uses: yakuphanycl/wrg-devguard@v1
+        with:
+          format: sarif
+          fail-on: none
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ steps.dg.outputs.report-path }}
+```
+
+**3. Monorepo path filter — scan only one app, warn-level threshold:**
+
+```yaml
+- uses: yakuphanycl/wrg-devguard@v1
+  with:
+    path: apps/payments
+    profile: strict
+    fail-on: warn
+    format: json
+```
+
+### Pinning
+
+- `@v1` — moving major tag, fast-forwards on every minor/patch release
+- `@v1.0.0` — immutable release tag (recommended for reproducible CI)
+
+See the [Marketplace listing](https://github.com/marketplace/actions/wrg-devguard) for the latest published versions.
+
 ## Claude Code skill
 
 Drop the skill into your workspace:
